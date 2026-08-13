@@ -1,0 +1,56 @@
+---
+pagetitle: "Manifiesto · IASI"
+lang: es
+title-block-style: none
+---
+
+::: {.iasi-document}
+
+# Manifiesto
+
+IASI es un ecosistema abierto dedicado a explorar una nueva forma de hacer ingeniería. Creemos que la aparición de los **Sistemas Inteligentes** representa un cambio de paradigma comparable a la llegada de Internet, la orientación a objetos o el software libre. No se trata únicamente de incorporar nuevas herramientas, sino de replantear cómo concebimos, diseñamos, construimos y evolucionamos sistemas de software.
+
+IASI nace para recorrer ese camino.
+
+## Nuestra aproximación
+
+IASI no parte de una metodología predefinida. Partimos del problema **sin precondiciones**. Creemos que la aparición de los Sistemas Inteligentes obliga a replantear cómo hacemos ingeniería y, por tanto, no queremos asumir que las metodologías actuales constituyan, por sí solas, la respuesta.
+
+> **No adoptamos metodologías para resolver problemas. Partimos de los problemas para descubrir la metodología.**
+
+Cada necesidad será analizada de forma independiente.
+
+- Si una metodología existente ofrece una buena respuesta, la utilizaremos.
+- Si necesita adaptarse, la adaptaremos.
+- Si varias aportan valor, las combinaremos.
+- Y cuando ninguna resulte suficiente, construiremos una nueva.
+
+No buscamos una metodología universal. Buscamos la mejor solución para cada problema.
+
+## El viaje también es conocimiento
+
+IASI no solo publica resultados. También documenta el camino recorrido:
+
+- las decisiones de arquitectura;
+- los experimentos;
+- las dudas;
+- los errores;
+- los cambios de dirección;
+- las herramientas descartadas;
+- las ideas que funcionaron y las que no.
+
+Creemos que comprender **cómo** se construye una solución es tan valioso como la propia solución.
+
+Por eso, en IASI, **el viaje también forma parte del producto**.
+
+## Un proyecto abierto
+
+IASI nace como una iniciativa personal, pero no pretende ser un proyecto personal. Está concebido para crecer de forma abierta, incorporando nuevas ideas, herramientas, metodologías y colaboradores.
+
+**Toda aportación fundamentada será bienvenida.**
+
+Porque creemos que la Ingeniería Asistida por Sistemas Inteligentes solo puede construirse desde la colaboración, el pensamiento crítico y la experimentación.
+
+> *La mejor metodología no es la que seguimos, sino la que descubrimos mientras resolvemos el problema adecuado.*
+
+:::

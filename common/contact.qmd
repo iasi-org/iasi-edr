@@ -1,0 +1,14 @@
+---
+title: "Contacto"
+lang: es
+---
+
+# Contacto
+
+IASI es todavía un proyecto en crecimiento. Mientras se desarrollan nuevos canales de participación y colaboración, **el correo electrónico es la mejor forma de contactar con el equipo**.
+
+## Correo electrónico
+
+[Javier G. Grández](mailto:jggrandez@gmail.com)
+
+Puedes escribirnos para plantear preguntas, proponer ideas, colaborar en el proyecto o simplemente iniciar una conversación sobre IASI.

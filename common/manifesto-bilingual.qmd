@@ -1,0 +1,29 @@
+This book is deliberately written in Spanish.
+
+There are two main reasons: 
+
+1. The first one is simple; Spanish is one of the most widely spoken native languages in the world, second only to Mandarin Chinese. It is therefore not a marginal language for thinking, explaining, or building technical knowledge.
+2. The second is personal, but also methodological: it is the language I use and the one in which I can express myself with the greatest precision and consistency.
+
+This is not a rejection of English, nor does it ignore the fact that much of technology is first developed and documented in English. It is a choice to work in the language in which I can think, question, discuss, and capture nuance most accurately.
+
+And in engineering, nuance matters.
+
+Translations can come later. Original thought cannot.
+
+Nevertheless, if you need any part of this work translated into English, we will be happy to provide it.
+
+---
+
+Este libro está escrito conscientemente en castellano.
+
+Hay dos razones principales:
+
+1. La primera es sencilla: el castellano es una de las lenguas maternas más habladas del mundo, solo por detrás del chino mandarín. No es, por tanto, una lengua marginal para pensar, explicar o construir conocimiento técnico.
+2. La segunda es personal, pero también metodológica: es la lengua que uso y en la que puedo expresarme con mayor exactitud y coherencia.
+
+No se trata de rechazar el inglés ni de ignorar que gran parte de la tecnología se desarrolla y documenta primero en ese idioma. Se trata de elegir la lengua en la que puedo pensar, dudar, discutir y encontrar mejor los matices.
+
+Y en ingeniería, los matices importan.
+
+Las traducciones podrán venir después. El pensamiento original, no.

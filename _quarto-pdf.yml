@@ -1,0 +1,4 @@
+# _quarto-pdf.yml
+format:
+  pdf:
+    toc: true
