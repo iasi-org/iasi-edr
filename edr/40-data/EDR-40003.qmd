@@ -1,0 +1,39 @@
+---
+id: EDR-40003
+title: "Hacer los EDR consultables por metadatos y texto completo"
+status: accepted
+area:
+  id: "40"
+  name: "Datos"
+created: 2026-08-16
+tags:
+  - "search"
+  - "metadata"
+  - "traceability"
+affects:
+  - "iasi-edr"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Clasificar cada decisión en una sola área primaria no basta para responder preguntas transversales como qué
+decisiones afectan a un producto, cuáles están relacionadas o qué decisiones sustituyen a otras.
+
+## Decisión
+
+El modelo EDR incorporará metadatos de afectación y relaciones, y la publicación debe permitir consulta tanto
+por esos campos como por el texto completo del documento.
+
+## Alternativas consideradas
+
+- Crear múltiples copias del mismo EDR en cada área afectada.
+- Limitar la recuperación a la navegación por carpetas.
+
+## Consecuencias
+
+La clasificación física sigue siendo simple mientras las relaciones transversales se expresan como datos.
+El registro puede evolucionar hacia búsquedas y vistas derivadas sin cambiar los documentos.

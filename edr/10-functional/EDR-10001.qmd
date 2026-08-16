@@ -1,0 +1,39 @@
+---
+id: EDR-10001
+title: "Usar iasi-home como puerta de entrada visual al ecosistema"
+status: accepted
+area:
+  id: "10"
+  name: "Funcional"
+created: 2026-08-16
+tags:
+  - "iasi-home"
+  - "navegación"
+  - "ecosistema"
+affects:
+  - "iasi-home"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+IASI ya no es un único libro con repositorios auxiliares, sino un ecosistema con varios libros, productos
+y artefactos. Hace falta un punto de entrada que permita orientarse sin conocer previamente su estructura.
+
+## Decisión
+
+`iasi-home` será la portada navegable del ecosistema IASI y concentrará el acceso visual a sus principales
+piezas.
+
+## Alternativas consideradas
+
+- Usar GitHub como única página de entrada.
+- Hacer que cada libro funcione como portada del ecosistema.
+
+## Consecuencias
+
+La navegación comienza por el mapa del ecosistema y después desciende a cada pieza. `iasi-home` no necesita
+absorber el contenido de los productos, solo presentarlos y enlazarlos.

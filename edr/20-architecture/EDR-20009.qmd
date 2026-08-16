@@ -1,0 +1,40 @@
+---
+id: EDR-20009
+title: "Componer el estilo HTML con SCSS común y específico"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-16
+tags:
+  - "scss"
+  - "html"
+  - "styles"
+affects:
+  - "resources/css/iasi.scss"
+  - "resources/css/edr.scss"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+El ecosistema necesita identidad visual compartida, pero cada producto puede requerir reglas propias. Un solo
+fichero global haría que ajustes locales terminasen afectando a publicaciones no relacionadas.
+
+## Decisión
+
+Los estilos vivirán en `resources/css/`. `iasi.scss` contendrá la base visual común y `edr.scss` las
+especializaciones de EDR. El theme HTML cargará primero el estilo común y después el específico.
+
+## Alternativas consideradas
+
+- Mantener CSS independiente y duplicado en cada producto.
+- Incluir todas las reglas EDR en el fichero común.
+
+## Consecuencias
+
+EDR puede sobrescribir detalles sin romper la identidad general. El orden de carga deja explícita la relación
+base-especialización.

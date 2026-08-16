@@ -1,0 +1,43 @@
+---
+id: EDR-20007
+title: "Separar la configuración común de los perfiles HTML y PDF"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-16
+tags:
+  - "quarto"
+  - "profiles"
+  - "html"
+  - "pdf"
+affects:
+  - "quarto"
+  - "iasi-books"
+  - "iasi-edr"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+HTML y PDF comparten estructura documental pero requieren presentación, recursos y directorios de salida
+distintos. Mezclar ambas configuraciones en un único YAML hace difícil distinguir qué es común y qué depende
+del formato.
+
+## Decisión
+
+`_quarto.yml` contendrá la configuración común y declarará el grupo de perfiles. `_quarto-html.yml` y
+`_quarto-pdf.yml` contendrán respectivamente la configuración específica de HTML y PDF.
+
+## Alternativas consideradas
+
+- Un único `_quarto.yml` con condicionales o configuración acumulada.
+- Repositorios separados para cada formato.
+
+## Consecuencias
+
+Cada perfil puede evolucionar sin contaminar al otro y la configuración común permanece visible en un único
+lugar.

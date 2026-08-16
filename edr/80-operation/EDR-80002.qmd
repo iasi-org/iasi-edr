@@ -1,0 +1,40 @@
+---
+id: EDR-80002
+title: "Separar los directorios de salida por perfil"
+status: accepted
+area:
+  id: "80"
+  name: "Operación"
+created: 2026-08-16
+tags:
+  - "quarto"
+  - "output"
+  - "html"
+  - "pdf"
+affects:
+  - "outputs/html"
+  - "outputs/pdf"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+HTML produce un sitio con múltiples archivos mientras PDF produce un artefacto documental distinto. Mezclar
+ambas salidas dificulta limpieza, despliegue y revisión.
+
+## Decisión
+
+El perfil HTML escribirá en `outputs/html` y el perfil PDF en `outputs/pdf`. El `output-dir` pertenece a la
+configuración específica de cada perfil.
+
+## Alternativas consideradas
+
+- Un único directorio de salida para todos los formatos.
+- Configurar el directorio común en `_quarto.yml`.
+
+## Consecuencias
+
+Cada formato puede limpiarse, publicarse o inspeccionarse de manera independiente.

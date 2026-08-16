@@ -1,0 +1,18 @@
+---
+title: "General"
+---
+
+Esta sección reúne los Engineering Decision Records clasificados en el área **General** (`00`).
+
+| ID | Título |
+|---|---|
+| [EDR-00001](EDR-00001.qmd) | Registro único de decisiones de ingeniería |
+| [EDR-00002](EDR-00002.qmd) | Identificación y clasificación de los EDR |
+| [EDR-00003](EDR-00003.qmd) | Partir de la necesidad y no de las herramientas disponibles |
+| [EDR-00004](EDR-00004.qmd) | Encapsular la complejidad interna |
+| [EDR-00005](EDR-00005.qmd) | Automatizar lo repetible y mantener manual lo excepcional |
+| [EDR-00006](EDR-00006.qmd) | Limitar la velocidad del sistema a la capacidad humana sostenible |
+| [EDR-00007](EDR-00007.qmd) | Organizar la obra de IASI en tres volúmenes |
+| [EDR-00008](EDR-00008.qmd) | Separar el proceso vivido del resultado consolidado |
+| [EDR-00009](EDR-00009.qmd) | Hacer emerger las prácticas desde necesidades reales |
+| [EDR-00010](EDR-00010.qmd) | Adoptar desarrollo dirigido por especificaciones |

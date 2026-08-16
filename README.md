@@ -1,2 +1,3 @@
-# iasi-adr
-las decisiones
+# iasi-edr
+
+Engineering Decision Records de IASI.

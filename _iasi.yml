@@ -1,5 +1,46 @@
-# _iasi.yml
 publication:
   strategy: structured
   content-dir: edr
   numbered: false
+
+edr:
+  areas:
+    - id: "00"
+      name: General
+      path: 00-general
+
+    - id: "10"
+      name: Funcional
+      path: 10-functional
+
+    - id: "20"
+      name: Arquitectura
+      path: 20-architecture
+
+    - id: "30"
+      name: Constraints
+      path: 30-constraints
+
+    - id: "40"
+      name: Datos
+      path: 40-data
+
+    - id: "50"
+      name: Integración
+      path: 50-integration
+
+    - id: "60"
+      name: Seguridad
+      path: 60-security
+
+    - id: "70"
+      name: Calidad
+      path: 70-quality
+
+    - id: "80"
+      name: Operación
+      path: 80-operation
+
+    - id: "99"
+      name: Pendiente de clasificar
+      path: 99-pending

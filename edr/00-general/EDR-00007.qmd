@@ -1,0 +1,41 @@
+---
+id: EDR-00007
+title: "Organizar la obra de IASI en tres volúmenes"
+status: accepted
+area:
+  id: "00"
+  name: "General"
+created: 2026-08-16
+tags:
+  - "editorial"
+  - "books"
+  - "estructura"
+affects:
+  - "iasi-books"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+El material de IASI mezcla fundamentos, historia real de construcción y metodología consolidada. Un
+único volumen obliga a mezclar el porqué, el proceso y el resultado final.
+
+## Decisión
+
+La obra se separará en tres volúmenes: Volumen I para fundamentos y teoría, Volumen II para el viaje,
+errores y evolución, y Volumen III para la metodología o framework consolidado. Las partes se presentan
+con numeración romana y los capítulos mantienen numeración arábiga.
+
+## Alternativas consideradas
+
+- Un único libro cronológico.
+- Un libro puramente metodológico que oculte el proceso real.
+- Repartir el contenido por tecnologías en lugar de por función narrativa.
+
+## Consecuencias
+
+Cada volumen puede mantener una voz y propósito propios sin perder coherencia. El lector puede distinguir
+teoría, evidencia del proceso y método final.

@@ -1,0 +1,41 @@
+---
+id: EDR-20010
+title: "Mantener iasi-graphics deliberadamente simple"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-16
+tags:
+  - "graphics"
+  - "simplicidad"
+  - "automatización"
+affects:
+  - "iasi-graphics"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+La mayoría de las necesidades repetibles de IASI son diagramas editoriales sencillos: cajas, círculos,
+relaciones y composiciones previsibles. Los casos visuales complejos son mucho menos frecuentes y necesitan
+iteración específica.
+
+## Decisión
+
+`iasi-graphics` se limitará en su fase actual a generar gráficos sencillos, claros y correctos. Las figuras
+complejas se resolverán excepcionalmente con herramientas de generación de imagen, PowerPoint u otra
+herramienta adecuada al caso.
+
+## Alternativas consideradas
+
+- Construir desde el inicio un motor gráfico general.
+- Resolver manualmente incluso los patrones sencillos repetidos.
+
+## Consecuencias
+
+La herramienta permanece pequeña y automatiza justo la parte repetible. Los casos raros no dictan la
+arquitectura del caso común.

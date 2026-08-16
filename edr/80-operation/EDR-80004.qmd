@@ -1,0 +1,41 @@
+---
+id: EDR-80004
+title: "Separar herramientas principales de trabajo y laboratorios locales"
+status: accepted
+area:
+  id: "80"
+  name: "Operación"
+created: 2026-08-16
+tags:
+  - "codex"
+  - "copilot"
+  - "ollama"
+  - "lab"
+affects:
+  - "agentics"
+  - "iasi-graphics"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+El entorno de trabajo puede aprovechar servicios como Codex y Copilot sin renunciar a experimentar con modelos
+locales. Obligar a todos los componentes a usar el mismo backend reduciría el valor del laboratorio.
+
+## Decisión
+
+Codex y Copilot se utilizarán como herramientas principales del workspace cuando resulten adecuadas. Ollama se
+mantendrá para experimentación local y laboratorios, incluyendo el desarrollo exploratorio de `iasi-graphics`.
+
+## Alternativas consideradas
+
+- Estandarizar todo IASI sobre un único proveedor o runtime de modelos.
+- Excluir modelos locales del entorno por no ser la herramienta principal.
+
+## Consecuencias
+
+Los experimentos pueden evaluar capacidades locales sin condicionar el flujo principal. La metodología y los
+productos permanecen desacoplados de una única plataforma de IA.

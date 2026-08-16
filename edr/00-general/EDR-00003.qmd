@@ -1,0 +1,42 @@
+---
+id: EDR-00003
+title: "Partir de la necesidad y no de las herramientas disponibles"
+status: accepted
+area:
+  id: "00"
+  name: "General"
+created: 2026-08-16
+tags:
+  - "metodología"
+  - "diseño"
+  - "principios"
+affects:
+  - "iasi-methodology"
+  - "engineering"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Empezar preguntando cómo resolver un problema con las herramientas actuales condiciona el espacio de
+solución antes de haber entendido la necesidad. La capacidad disponible termina dictando el diseño.
+
+## Decisión
+
+Ante un problema se preguntará primero qué se necesita para resolverlo. Solo después se evaluará si
+herramientas, tecnologías o prácticas existentes satisfacen esa necesidad. Si no lo hacen, se
+adaptarán o se crearán los mecanismos necesarios.
+
+## Alternativas consideradas
+
+- Elegir primero una herramienta y adaptar el problema a sus capacidades.
+- Limitar la solución al catálogo tecnológico ya disponible.
+
+## Consecuencias
+
+Las decisiones se justifican por la necesidad que resuelven y no por familiaridad tecnológica.
+La metodología mantiene abierto el espacio de diseño y obliga a cuestionar incluso las soluciones
+aparentemente establecidas.

@@ -1,0 +1,41 @@
+---
+id: EDR-10002
+title: "Distinguir libros de productos y artefactos en iasi-home"
+status: accepted
+area:
+  id: "10"
+  name: "Funcional"
+created: 2026-08-16
+tags:
+  - "iasi-home"
+  - "información"
+  - "productos"
+affects:
+  - "iasi-home"
+  - "iasi-books"
+  - "artifacts"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Los libros y los repositorios reutilizables cumplen funciones diferentes. Presentarlos como una lista
+homogénea oculta esa diferencia y dificulta entender qué se lee y qué se usa.
+
+## Decisión
+
+`iasi-home` distinguirá explícitamente los libros de los productos, artefactos o repositorios reutilizables.
+La estructura visual debe mostrar ambas familias sin confundir publicación editorial con herramienta.
+
+## Alternativas consideradas
+
+- Una única lista de repositorios.
+- Clasificar todo como documentación.
+
+## Consecuencias
+
+El visitante entiende antes la naturaleza de cada pieza y puede elegir si quiere leer, explorar una
+metodología o utilizar un producto.

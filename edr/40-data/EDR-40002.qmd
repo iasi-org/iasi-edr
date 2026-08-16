@@ -1,0 +1,39 @@
+---
+id: EDR-40002
+title: "Tratar los índices de área como datos derivados"
+status: accepted
+area:
+  id: "40"
+  name: "Datos"
+created: 2026-08-16
+tags:
+  - "derived-data"
+  - "indices"
+  - "edr"
+affects:
+  - "iasi-edr"
+  - "R/create-index.R"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Un `index.qmd` de área repite identificadores y títulos que ya existen en los EDR. Si se edita como fuente
+primaria puede quedar desincronizado del conjunto real de documentos.
+
+## Decisión
+
+Los EDR y su front matter son la fuente de verdad. Los `index.qmd` de área se regeneran a partir de ellos y
+pueden reemplazarse completamente en cada ejecución.
+
+## Alternativas consideradas
+
+- Considerar el índice como catálogo maestro.
+- Exigir actualización manual simultánea del EDR y del índice.
+
+## Consecuencias
+
+No hay doble escritura. Un índice puede borrarse y reconstruirse sin pérdida de información.

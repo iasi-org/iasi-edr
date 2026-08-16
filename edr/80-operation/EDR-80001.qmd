@@ -1,0 +1,41 @@
+---
+id: EDR-80001
+title: "Usar HTML como perfil por defecto"
+status: accepted
+area:
+  id: "80"
+  name: "Operación"
+created: 2026-08-16
+tags:
+  - "quarto"
+  - "profile"
+  - "html"
+affects:
+  - "iasi-edr"
+  - "iasi-books"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Durante la edición y revisión ordinaria la salida HTML es la más rápida y navegable. PDF sigue siendo una
+publicación necesaria, pero no necesita activarse implícitamente en cada render.
+
+## Decisión
+
+Los proyectos Quarto con perfiles HTML/PDF usarán `html` como perfil por defecto. PDF se solicitará de forma
+explícita mediante su perfil.
+
+## Alternativas consideradas
+
+- No declarar perfil por defecto.
+- Renderizar ambos perfiles siempre.
+- Usar PDF como perfil predeterminado.
+
+## Consecuencias
+
+El comando de render habitual produce HTML sin opciones adicionales y el coste de PDF se paga solo cuando se
+necesita esa salida.

@@ -1,0 +1,41 @@
+---
+id: EDR-10004
+title: "Generar un catálogo por área de EDR"
+status: accepted
+area:
+  id: "10"
+  name: "Funcional"
+created: 2026-08-16
+tags:
+  - "edr"
+  - "índices"
+  - "catálogo"
+affects:
+  - "iasi-edr"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Cada área de EDR necesita una entrada navegable incluso cuando todavía no contiene decisiones. Mantener
+manualmente listas de documentos introduce desajustes en cuanto se crea, mueve o renombra un registro.
+
+## Decisión
+
+Cada directorio de área tendrá un `index.qmd` generado automáticamente. El documento incluirá siempre una
+introducción que identifique el área y, cuando existan registros, una tabla simple `ID | Título` con enlaces.
+Si el área está vacía, mostrará un mensaje explícito en lugar de quedar sin contenido.
+
+## Alternativas consideradas
+
+- Mantener el catálogo a mano.
+- No crear páginas de área hasta que exista el primer EDR.
+- Mostrar metadatos completos en el catálogo.
+
+## Consecuencias
+
+Todas las áreas son navegables desde el primer día y el catálogo refleja siempre los documentos realmente
+existentes.

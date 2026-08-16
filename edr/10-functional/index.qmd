@@ -1,0 +1,13 @@
+---
+title: "Funcional"
+---
+
+Esta sección reúne los Engineering Decision Records clasificados en el área **Funcional** (`10`).
+
+| ID | Título |
+|---|---|
+| [EDR-10001](EDR-10001.qmd) | Usar iasi-home como puerta de entrada visual al ecosistema |
+| [EDR-10002](EDR-10002.qmd) | Distinguir libros de productos y artefactos en iasi-home |
+| [EDR-10003](EDR-10003.qmd) | Ofrecer iasi-home en castellano e inglés con detección automática |
+| [EDR-10004](EDR-10004.qmd) | Generar un catálogo por área de EDR |
+| [EDR-10005](EDR-10005.qmd) | Crear EDR mediante un Addin de RStudio |

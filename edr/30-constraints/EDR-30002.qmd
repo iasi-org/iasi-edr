@@ -1,0 +1,41 @@
+---
+id: EDR-30002
+title: "Evitar la generalización prematura"
+status: accepted
+area:
+  id: "30"
+  name: "Constraints"
+created: 2026-08-16
+tags:
+  - "simplicidad"
+  - "generalización"
+  - "arquitectura"
+affects:
+  - "iasi-quarto"
+  - "iasi-edr"
+  - "tools"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+IASI genera patrones que podrían parecer reutilizables desde su primera aparición. Convertir inmediatamente
+cada patrón en infraestructura compartida crea APIs y dependencias antes de conocer sus verdaderos límites.
+
+## Decisión
+
+Una solución permanecerá local mientras solo exista una necesidad demostrada. La promoción a componente común
+se hará cuando aparezca reutilización real y pueda definirse un contrato estable.
+
+## Alternativas consideradas
+
+- Centralizar desde el primer uso.
+- Diseñar extensibilidad para escenarios todavía hipotéticos.
+
+## Consecuencias
+
+La arquitectura común crece por evidencia. Los productos conservan libertad para experimentar sin comprometer
+prematuramente a todo el ecosistema.

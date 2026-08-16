@@ -1,5 +1,0 @@
-# _iasi.yml
-publication:
-  strategy: structured
-  content-dir: edr
-  numbered: false

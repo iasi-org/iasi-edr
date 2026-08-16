@@ -1,0 +1,44 @@
+---
+id: EDR-00002
+title: "Identificación y clasificación de los EDR"
+status: accepted
+area:
+  id: "00"
+  name: "General"
+created: 2026-08-16
+tags:
+  - "edr"
+  - "identidad"
+  - "clasificación"
+affects:
+  - "iasi-edr"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Un registro central necesita una identidad estable y una clasificación suficientemente amplia para
+localizar decisiones funcionales, arquitectónicas, operativas, de datos, calidad e integración sin
+reducir EDR a decisiones puramente arquitectónicas.
+
+## Decisión
+
+Los documentos usarán el identificador `EDR-nnmmm`, donde `nn` representa el área principal y `mmm`
+la secuencia dentro de esa área. `00` queda reservado para decisiones generales o transversales.
+Las áreas son: 00 General, 10 Funcional, 20 Arquitectura, 30 Constraints, 40 Datos, 50 Integración,
+60 Seguridad, 70 Calidad, 80 Operación y 99 Pendiente de clasificar. Los identificadores definitivos
+son permanentes y no se reutilizan.
+
+## Alternativas consideradas
+
+- Una secuencia global sin clasificación.
+- Identificadores derivados únicamente del nombre del archivo.
+- Numeración por repositorio o producto.
+
+## Consecuencias
+
+El propio identificador aporta una primera señal de clasificación, permite ordenar documentos y
+mantiene referencias estables a lo largo del ecosistema.

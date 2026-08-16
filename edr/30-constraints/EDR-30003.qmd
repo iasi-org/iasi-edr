@@ -1,0 +1,40 @@
+---
+id: EDR-30003
+title: "Construir manualmente la infraestructura antes de automatizarla"
+status: accepted
+area:
+  id: "30"
+  name: "Constraints"
+created: 2026-08-16
+tags:
+  - "infra"
+  - "automatización"
+  - "aprendizaje"
+affects:
+  - "iasi-infra"
+  - "workstation"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Automatizar una máquina o entorno que todavía no se comprende convierte supuestos provisionales en código y
+dificulta distinguir necesidad real de accidente de la primera instalación.
+
+## Decisión
+
+La construcción inicial de la máquina y la infraestructura se hará manualmente. Después de experimentar,
+aprender, documentar y especificar el entorno, se automatizarán las partes estables.
+
+## Alternativas consideradas
+
+- Empezar directamente con infraestructura totalmente automatizada.
+- Mantener permanentemente una instalación manual.
+
+## Consecuencias
+
+La automatización captura conocimiento comprobado en lugar de congelar descubrimientos provisionales.
+El proceso manual inicial forma parte del aprendizaje.

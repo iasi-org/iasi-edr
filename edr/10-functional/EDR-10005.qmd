@@ -1,0 +1,42 @@
+---
+id: EDR-10005
+title: "Crear EDR mediante un Addin de RStudio"
+status: accepted
+area:
+  id: "10"
+  name: "Funcional"
+created: 2026-08-16
+tags:
+  - "edr"
+  - "rstudio"
+  - "addin"
+  - "authoring"
+affects:
+  - "iasi-edr"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Crear un EDR a mano obliga a recordar área, secuencia, nombre de archivo, ruta y front matter. Es trabajo
+mecánico y además puede romper la consistencia del registro.
+
+## Decisión
+
+La creación ordinaria de EDR se realizará mediante un Addin de RStudio apoyado en una plantilla. El usuario
+selecciona el área y proporciona el título; el sistema calcula el siguiente identificador, resuelve el
+directorio, genera el front matter y abre el documento creado.
+
+## Alternativas consideradas
+
+- Crear archivos manualmente.
+- Pedir al usuario que escriba el número de área y la secuencia.
+- Mantener un contador externo separado de los documentos.
+
+## Consecuencias
+
+El humano decide el contenido y la clasificación; el sistema mantiene la mecánica de identidad y ubicación.
+El flujo queda preparado para regenerar el índice de área después de crear el documento.

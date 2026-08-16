@@ -1,0 +1,42 @@
+---
+id: EDR-20011
+title: "Crear un espacio dedicado para capacidades agentic de IASI"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-16
+tags:
+  - "agentics"
+  - "skills"
+  - "commands"
+  - "agents"
+affects:
+  - "IASI/agentics"
+  - "codex"
+  - "copilot"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+A medida que IASI incorpora comandos, skills, agentes y adaptadores, esas capacidades dejan de ser simples
+notas de uso de una herramienta concreta y forman una capa reutilizable del ecosistema.
+
+## Decisión
+
+IASI mantendrá un espacio dedicado `agentics` para organizar comandos, skills, adaptadores y demás capacidades
+agentic que surjan de la metodología, separándolas de los libros y de la implementación de productos concretos.
+
+## Alternativas consideradas
+
+- Guardar cada skill dentro del repositorio donde se utilizó por primera vez.
+- Acoplar las capacidades a una única plataforma de agentes.
+
+## Consecuencias
+
+La metodología puede definir capacidades propias y adaptar su ejecución a plataformas como Codex sin convertir
+la plataforma en la definición del comportamiento.

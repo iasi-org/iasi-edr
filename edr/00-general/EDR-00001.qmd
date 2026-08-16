@@ -1,0 +1,45 @@
+---
+id: EDR-00001
+title: "Registro único de decisiones de ingeniería"
+status: accepted
+area:
+  id: "00"
+  name: "General"
+created: 2026-08-16
+tags:
+  - "edr"
+  - "gobierno"
+  - "trazabilidad"
+affects:
+  - "iasi-edr"
+  - "books"
+  - "artifacts"
+  - "journey"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Las decisiones de IASI aparecen durante el desarrollo de libros, herramientas, infraestructura,
+experimentos y conversaciones de diseño. Si cada producto conserva su propia versión de una decisión,
+el razonamiento termina duplicado y puede divergir.
+
+## Decisión
+
+`iasi-edr` será el registro único de las decisiones de ingeniería de IASI. Los libros, artefactos,
+productos y el Journey pueden explicar o referenciar una decisión, pero no mantienen copias
+independientes de su contenido normativo.
+
+## Alternativas consideradas
+
+- Mantener ADR o notas de decisión dentro de cada repositorio.
+- Documentar únicamente el estado final en los libros.
+- Conservar las decisiones solo en el Journey.
+
+## Consecuencias
+
+Existe un punto único para consultar por qué se tomó una decisión. Se reduce la duplicación y se hace
+posible referenciar una identidad estable desde cualquier pieza del ecosistema.

@@ -1,0 +1,40 @@
+---
+id: EDR-20006
+title: "Mantener la lógica específica de EDR fuera de iasi.quarto"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-16
+tags:
+  - "separación"
+  - "iasi-quarto"
+  - "edr"
+affects:
+  - "iasi-edr"
+  - "iasi-quarto"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+`iasi.quarto` proporciona infraestructura genérica de publicación. La generación de catálogos por áreas EDR
+responde a un modelo particular que, por ahora, no ha demostrado ser necesario en otras publicaciones.
+
+## Decisión
+
+La lógica específica de EDR permanecerá en `iasi-edr`, inicialmente bajo `R/`. Solo se promoverá a
+`iasi.quarto` cuando exista evidencia de reutilización real.
+
+## Alternativas consideradas
+
+- Incorporar inmediatamente cualquier automatización nueva a `iasi.quarto`.
+- Duplicar la lógica entre ambos repositorios.
+
+## Consecuencias
+
+`iasi.quarto` conserva una responsabilidad genérica y EDR puede evolucionar con rapidez sin convertir una
+necesidad local en contrato global.

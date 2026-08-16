@@ -1,0 +1,42 @@
+---
+id: EDR-70001
+title: "Validar la estructura Quarto antes de preparar o renderizar"
+status: accepted
+area:
+  id: "70"
+  name: "Calidad"
+created: 2026-08-16
+tags:
+  - "validation"
+  - "quarto"
+  - "iasi-quarto"
+affects:
+  - "iasi-quarto"
+  - "_quarto.yml"
+  - "_iasi.yml"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Un pipeline puede avanzar bastante antes de fallar si faltan archivos esenciales o la configuración no es
+coherente con el tipo de proyecto.
+
+## Decisión
+
+`iasi.quarto` validará al inicio la existencia de `_quarto.yml` y `_iasi.yml`, determinará el tipo de proyecto
+Quarto y verificará la configuración específica requerida por ese tipo antes de continuar con prepare/build.
+Para publicaciones con perfiles se comprobará la presencia de las configuraciones declaradas.
+
+## Alternativas consideradas
+
+- Delegar todos los errores a `quarto render`.
+- Validar solo después de haber generado artefactos.
+
+## Consecuencias
+
+Los errores de configuración aparecen cerca de su causa y antes de modificar artefactos derivados. El pipeline
+puede detenerse con mensajes específicos de IASI.

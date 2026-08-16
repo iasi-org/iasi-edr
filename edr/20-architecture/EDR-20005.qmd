@@ -1,0 +1,43 @@
+---
+id: EDR-20005
+title: "Regenerar los índices EDR en pre-render"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-16
+tags:
+  - "quarto"
+  - "pre-render"
+  - "edr"
+  - "r"
+affects:
+  - "iasi-edr"
+  - "R/create-index.R"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Los índices de área son contenido derivado y deben estar actualizados cuando se publica, sin exigir una acción
+manual adicional después de crear o modificar un EDR.
+
+## Decisión
+
+Quarto ejecutará `R/create-index.R` mediante `project.pre-render`. El script leerá las áreas desde `_iasi.yml`,
+recorrerá los EDR de cada directorio, extraerá `id` y `title`, validará la correspondencia con el área y
+regenerará el `index.qmd` correspondiente.
+
+## Alternativas consideradas
+
+- Actualizar índices desde el Addin únicamente.
+- Regenerarlos mediante una tarea manual separada.
+- Integrar la lógica directamente en `iasi.quarto`.
+
+## Consecuencias
+
+El render siempre parte de índices frescos. La publicación falla si la estructura física contradice la
+configuración, evitando resultados silenciosamente incompletos.

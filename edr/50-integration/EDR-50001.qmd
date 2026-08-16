@@ -1,0 +1,40 @@
+---
+id: EDR-50001
+title: "Distinguir MCP del servidor MCP"
+status: accepted
+area:
+  id: "50"
+  name: "Integración"
+created: 2026-08-16
+tags:
+  - "mcp"
+  - "protocol"
+  - "terminología"
+affects:
+  - "mcp"
+  - "products"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Usar “MCP” para referirse tanto al protocolo como al software que se instala y configura mezcla dos conceptos
+distintos y dificulta explicar qué producto ofrece IASI.
+
+## Decisión
+
+MCP se utilizará para nombrar el Model Context Protocol. El componente ejecutable que expone capacidades a un
+modelo se denominará `servidor MCP`.
+
+## Alternativas consideradas
+
+- Llamar MCP indistintamente al protocolo y al servidor.
+- Inventar un nombre específico de IASI para evitar la terminología estándar.
+
+## Consecuencias
+
+La documentación puede explicar con precisión qué estándar se usa y qué componente debe instalarse,
+configurarse y operarse.

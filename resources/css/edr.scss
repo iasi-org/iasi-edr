@@ -1,0 +1,87 @@
+/*-- scss:defaults --*/
+
+// EDR-specific layer. Shared IASI identity lives in iasi.scss.
+$edr-meta-bg: rgba(57, 114, 158, 0.07);
+$edr-meta-border: rgba(57, 114, 158, 0.20);
+$edr-muted: rgba(33, 37, 41, 0.68);
+
+/*-- scss:rules --*/
+
+/* Give EDR pages a little more horizontal room now that both sidebars are gone. */
+main.content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Compact metadata strip injected from the EDR front matter by edr-meta.lua. */
+.edr-meta {
+  margin: 0 0 1.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid $edr-meta-border;
+  border-radius: 0.45rem;
+  background: $edr-meta-bg;
+  color: $edr-muted;
+  font-size: 0.9rem;
+}
+
+.edr-meta-summary,
+.edr-tags {
+  margin: 0;
+}
+
+.edr-tags {
+  margin-top: 0.4rem;
+}
+
+.edr-id {
+  color: var(--iasi-quarto-blue);
+  font-family: var(--bs-font-monospace);
+  font-weight: 700;
+}
+
+.edr-area {
+  font-weight: 600;
+}
+
+.edr-status {
+  text-transform: lowercase;
+}
+
+.edr-tags-label {
+  font-weight: 600;
+}
+
+code.edr-tag {
+  padding: 0.12rem 0.42rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(57, 114, 158, 0.12);
+  color: var(--iasi-quarto-blue);
+  font-size: 0.82rem;
+}
+
+/* Area catalogues are intentionally simple: ID + title. */
+table {
+  width: 100%;
+}
+
+thead {
+  border-bottom: 2px solid var(--iasi-quarto-blue);
+}
+
+th {
+  font-weight: 650;
+}
+
+td,
+th {
+  padding: 0.6rem 0.75rem;
+}
+
+table td:first-child {
+  width: 9rem;
+  white-space: nowrap;
+  font-family: var(--bs-font-monospace);
+  font-weight: 650;
+}

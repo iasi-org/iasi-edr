@@ -1,0 +1,11 @@
+---
+title: "Constraints"
+---
+
+Esta sección reúne los Engineering Decision Records clasificados en el área **Constraints** (`30`).
+
+| ID | Título |
+|---|---|
+| [EDR-30001](EDR-30001.qmd) | Diseñar las publicaciones IASI para escritorio |
+| [EDR-30002](EDR-30002.qmd) | Evitar la generalización prematura |
+| [EDR-30003](EDR-30003.qmd) | Construir manualmente la infraestructura antes de automatizarla |

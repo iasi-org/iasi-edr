@@ -1,0 +1,41 @@
+---
+id: EDR-00005
+title: "Automatizar lo repetible y mantener manual lo excepcional"
+status: accepted
+area:
+  id: "00"
+  name: "General"
+created: 2026-08-16
+tags:
+  - "automatización"
+  - "simplicidad"
+  - "herramientas"
+affects:
+  - "iasi-graphics"
+  - "tooling"
+  - "workflows"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+No toda tarea merece convertirse en un sistema general. Algunas aparecen con frecuencia y tienen una
+estructura clara; otras son excepcionales, visuales o requieren iteración específica.
+
+## Decisión
+
+IASI automatizará los casos repetibles, estructurables y suficientemente frecuentes. Los casos
+excepcionales permanecerán manuales o se resolverán con herramientas especializadas cuando aparezcan.
+
+## Alternativas consideradas
+
+- Automatizar desde el principio cualquier caso imaginable.
+- Renunciar a automatizar y resolver todo manualmente.
+
+## Consecuencias
+
+Se reduce la superficie de mantenimiento y la complejidad accidental. La automatización crece cuando
+existe evidencia de repetición, no como anticipación especulativa.

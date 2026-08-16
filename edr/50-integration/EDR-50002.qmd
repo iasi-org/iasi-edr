@@ -1,0 +1,40 @@
+---
+id: EDR-50002
+title: "Exponer PlantUML como capacidad utilizable por modelos"
+status: accepted
+area:
+  id: "50"
+  name: "Integración"
+created: 2026-08-16
+tags:
+  - "plantuml"
+  - "mcp"
+  - "diagramas"
+affects:
+  - "plantuml"
+  - "agentics"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Generar diagramas PlantUML desde un modelo requiere una frontera clara entre la intención del agente y la
+herramienta externa que procesa el diagrama.
+
+## Decisión
+
+PlantUML se tratará como una herramienta que puede exponerse mediante un servidor MCP para que un modelo
+solicite la creación o renderizado de diagramas sin incorporar PlantUML al propio modelo.
+
+## Alternativas consideradas
+
+- Acoplar la generación a una interfaz manual.
+- Tratar PlantUML como parte intrínseca del agente.
+
+## Consecuencias
+
+La capacidad puede reutilizarse desde distintos modelos o plataformas y conserva una interfaz explícita de
+integración.

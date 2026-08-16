@@ -1,5 +1,0 @@
-# _quarto-html.yml
-format:
-  html:
-    toc: true
-    smooth-scroll: true

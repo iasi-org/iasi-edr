@@ -1,0 +1,40 @@
+---
+id: EDR-20004
+title: "Organizar físicamente los EDR por área"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-16
+tags:
+  - "edr"
+  - "filesystem"
+  - "estructura"
+affects:
+  - "iasi-edr"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+La clasificación del identificador debe reflejarse también en la organización física para que el repositorio
+sea comprensible sin necesidad de ejecutar herramientas.
+
+## Decisión
+
+Los documentos vivirán bajo `edr/<nn-area>/`. La estructura estable incluye los directorios
+`00-general`, `10-functional`, `20-architecture`, `30-constraints`, `40-data`, `50-integration`,
+`60-security`, `70-quality`, `80-operation` y `99-pending`.
+
+## Alternativas consideradas
+
+- Guardar todos los EDR en un único directorio.
+- Separarlos por producto afectado.
+
+## Consecuencias
+
+La ruta física coincide con la clasificación primaria. Un documento tiene una sola ubicación principal,
+mientras que sus relaciones transversales se expresan mediante metadatos.

@@ -1,0 +1,19 @@
+---
+title: "Arquitectura"
+---
+
+Esta sección reúne los Engineering Decision Records clasificados en el área **Arquitectura** (`20`).
+
+| ID | Título |
+|---|---|
+| [EDR-20001](EDR-20001.qmd) | Mantener iasi-edr como repositorio independiente |
+| [EDR-20002](EDR-20002.qmd) | Publicar iasi-edr como Quarto book estructurado |
+| [EDR-20003](EDR-20003.qmd) | Definir las áreas EDR en _iasi.yml |
+| [EDR-20004](EDR-20004.qmd) | Organizar físicamente los EDR por área |
+| [EDR-20005](EDR-20005.qmd) | Regenerar los índices EDR en pre-render |
+| [EDR-20006](EDR-20006.qmd) | Mantener la lógica específica de EDR fuera de iasi.quarto |
+| [EDR-20007](EDR-20007.qmd) | Separar la configuración común de los perfiles HTML y PDF |
+| [EDR-20008](EDR-20008.qmd) | Usar la navbar como navegación principal de iasi-edr en HTML |
+| [EDR-20009](EDR-20009.qmd) | Componer el estilo HTML con SCSS común y específico |
+| [EDR-20010](EDR-20010.qmd) | Mantener iasi-graphics deliberadamente simple |
+| [EDR-20011](EDR-20011.qmd) | Crear un espacio dedicado para capacidades agentic de IASI |

@@ -1,5 +1,68 @@
-# _quarto-html.yml
+project:
+  output-dir: _outputs/html
+
+sidebar: false
+
 format:
   html:
-    toc: true
+    theme:
+      - cosmo
+      - resources/css/iasi.scss
+      - resources/css/edr.scss
+    toc: false
     smooth-scroll: true
+
+filters:
+  - resources/lua/edr-meta.lua
+
+book:
+  search:
+    location: navbar
+    type: overlay
+
+  navbar:
+    title: "IASI EDR"
+
+    left:
+      - text: "Inicio"
+        href: index.qmd
+
+      - text: "General"
+        href: edr/00-general/index.qmd
+
+      - text: "Funcional"
+        href: edr/10-functional/index.qmd
+
+      - text: "Arquitectura"
+        href: edr/20-architecture/index.qmd
+
+      - text: "Constraints"
+        href: edr/30-constraints/index.qmd
+
+      - text: "Datos"
+        href: edr/40-data/index.qmd
+
+      - text: "Integración"
+        href: edr/50-integration/index.qmd
+
+      - text: "Seguridad"
+        href: edr/60-security/index.qmd
+
+      - text: "Calidad"
+        href: edr/70-quality/index.qmd
+
+      - text: "Operación"
+        href: edr/80-operation/index.qmd
+
+      - text: "Pendientes"
+        href: edr/99-pending/index.qmd
+    tools:
+      - icon: translate
+        href: common/manifesto-bilingual.qmd
+        aria-label: "Idioma / Language"
+      - icon: envelope
+        href: common/contact.qmd
+        aria-label: "Contact us"
+      - icon: github
+        href: https://github.com/iasi-org
+        aria-label: "Explore IASI on GitHub"

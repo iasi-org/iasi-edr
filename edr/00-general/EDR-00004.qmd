@@ -1,0 +1,42 @@
+---
+id: EDR-00004
+title: "Encapsular la complejidad interna"
+status: accepted
+area:
+  id: "00"
+  name: "General"
+created: 2026-08-16
+tags:
+  - "diseño"
+  - "usabilidad"
+  - "complejidad"
+affects:
+  - "products"
+  - "tools"
+  - "methodology"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Una solución puede requerir mecanismos internos complejos sin que esa complejidad deba trasladarse a
+quien la utiliza. Exponer cada detalle técnico convierte la potencia interna en fricción operativa.
+
+## Decisión
+
+Los productos IASI deben encapsular la complejidad técnica detrás de interfaces, comandos y contratos
+simples. La complejidad se admite donde sea necesaria internamente, pero no se considera aceptable como
+coste impuesto al usuario.
+
+## Alternativas consideradas
+
+- Exponer directamente todos los componentes internos.
+- Simplificar eliminando capacidades necesarias.
+
+## Consecuencias
+
+El diseño de interfaces pasa a ser parte de la ingeniería, no una capa cosmética. Una implementación
+compleja puede seguir ofreciendo un uso pequeño, explícito y predecible.

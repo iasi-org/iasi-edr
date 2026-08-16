@@ -1,0 +1,42 @@
+---
+id: EDR-30001
+title: "Diseñar las publicaciones IASI para escritorio"
+status: accepted
+area:
+  id: "30"
+  name: "Constraints"
+created: 2026-08-16
+tags:
+  - "desktop"
+  - "responsive"
+  - "ui"
+affects:
+  - "iasi-home"
+  - "html"
+  - "css"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+El uso principal previsto para las publicaciones IASI es escritorio. Ajustar continuamente layouts, tamaños y
+componentes para móvil añade trabajo y condiciona una interfaz que se está diseñando y evaluando en pantallas
+de escritorio.
+
+## Decisión
+
+La referencia de diseño será escritorio. No se añadirán media queries ni ajustes responsive específicos para
+móvil salvo que una necesidad futura los justifique expresamente.
+
+## Alternativas consideradas
+
+- Diseñar mobile-first.
+- Mantener paridad visual obligatoria entre escritorio y móvil desde el inicio.
+
+## Consecuencias
+
+El CSS permanece más pequeño y la revisión visual se hace contra una referencia estable. La ausencia de trabajo
+móvil es deliberada, no un olvido.

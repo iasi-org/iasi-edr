@@ -1,0 +1,41 @@
+---
+id: EDR-20002
+title: "Publicar iasi-edr como Quarto book estructurado"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-16
+tags:
+  - "quarto"
+  - "book"
+  - "structured"
+affects:
+  - "iasi-edr"
+  - "iasi-quarto"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Los EDR son documentos individuales organizados por áreas, pero también forman una publicación consultable
+como conjunto. Una web plana perdería la relación natural entre área y documentos.
+
+## Decisión
+
+`iasi-edr` será un proyecto Quarto de tipo `book` y utilizará la estrategia de publicación `structured` de
+`iasi.quarto`.
+
+## Alternativas consideradas
+
+- Publicarlo como website.
+- Mantener solo archivos QMD sin publicación conjunta.
+- Construir manualmente el `book.chapters`.
+
+## Consecuencias
+
+Cada área puede representarse como una parte del libro y cada EDR como documento de esa estructura, mientras
+`iasi.quarto` puede derivar el `_book-structure.yml`.

@@ -1,0 +1,42 @@
+---
+id: EDR-20003
+title: "Definir las áreas EDR en _iasi.yml"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-16
+tags:
+  - "edr"
+  - "yaml"
+  - "configuración"
+affects:
+  - "iasi-edr"
+  - "_iasi.yml"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+El generador de índices, el futuro Addin y cualquier validación necesitan conocer la correspondencia entre
+código, nombre y directorio de cada área. Duplicar esa información en scripts y páginas produciría divergencia.
+
+## Decisión
+
+`_iasi.yml` será la fuente estructural legible por máquina para el catálogo de áreas EDR, incluyendo como
+mínimo `id`, `name` y `path`. `index.qmd` permanece como contenido humano y no se convierte en un contenedor
+de configuración oculto.
+
+## Alternativas consideradas
+
+- Codificar las áreas directamente en R.
+- Mantener la tabla únicamente en `index.qmd`.
+- Crear un catálogo duplicado por cada consumidor.
+
+## Consecuencias
+
+Los consumidores comparten una única definición de estructura y el contenido editorial sigue separado de la
+configuración.

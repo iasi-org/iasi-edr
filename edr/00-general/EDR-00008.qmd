@@ -1,0 +1,41 @@
+---
+id: EDR-00008
+title: "Separar el proceso vivido del resultado consolidado"
+status: accepted
+area:
+  id: "00"
+  name: "General"
+created: 2026-08-16
+tags:
+  - "journey"
+  - "books"
+  - "trazabilidad"
+affects:
+  - "iasi-journey"
+  - "iasi-books"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Las metodologías suelen describir únicamente el resultado final, pero IASI también quiere conservar el
+proceso efectivo: discusiones, errores, cambios de criterio y descubrimientos que llevaron a ese estado.
+
+## Decisión
+
+El Book contiene la versión final y correcta del conocimiento. `iasi-journey` conserva cómo se llegó a
+ella. Las entradas del Journey se tratan como registros inmutables del proceso y no se reescriben para
+hacer que el pasado parezca coherente con la decisión final.
+
+## Alternativas consideradas
+
+- Reescribir el Journey cuando cambia la conclusión.
+- Incluir toda la conversación histórica dentro del Book.
+
+## Consecuencias
+
+IASI puede mostrar tanto el conocimiento consolidado como el proceso real que lo produjo. La discrepancia
+histórica deja de ser ruido y se convierte en evidencia de evolución.

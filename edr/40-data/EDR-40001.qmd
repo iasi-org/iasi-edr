@@ -1,0 +1,40 @@
+---
+id: EDR-40001
+title: "Usar el front matter como fuente de metadatos del EDR"
+status: accepted
+area:
+  id: "40"
+  name: "Datos"
+created: 2026-08-16
+tags:
+  - "metadata"
+  - "yaml"
+  - "edr"
+affects:
+  - "iasi-edr"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Los índices, búsquedas, validaciones y herramientas de creación necesitan leer información estructurada de
+cada decisión sin interpretar su prosa.
+
+## Decisión
+
+Cada EDR almacenará en el front matter, como mínimo, `id`, `title`, `status`, `area`, `created`, `tags`,
+`affects`, `related`, `supersedes` y `superseded-by`. El cuerpo del documento conserva el razonamiento.
+
+## Alternativas consideradas
+
+- Inferir metadatos del nombre del archivo.
+- Mantener un catálogo YAML externo con todos los documentos.
+- Extraer clasificación mediante análisis del texto.
+
+## Consecuencias
+
+Cada documento es autocontenido y legible por máquina. Las herramientas pueden indexarlo sin mantener una
+segunda base de datos de metadatos.

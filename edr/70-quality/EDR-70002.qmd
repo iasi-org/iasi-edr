@@ -1,0 +1,40 @@
+---
+id: EDR-70002
+title: "Fallar ante inconsistencias estructurales del registro EDR"
+status: accepted
+area:
+  id: "70"
+  name: "Calidad"
+created: 2026-08-16
+tags:
+  - "validation"
+  - "fail-fast"
+  - "edr"
+affects:
+  - "iasi-edr"
+  - "R/create-index.R"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Omitir silenciosamente un directorio, un identificador incorrecto o un front matter incompleto permitiría
+publicar un catálogo aparentemente correcto pero parcial.
+
+## Decisión
+
+Las herramientas EDR fallarán ante inconsistencias relevantes: directorios configurados que no existen,
+documentos sin `id` o `title`, identificadores que no corresponden al área y duplicados detectables.
+
+## Alternativas consideradas
+
+- Emitir warnings y continuar siempre.
+- Ignorar archivos problemáticos durante la generación del índice.
+
+## Consecuencias
+
+Un render fallido es preferible a una publicación incompleta que parezca válida. Los errores estructurales
+se convierten en defectos visibles y corregibles.

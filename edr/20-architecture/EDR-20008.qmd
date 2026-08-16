@@ -1,0 +1,40 @@
+---
+id: EDR-20008
+title: "Usar la navbar como navegación principal de iasi-edr en HTML"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-16
+tags:
+  - "html"
+  - "navbar"
+  - "navegación"
+  - "quarto"
+affects:
+  - "iasi-edr"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Un Quarto Book ofrece por defecto sidebar de libro y TOC de página. En EDR esos dos elementos duplican la
+navegación porque las áreas ya forman un catálogo pequeño y estable accesible desde la cabecera.
+
+## Decisión
+
+En el perfil HTML de `iasi-edr` la navegación principal será la navbar con Inicio y las áreas EDR.
+La sidebar izquierda se desactiva y el TOC flotante derecho también se desactiva.
+
+## Alternativas consideradas
+
+- Mantener la navegación estándar de Quarto Book.
+- Usar solo sidebar sin navbar.
+
+## Consecuencias
+
+El contenido gana anchura y el usuario dispone de un único mapa de navegación. Esta decisión afecta solo a
+HTML y no se incorpora a la configuración común del proyecto.

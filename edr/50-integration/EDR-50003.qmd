@@ -1,0 +1,40 @@
+---
+id: EDR-50003
+title: "Clasificar los productos técnicos por su forma de uso"
+status: accepted
+area:
+  id: "50"
+  name: "Integración"
+created: 2026-08-16
+tags:
+  - "productos"
+  - "tool"
+  - "extension"
+  - "mcp"
+affects:
+  - "iasi-home"
+  - "products"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+El ecosistema contiene componentes de naturaleza distinta. Llamarlos a todos “herramientas” oculta cómo se
+consumen y qué debe instalar o configurar el usuario.
+
+## Decisión
+
+La documentación distinguirá al menos tres tipos de producto técnico: `Herramienta`, `Extensión` y
+`Servidor MCP`. Cada producto se presenta según su forma real de integración.
+
+## Alternativas consideradas
+
+- Usar “MCP” como categoría de producto.
+- Presentar todos los repositorios bajo una única etiqueta genérica.
+
+## Consecuencias
+
+La navegación y la documentación pueden comunicar de inmediato el modo de consumo esperado de cada pieza.

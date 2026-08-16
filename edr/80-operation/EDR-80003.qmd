@@ -1,0 +1,39 @@
+---
+id: EDR-80003
+title: "Usar scripts R reutilizables para preview y render"
+status: accepted
+area:
+  id: "80"
+  name: "Operación"
+created: 2026-08-16
+tags:
+  - "r"
+  - "quarto"
+  - "automation"
+affects:
+  - "iasi-books"
+  - "tooling"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Repetir comandos largos de Quarto en terminal dispersa conocimiento operativo y facilita variaciones entre
+ejecuciones.
+
+## Decisión
+
+IASI utilizará scripts R reutilizables para las operaciones recurrentes de preview y render, como mínimo para
+HTML y PDF, en lugar de depender únicamente de comandos manuales recordados por el usuario.
+
+## Alternativas consideradas
+
+- Ejecutar siempre comandos Quarto manualmente.
+- Ocultar todo el proceso dentro del IDE sin scripts versionados.
+
+## Consecuencias
+
+Las operaciones frecuentes quedan documentadas como código y pueden evolucionar junto al proyecto.

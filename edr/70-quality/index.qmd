@@ -1,0 +1,11 @@
+---
+title: "Calidad"
+---
+
+Esta sección reúne los Engineering Decision Records clasificados en el área **Calidad** (`70`).
+
+| ID | Título |
+|---|---|
+| [EDR-70001](EDR-70001.qmd) | Validar la estructura Quarto antes de preparar o renderizar |
+| [EDR-70002](EDR-70002.qmd) | Fallar ante inconsistencias estructurales del registro EDR |
+| [EDR-70003](EDR-70003.qmd) | Regenerar de forma determinista los artefactos derivados |

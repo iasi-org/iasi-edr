@@ -1,0 +1,30 @@
+---
+id: EDR-00000
+title: "Título de la decisión"
+status: proposed
+area:
+  id: "00"
+  name: "General"
+created: YYYY-MM-DD
+tags: []
+affects: []
+related: []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+¿Qué problema, necesidad o situación requiere una decisión?
+
+## Decisión
+
+¿Qué hemos decidido?
+
+## Alternativas consideradas
+
+¿Qué otras opciones se consideraron y por qué no se eligieron?
+
+## Consecuencias
+
+¿Qué implica esta decisión, tanto positiva como negativamente?

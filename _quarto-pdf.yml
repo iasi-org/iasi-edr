@@ -1,4 +1,6 @@
-# _quarto-pdf.yml
+project:
+  output-dir: _outputs/pdf
+
 format:
   pdf:
     toc: true

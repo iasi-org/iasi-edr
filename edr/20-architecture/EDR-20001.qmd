@@ -1,0 +1,40 @@
+---
+id: EDR-20001
+title: "Mantener iasi-edr como repositorio independiente"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-16
+tags:
+  - "edr"
+  - "repositorio"
+  - "arquitectura"
+affects:
+  - "iasi-edr"
+  - "iasi-books"
+  - "artifacts"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Las decisiones afectan a múltiples libros y productos. Si viven dentro de uno de ellos, ese repositorio
+adquiere una autoridad que no corresponde a decisiones transversales.
+
+## Decisión
+
+`iasi-edr` será un repositorio independiente del Book, Journey y demás productos de IASI.
+
+## Alternativas consideradas
+
+- Integrar los EDR en el repositorio principal de un libro.
+- Mantener un directorio ADR dentro de cada producto.
+
+## Consecuencias
+
+El registro de decisiones tiene ciclo de vida y publicación propios. Cualquier repositorio puede referenciarlo
+sin dependencia jerárquica.

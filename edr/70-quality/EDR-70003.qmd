@@ -1,0 +1,40 @@
+---
+id: EDR-70003
+title: "Regenerar de forma determinista los artefactos derivados"
+status: accepted
+area:
+  id: "70"
+  name: "Calidad"
+created: 2026-08-16
+tags:
+  - "reproducibility"
+  - "generated"
+  - "quality"
+affects:
+  - "iasi-edr"
+  - "iasi-quarto"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Los archivos generados introducen incertidumbre si su contenido depende del estado previo o de modificaciones
+manuales.
+
+## Decisión
+
+Los artefactos derivados se reconstruirán completamente a partir de sus fuentes y con orden estable. En EDR,
+los índices se ordenarán por identificador y no conservarán contenido manual entre ejecuciones.
+
+## Alternativas consideradas
+
+- Actualizar incrementalmente los índices existentes.
+- Preservar secciones manuales dentro de archivos generados.
+
+## Consecuencias
+
+Dos ejecuciones sobre las mismas fuentes producen el mismo resultado. Los cambios generados son revisables y
+no esconden estado acumulado.

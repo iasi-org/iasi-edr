@@ -1,0 +1,43 @@
+---
+id: EDR-00010
+title: "Adoptar desarrollo dirigido por especificaciones"
+status: accepted
+area:
+  id: "00"
+  name: "General"
+created: 2026-08-16
+tags:
+  - "openspec"
+  - "specification-driven"
+  - "metodología"
+affects:
+  - "openspec"
+  - "implementation"
+  - "agentic-development"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+La reducción del coste de implementación aumenta el valor relativo de decidir y especificar correctamente
+qué debe construirse. La implementación, humana o asistida por IA, no debe convertirse en el lugar donde
+se descubre implícitamente el comportamiento esperado.
+
+## Decisión
+
+IASI adopta desarrollo dirigido por especificaciones. La especificación explícita es un artefacto principal
+y precede a la implementación cuando el cambio lo requiere. OpenSpec se utiliza como mecanismo para
+materializar este enfoque allí donde resulte aplicable.
+
+## Alternativas consideradas
+
+- Implementar primero y documentar después.
+- Confiar en prompts o conversaciones efímeras como única especificación.
+
+## Consecuencias
+
+Las implementaciones pueden cambiar de herramienta o agente sin perder la intención. La revisión se centra
+primero en qué debe ocurrir y después en cómo se implementa.

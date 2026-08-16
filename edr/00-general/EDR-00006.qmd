@@ -1,0 +1,42 @@
+---
+id: EDR-00006
+title: "Limitar la velocidad del sistema a la capacidad humana sostenible"
+status: accepted
+area:
+  id: "00"
+  name: "General"
+created: 2026-08-16
+tags:
+  - "human-ai"
+  - "metodología"
+  - "ritmo"
+affects:
+  - "agentic-workflows"
+  - "methodology"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+La disponibilidad continua de agentes elimina esperas que antes actuaban como pausas naturales. El
+humano puede encadenar decisiones de alta intensidad mientras la IA resuelve tareas paralelas, incluso
+cuando su capacidad de comprender y validar ya está disminuyendo.
+
+## Decisión
+
+La velocidad sostenible de IASI se diseñará alrededor de la capacidad humana para comprender, decidir,
+validar y asimilar, no alrededor de la velocidad máxima de los agentes. No se confundirá disponibilidad
+de la IA con disponibilidad humana.
+
+## Alternativas consideradas
+
+- Maximizar siempre el paralelismo de agentes.
+- Medir productividad solo por volumen o tiempo de ejecución.
+
+## Consecuencias
+
+Los workflows deben admitir pausas, límites y momentos de asimilación. El rendimiento se evalúa por la
+calidad sostenible de las decisiones, no por mantener ocupados todos los agentes.

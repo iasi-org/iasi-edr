@@ -1,0 +1,41 @@
+---
+id: EDR-10003
+title: "Ofrecer iasi-home en castellano e inglés con detección automática"
+status: accepted
+area:
+  id: "10"
+  name: "Funcional"
+created: 2026-08-16
+tags:
+  - "iasi-home"
+  - "i18n"
+  - "javascript"
+affects:
+  - "iasi-home"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+La landing necesita versiones en castellano e inglés sin duplicar toda la arquitectura del sitio ni
+obligar al visitante a escoger idioma antes de entrar.
+
+## Decisión
+
+La raíz mantendrá `index_es.qmd` e `index_en.qmd`. `index.qmd` actuará como entrada de detección y el
+JavaScript común resolverá el idioma al cargar, permitiendo además el cambio explícito entre versiones.
+Los recursos compartidos permanecerán fuera de árboles específicos de idioma.
+
+## Alternativas consideradas
+
+- Mantener una jerarquía completa `pages/en/`.
+- Publicar solo un idioma.
+- Duplicar recursos y páginas comunes por idioma.
+
+## Consecuencias
+
+La estructura bilingüe permanece pequeña y predecible. Las páginas comunes pueden tener variantes de
+idioma sin replicar todo el sitio.

@@ -1,0 +1,42 @@
+---
+id: EDR-00009
+title: "Hacer emerger las prácticas desde necesidades reales"
+status: accepted
+area:
+  id: "00"
+  name: "General"
+created: 2026-08-16
+tags:
+  - "metodología"
+  - "emergencia"
+  - "caso-de-estudio"
+affects:
+  - "iasi"
+  - "openspec"
+  - "skills"
+  - "agentics"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+IASI es a la vez metodología y caso de estudio de su propia construcción. Introducir de antemano skills,
+especificaciones, agentes o procesos completos convertiría el proyecto en una demostración prefabricada.
+
+## Decisión
+
+Las prácticas, skills, automatizaciones y mecanismos de IASI deben surgir cuando una necesidad real del
+propio ecosistema los justifique. IASI se utilizará como caso de estudio vivo para validar esas decisiones.
+
+## Alternativas consideradas
+
+- Diseñar por adelantado el framework completo y después buscar ejemplos.
+- Adoptar una práctica porque sea habitual en otros ecosistemas.
+
+## Consecuencias
+
+Cada componente puede señalar la necesidad concreta que lo originó. El framework final se apoya en
+experiencia acumulada y no solo en diseño teórico.
