@@ -17,3 +17,4 @@ Esta sección reúne los Engineering Decision Records clasificados en el área *
 | [EDR-20009](EDR-20009.qmd) | Componer el estilo HTML con SCSS común y específico |
 | [EDR-20010](EDR-20010.qmd) | Mantener iasi-graphics deliberadamente simple |
 | [EDR-20011](EDR-20011.qmd) | Crear un espacio dedicado para capacidades agentic de IASI |
+

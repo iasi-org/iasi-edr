@@ -5,3 +5,4 @@ title: "Pendiente de clasificar"
 Esta sección reúne los Engineering Decision Records clasificados en el área **Pendiente de clasificar** (`99`).
 
 Actualmente no hay EDR registrados en esta área.
+

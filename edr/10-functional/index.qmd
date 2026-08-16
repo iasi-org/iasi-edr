@@ -11,3 +11,4 @@ Esta sección reúne los Engineering Decision Records clasificados en el área *
 | [EDR-10003](EDR-10003.qmd) | Ofrecer iasi-home en castellano e inglés con detección automática |
 | [EDR-10004](EDR-10004.qmd) | Generar un catálogo por área de EDR |
 | [EDR-10005](EDR-10005.qmd) | Crear EDR mediante un Addin de RStudio |
+

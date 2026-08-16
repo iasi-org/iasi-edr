@@ -9,3 +9,4 @@ Esta sección reúne los Engineering Decision Records clasificados en el área *
 | [EDR-50001](EDR-50001.qmd) | Distinguir MCP del servidor MCP |
 | [EDR-50002](EDR-50002.qmd) | Exponer PlantUML como capacidad utilizable por modelos |
 | [EDR-50003](EDR-50003.qmd) | Clasificar los productos técnicos por su forma de uso |
+

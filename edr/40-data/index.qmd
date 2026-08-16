@@ -9,3 +9,4 @@ Esta sección reúne los Engineering Decision Records clasificados en el área *
 | [EDR-40001](EDR-40001.qmd) | Usar el front matter como fuente de metadatos del EDR |
 | [EDR-40002](EDR-40002.qmd) | Tratar los índices de área como datos derivados |
 | [EDR-40003](EDR-40003.qmd) | Hacer los EDR consultables por metadatos y texto completo |
+

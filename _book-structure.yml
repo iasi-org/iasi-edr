@@ -61,3 +61,4 @@ book:
         - "edr/80-operation/EDR-80003.qmd"
         - "edr/80-operation/EDR-80004.qmd"
     - part: "edr/99-pending/index.qmd"
+    - "areas-edr.qmd"

@@ -16,3 +16,4 @@ Esta sección reúne los Engineering Decision Records clasificados en el área *
 | [EDR-00008](EDR-00008.qmd) | Separar el proceso vivido del resultado consolidado |
 | [EDR-00009](EDR-00009.qmd) | Hacer emerger las prácticas desde necesidades reales |
 | [EDR-00010](EDR-00010.qmd) | Adoptar desarrollo dirigido por especificaciones |
+

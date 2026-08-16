@@ -5,3 +5,4 @@ title: "Seguridad"
 Esta sección reúne los Engineering Decision Records clasificados en el área **Seguridad** (`60`).
 
 Actualmente no hay EDR registrados en esta área.
+

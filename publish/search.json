@@ -1,0 +1,2568 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Áreas EDR",
+    "section": "",
+    "text": "0.1 Áreas\nLos Engineering Decision Records de IASI utilizan identificadores con la forma:\ndonde:\nEl área permite conocer la naturaleza principal de una decisión antes incluso de abrir el EDR.\nnn\nÁrea\nCriterio\n\n\n\n\n00\nGeneral\nDecisiones transversales o relativas al propio funcionamiento de IASI.\n\n\n10\nFuncional\nQué debe hacer el sistema y qué comportamiento debe ofrecer.\n\n\n20\nArquitectura\nEstructura del sistema, componentes, responsabilidades y relaciones.\n\n\n30\nConstraints\nRestricciones que condicionan o limitan las posibles soluciones.\n\n\n40\nDatos\nModelos, persistencia, intercambio, ciclo de vida y gobierno del dato.\n\n\n50\nIntegración\nInterfaces, protocolos y comunicación entre sistemas o componentes.\n\n\n60\nSeguridad\nIdentidad, acceso, protección, amenazas y controles.\n\n\n70\nCalidad\nValidación, pruebas, observabilidad y atributos de calidad.\n\n\n80\nOperación\nDespliegue, ejecución, configuración, infraestructura y explotación.\n\n\n99\nPendiente de clasificar\nDecisiones registradas provisionalmente cuya clasificación definitiva todavía no se ha determinado.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#búsqueda-y-tags",
+    "href": "index.html#búsqueda-y-tags",
+    "title": "Áreas EDR",
+    "section": "0.2 Búsqueda y tags",
+    "text": "0.2 Búsqueda y tags\nEn la publicación HTML, la lupa realiza una búsqueda de texto completo sobre el libro.\nCada EDR pertenece a una única área principal, pero puede incorporar varios tags para describir temas transversales. Los tags se definen una sola vez en el front matter y se muestran automáticamente en la página del EDR, por lo que también forman parte de la búsqueda.\nLa regla es sencilla:\n\nel área responde a dónde se clasifica principalmente una decisión;\nlos tags responden a de qué habla la decisión y permiten encontrarla desde otros ángulos.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#reglas-de-clasificación",
+    "href": "index.html#reglas-de-clasificación",
+    "title": "Áreas EDR",
+    "section": "0.3 Reglas de clasificación",
+    "text": "0.3 Reglas de clasificación\nCada EDR pertenece a una única área principal.\nEl área representa la naturaleza de la decisión, no:\n\nla herramienta utilizada;\nla tecnología elegida;\nel repositorio donde se implementa;\nel equipo responsable.\n\nCuando una decisión afecta a varios ámbitos, se asigna al área que mejor represente el objeto principal de la decisión.\nLos efectos secundarios pueden expresarse mediante los metadatos del EDR.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#área-00-general",
+    "href": "index.html#área-00-general",
+    "title": "Áreas EDR",
+    "section": "0.4 Área 00 — General",
+    "text": "0.4 Área 00 — General\n00 está reservado para decisiones generales o transversales.\nTambién pertenece a esta área cualquier decisión relacionada con el propio sistema de Engineering Decision Records.\nPor ejemplo:\nEDR-00001\npuede definir el modelo, estructura y reglas de los propios EDR.\n00 no debe utilizarse simplemente porque una decisión resulte difícil de clasificar.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#área-10-funcional",
+    "href": "index.html#área-10-funcional",
+    "title": "Áreas EDR",
+    "section": "0.5 Área 10 — Funcional",
+    "text": "0.5 Área 10 — Funcional\nEl área 10 agrupa decisiones relacionadas con qué debe hacer el sistema.\nIncluye decisiones sobre:\n\ncomportamiento funcional;\ncapacidades ofrecidas;\nreglas de negocio;\ninteracción entre el sistema y sus usuarios;\nresultados esperados;\ncriterios funcionales.\n\nUna decisión pertenece a esta área cuando su cuestión principal puede formularse aproximadamente como:\n\n¿Qué comportamiento debe ofrecer el sistema?",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#área-20-arquitectura",
+    "href": "index.html#área-20-arquitectura",
+    "title": "Áreas EDR",
+    "section": "0.6 Área 20 — Arquitectura",
+    "text": "0.6 Área 20 — Arquitectura\nEl área 20 agrupa decisiones relacionadas con cómo se estructura el sistema.\nIncluye decisiones sobre:\n\ncomponentes;\nresponsabilidades;\nrelaciones entre componentes;\nseparación de responsabilidades;\norganización interna;\nestilos y patrones arquitectónicos;\ndistribución de capacidades;\nfronteras entre subsistemas.\n\nUna decisión pertenece a esta área cuando su cuestión principal puede formularse aproximadamente como:\n\n¿Cómo organizamos el sistema para satisfacer sus necesidades?",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#área-30-constraints",
+    "href": "index.html#área-30-constraints",
+    "title": "Áreas EDR",
+    "section": "0.7 Área 30 — Constraints",
+    "text": "0.7 Área 30 — Constraints\nEl área 30 agrupa decisiones derivadas de restricciones que condicionan el espacio de soluciones posibles.\nIncluye restricciones:\n\ntécnicas;\norganizativas;\noperativas;\nregulatorias;\neconómicas;\ntemporales;\nde compatibilidad;\nde plataforma;\nimpuestas por sistemas externos.\n\nUna decisión pertenece a esta área cuando su cuestión principal parte de una condición que no puede ignorarse libremente.\nLos constraints no describen necesariamente qué queremos hacer, sino qué límites debe respetar cualquier solución válida.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#área-40-datos",
+    "href": "index.html#área-40-datos",
+    "title": "Áreas EDR",
+    "section": "0.8 Área 40 — Datos",
+    "text": "0.8 Área 40 — Datos\nEl área 40 agrupa decisiones relacionadas con la representación, persistencia, intercambio y ciclo de vida de los datos.\nIncluye decisiones sobre:\n\nmodelos de datos;\nestructuras y formatos;\nalmacenamiento y persistencia;\nmigraciones;\nretención y ciclo de vida;\ncalidad y gobierno del dato;\nintercambio y transformación de información.\n\nUna decisión pertenece a esta área cuando el elemento principal sobre el que se decide es el dato y su tratamiento.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#área-50-integración",
+    "href": "index.html#área-50-integración",
+    "title": "Áreas EDR",
+    "section": "0.9 Área 50 — Integración",
+    "text": "0.9 Área 50 — Integración\nEl área 50 agrupa decisiones relacionadas con la comunicación entre sistemas, servicios o componentes.\nIncluye decisiones sobre:\n\ninterfaces;\nAPIs;\nprotocolos;\nmensajería;\ncontratos de integración;\ninteroperabilidad;\nmecanismos de comunicación;\ndependencias con sistemas externos.\n\nUna decisión pertenece a esta área cuando su cuestión principal es cómo se relacionan o intercambian información distintos elementos del sistema.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#área-60-seguridad",
+    "href": "index.html#área-60-seguridad",
+    "title": "Áreas EDR",
+    "section": "0.10 Área 60 — Seguridad",
+    "text": "0.10 Área 60 — Seguridad\nEl área 60 agrupa decisiones relacionadas con la protección del sistema, sus usuarios y su información.\nIncluye decisiones sobre:\n\nidentidad;\nautenticación;\nautorización;\ngestión de secretos;\nprotección de datos;\namenazas;\ncontroles;\naislamiento;\ntrazabilidad de seguridad.\n\nUna decisión pertenece a esta área cuando su propósito principal es reducir riesgos o establecer mecanismos de protección.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#área-70-calidad",
+    "href": "index.html#área-70-calidad",
+    "title": "Áreas EDR",
+    "section": "0.11 Área 70 — Calidad",
+    "text": "0.11 Área 70 — Calidad\nEl área 70 agrupa decisiones relacionadas con la validación del sistema y sus atributos de calidad.\nIncluye decisiones sobre:\n\npruebas;\nacceptance tests;\nvalidación;\nverificación;\nobservabilidad;\nmétricas;\nrendimiento;\nfiabilidad;\nmantenibilidad;\ncriterios de calidad.\n\nUna decisión pertenece a esta área cuando define cómo demostrar, medir o asegurar que el sistema cumple las propiedades esperadas.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#área-80-operación",
+    "href": "index.html#área-80-operación",
+    "title": "Áreas EDR",
+    "section": "0.12 Área 80 — Operación",
+    "text": "0.12 Área 80 — Operación\nEl área 80 agrupa decisiones relacionadas con la ejecución y explotación del sistema.\nIncluye decisiones sobre:\n\ndespliegue;\nconfiguración;\ninfraestructura;\nentornos;\nejecución;\nautomatización operativa;\nmonitorización;\nrecuperación;\nmantenimiento en producción.\n\nUna decisión pertenece a esta área cuando su cuestión principal es cómo ejecutar, desplegar, configurar o mantener el sistema en funcionamiento.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#área-99-pendiente-de-clasificar",
+    "href": "index.html#área-99-pendiente-de-clasificar",
+    "title": "Áreas EDR",
+    "section": "0.13 Área 99 — Pendiente de clasificar",
+    "text": "0.13 Área 99 — Pendiente de clasificar\n99 está reservado para decisiones que deben registrarse, pero cuya clasificación definitiva todavía no está clara.\nSu uso es provisional.\nDebe utilizarse para evitar dos problemas:\n\nretrasar el registro de una decisión porque todavía no se sabe dónde clasificarla;\nforzar una clasificación prematura que después resulte incorrecta.\n\n99 no es una categoría residual ni un destino permanente.\nCuando se determine el área correcta, la decisión debe trasladarse a su clasificación definitiva.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#criterio-de-asignación",
+    "href": "index.html#criterio-de-asignación",
+    "title": "Áreas EDR",
+    "section": "0.14 Criterio de asignación",
+    "text": "0.14 Criterio de asignación\nPara determinar nn, debe identificarse primero la naturaleza principal de la decisión.\nPuede utilizarse esta secuencia:\n\n¿Cuál es el problema que estamos resolviendo?\n¿Qué aspecto de la ingeniería estamos decidiendo?\n¿Dónde tendría sentido buscar esta decisión dentro de varios años?\n¿Seguiría perteneciendo a la misma área si cambiase la tecnología utilizada?\n\nLa respuesta determina el área principal.\nEn caso de duda entre varias áreas, debe seleccionarse aquella que mejor represente la razón por la que existe la decisión.\nSi todavía no existe información suficiente para hacerlo con criterio, se utiliza provisionalmente el área 99.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#una-única-clasificación-principal",
+    "href": "index.html#una-única-clasificación-principal",
+    "title": "Áreas EDR",
+    "section": "0.15 Una única clasificación principal",
+    "text": "0.15 Una única clasificación principal\nUna decisión puede afectar simultáneamente a múltiples ámbitos.\nPor ejemplo, una decisión arquitectónica puede tener consecuencias funcionales, operativas o de seguridad.\nEsto no implica que deba pertenecer a varias áreas.\nCada EDR tiene un único nn.\nLos demás efectos se expresan mediante metadatos como:\ntags:\n  - publication\n  - validation\n\naffects:\n  - iasi-quarto\n  - iasi-book-I\n\nrelated:\n  - EDR-20002\nEl identificador proporciona la clasificación principal.\nLos metadatos proporcionan el contexto adicional.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#el-área-no-depende-de-la-implementación",
+    "href": "index.html#el-área-no-depende-de-la-implementación",
+    "title": "Áreas EDR",
+    "section": "0.16 El área no depende de la implementación",
+    "text": "0.16 El área no depende de la implementación\nnn no debe asignarse según:\n\nel lenguaje de programación;\nel framework;\nla herramienta;\nel producto;\nel repositorio;\nel proveedor;\nel agente de IA que implemente la decisión.\n\nPor ejemplo, una decisión sobre cómo se estructura la publicación de IASI puede implementarse inicialmente en iasi-quarto.\nEso no convierte automáticamente la decisión en una decisión sobre Quarto.\nLa pregunta relevante es qué se está decidiendo desde el punto de vista de ingeniería.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#estabilidad",
+    "href": "index.html#estabilidad",
+    "title": "Áreas EDR",
+    "section": "0.17 Estabilidad",
+    "text": "0.17 Estabilidad\nUna vez asignado un código nn a un área:\n\nsu significado no cambia;\nno se reutiliza para otro ámbito;\nlos EDR clasificados conservan su identificador.\n\nLos códigos de área son permanentes.\nEl área 99 constituye la excepción: representa explícitamente un estado provisional pendiente de clasificación.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#separación-entre-áreas",
+    "href": "index.html#separación-entre-áreas",
+    "title": "Áreas EDR",
+    "section": "0.18 Separación entre áreas",
+    "text": "0.18 Separación entre áreas\nLos códigos se asignan con separación deliberada:\n00\n10\n20\n30\n40\n50\n60\n70\n80\n99\nEsto mantiene una clasificación legible y deja espacio para incorporar nuevas áreas si la evolución de IASI lo hace necesario.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#creación-de-nuevas-áreas",
+    "href": "index.html#creación-de-nuevas-áreas",
+    "title": "Áreas EDR",
+    "section": "0.19 Creación de nuevas áreas",
+    "text": "0.19 Creación de nuevas áreas\nLa lista de áreas no pretende definir anticipadamente todos los ámbitos posibles de la ingeniería.\nSe crearán nuevas áreas cuando las decisiones reales de IASI hagan necesaria una nueva categoría estable.\nAntes de crear una nueva área debe comprobarse que:\n\nninguna de las áreas existentes representa adecuadamente la decisión;\nel nuevo ámbito tiene significado propio desde el punto de vista de ingeniería;\nno representa simplemente una herramienta, tecnología o producto;\nprevisiblemente podrá contener múltiples decisiones;\nsu significado puede mantenerse estable en el tiempo.\n\nLa taxonomía debe evolucionar a partir de necesidades reales.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#principio-de-evolución",
+    "href": "index.html#principio-de-evolución",
+    "title": "Áreas EDR",
+    "section": "0.20 Principio de evolución",
+    "text": "0.20 Principio de evolución\nIASI no pretende construir anticipadamente una clasificación completa de todas las decisiones de ingeniería posibles.\nLas áreas se incorporarán cuando aparezcan decisiones reales que justifiquen su existencia.\n\nLas áreas no se inventan por anticipado. Se descubren cuando las decisiones de ingeniería las hacen necesarias.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#regla-fundamental",
+    "href": "index.html#regla-fundamental",
+    "title": "Áreas EDR",
+    "section": "0.21 Regla fundamental",
+    "text": "0.21 Regla fundamental\n\nnn clasifica la naturaleza principal de la decisión. Los metadatos describen todo lo demás.\n\nEl identificador debe permitir saber dónde buscar una decisión.\nEl contenido y los metadatos explican su alcance, sus relaciones y sus consecuencias.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/index.html",
+    "href": "edr/00-general/index.html",
+    "title": "General",
+    "section": "",
+    "text": "Esta sección reúne los Engineering Decision Records clasificados en el área General (00).\n\n\n\nID\nTítulo\n\n\n\n\nEDR-00001\nRegistro único de decisiones de ingeniería\n\n\nEDR-00002\nIdentificación y clasificación de los EDR\n\n\nEDR-00003\nPartir de la necesidad y no de las herramientas disponibles\n\n\nEDR-00004\nEncapsular la complejidad interna\n\n\nEDR-00005\nAutomatizar lo repetible y mantener manual lo excepcional\n\n\nEDR-00006\nLimitar la velocidad del sistema a la capacidad humana sostenible\n\n\nEDR-00007\nOrganizar la obra de IASI en tres volúmenes\n\n\nEDR-00008\nSeparar el proceso vivido del resultado consolidado\n\n\nEDR-00009\nHacer emerger las prácticas desde necesidades reales\n\n\nEDR-00010\nAdoptar desarrollo dirigido por especificaciones",
+    "crumbs": [
+      "Inicio",
+      "General"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00001.html",
+    "href": "edr/00-general/EDR-00001.html",
+    "title": "2  Registro único de decisiones de ingeniería",
+    "section": "",
+    "text": "2.1 Contexto\nLas decisiones de IASI aparecen durante el desarrollo de libros, herramientas, infraestructura, experimentos y conversaciones de diseño. Si cada producto conserva su propia versión de una decisión, el razonamiento termina duplicado y puede divergir.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Registro único de decisiones de ingeniería</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00001.html#decisión",
+    "href": "edr/00-general/EDR-00001.html#decisión",
+    "title": "2  Registro único de decisiones de ingeniería",
+    "section": "2.2 Decisión",
+    "text": "2.2 Decisión\niasi-edr será el registro único de las decisiones de ingeniería de IASI. Los libros, artefactos, productos y el Journey pueden explicar o referenciar una decisión, pero no mantienen copias independientes de su contenido normativo.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Registro único de decisiones de ingeniería</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00001.html#alternativas-consideradas",
+    "href": "edr/00-general/EDR-00001.html#alternativas-consideradas",
+    "title": "2  Registro único de decisiones de ingeniería",
+    "section": "2.3 Alternativas consideradas",
+    "text": "2.3 Alternativas consideradas\n\nMantener ADR o notas de decisión dentro de cada repositorio.\nDocumentar únicamente el estado final en los libros.\nConservar las decisiones solo en el Journey.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Registro único de decisiones de ingeniería</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00001.html#consecuencias",
+    "href": "edr/00-general/EDR-00001.html#consecuencias",
+    "title": "2  Registro único de decisiones de ingeniería",
+    "section": "2.4 Consecuencias",
+    "text": "2.4 Consecuencias\nExiste un punto único para consultar por qué se tomó una decisión. Se reduce la duplicación y se hace posible referenciar una identidad estable desde cualquier pieza del ecosistema.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Registro único de decisiones de ingeniería</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00002.html",
+    "href": "edr/00-general/EDR-00002.html",
+    "title": "3  Identificación y clasificación de los EDR",
+    "section": "",
+    "text": "3.1 Contexto\nUn registro central necesita una identidad estable y una clasificación suficientemente amplia para localizar decisiones funcionales, arquitectónicas, operativas, de datos, calidad e integración sin reducir EDR a decisiones puramente arquitectónicas.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Identificación y clasificación de los EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00002.html#decisión",
+    "href": "edr/00-general/EDR-00002.html#decisión",
+    "title": "3  Identificación y clasificación de los EDR",
+    "section": "3.2 Decisión",
+    "text": "3.2 Decisión\nLos documentos usarán el identificador EDR-nnmmm, donde nn representa el área principal y mmm la secuencia dentro de esa área. 00 queda reservado para decisiones generales o transversales. Las áreas son: 00 General, 10 Funcional, 20 Arquitectura, 30 Constraints, 40 Datos, 50 Integración, 60 Seguridad, 70 Calidad, 80 Operación y 99 Pendiente de clasificar. Los identificadores definitivos son permanentes y no se reutilizan.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Identificación y clasificación de los EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00002.html#alternativas-consideradas",
+    "href": "edr/00-general/EDR-00002.html#alternativas-consideradas",
+    "title": "3  Identificación y clasificación de los EDR",
+    "section": "3.3 Alternativas consideradas",
+    "text": "3.3 Alternativas consideradas\n\nUna secuencia global sin clasificación.\nIdentificadores derivados únicamente del nombre del archivo.\nNumeración por repositorio o producto.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Identificación y clasificación de los EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00002.html#consecuencias",
+    "href": "edr/00-general/EDR-00002.html#consecuencias",
+    "title": "3  Identificación y clasificación de los EDR",
+    "section": "3.4 Consecuencias",
+    "text": "3.4 Consecuencias\nEl propio identificador aporta una primera señal de clasificación, permite ordenar documentos y mantiene referencias estables a lo largo del ecosistema.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Identificación y clasificación de los EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00003.html",
+    "href": "edr/00-general/EDR-00003.html",
+    "title": "4  Partir de la necesidad y no de las herramientas disponibles",
+    "section": "",
+    "text": "4.1 Contexto\nEmpezar preguntando cómo resolver un problema con las herramientas actuales condiciona el espacio de solución antes de haber entendido la necesidad. La capacidad disponible termina dictando el diseño.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Partir de la necesidad y no de las herramientas disponibles</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00003.html#decisión",
+    "href": "edr/00-general/EDR-00003.html#decisión",
+    "title": "4  Partir de la necesidad y no de las herramientas disponibles",
+    "section": "4.2 Decisión",
+    "text": "4.2 Decisión\nAnte un problema se preguntará primero qué se necesita para resolverlo. Solo después se evaluará si herramientas, tecnologías o prácticas existentes satisfacen esa necesidad. Si no lo hacen, se adaptarán o se crearán los mecanismos necesarios.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Partir de la necesidad y no de las herramientas disponibles</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00003.html#alternativas-consideradas",
+    "href": "edr/00-general/EDR-00003.html#alternativas-consideradas",
+    "title": "4  Partir de la necesidad y no de las herramientas disponibles",
+    "section": "4.3 Alternativas consideradas",
+    "text": "4.3 Alternativas consideradas\n\nElegir primero una herramienta y adaptar el problema a sus capacidades.\nLimitar la solución al catálogo tecnológico ya disponible.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Partir de la necesidad y no de las herramientas disponibles</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00003.html#consecuencias",
+    "href": "edr/00-general/EDR-00003.html#consecuencias",
+    "title": "4  Partir de la necesidad y no de las herramientas disponibles",
+    "section": "4.4 Consecuencias",
+    "text": "4.4 Consecuencias\nLas decisiones se justifican por la necesidad que resuelven y no por familiaridad tecnológica. La metodología mantiene abierto el espacio de diseño y obliga a cuestionar incluso las soluciones aparentemente establecidas.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Partir de la necesidad y no de las herramientas disponibles</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00004.html",
+    "href": "edr/00-general/EDR-00004.html",
+    "title": "5  Encapsular la complejidad interna",
+    "section": "",
+    "text": "5.1 Contexto\nUna solución puede requerir mecanismos internos complejos sin que esa complejidad deba trasladarse a quien la utiliza. Exponer cada detalle técnico convierte la potencia interna en fricción operativa.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Encapsular la complejidad interna</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00004.html#decisión",
+    "href": "edr/00-general/EDR-00004.html#decisión",
+    "title": "5  Encapsular la complejidad interna",
+    "section": "5.2 Decisión",
+    "text": "5.2 Decisión\nLos productos IASI deben encapsular la complejidad técnica detrás de interfaces, comandos y contratos simples. La complejidad se admite donde sea necesaria internamente, pero no se considera aceptable como coste impuesto al usuario.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Encapsular la complejidad interna</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00004.html#alternativas-consideradas",
+    "href": "edr/00-general/EDR-00004.html#alternativas-consideradas",
+    "title": "5  Encapsular la complejidad interna",
+    "section": "5.3 Alternativas consideradas",
+    "text": "5.3 Alternativas consideradas\n\nExponer directamente todos los componentes internos.\nSimplificar eliminando capacidades necesarias.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Encapsular la complejidad interna</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00004.html#consecuencias",
+    "href": "edr/00-general/EDR-00004.html#consecuencias",
+    "title": "5  Encapsular la complejidad interna",
+    "section": "5.4 Consecuencias",
+    "text": "5.4 Consecuencias\nEl diseño de interfaces pasa a ser parte de la ingeniería, no una capa cosmética. Una implementación compleja puede seguir ofreciendo un uso pequeño, explícito y predecible.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Encapsular la complejidad interna</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00005.html",
+    "href": "edr/00-general/EDR-00005.html",
+    "title": "6  Automatizar lo repetible y mantener manual lo excepcional",
+    "section": "",
+    "text": "6.1 Contexto\nNo toda tarea merece convertirse en un sistema general. Algunas aparecen con frecuencia y tienen una estructura clara; otras son excepcionales, visuales o requieren iteración específica.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Automatizar lo repetible y mantener manual lo excepcional</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00005.html#decisión",
+    "href": "edr/00-general/EDR-00005.html#decisión",
+    "title": "6  Automatizar lo repetible y mantener manual lo excepcional",
+    "section": "6.2 Decisión",
+    "text": "6.2 Decisión\nIASI automatizará los casos repetibles, estructurables y suficientemente frecuentes. Los casos excepcionales permanecerán manuales o se resolverán con herramientas especializadas cuando aparezcan.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Automatizar lo repetible y mantener manual lo excepcional</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00005.html#alternativas-consideradas",
+    "href": "edr/00-general/EDR-00005.html#alternativas-consideradas",
+    "title": "6  Automatizar lo repetible y mantener manual lo excepcional",
+    "section": "6.3 Alternativas consideradas",
+    "text": "6.3 Alternativas consideradas\n\nAutomatizar desde el principio cualquier caso imaginable.\nRenunciar a automatizar y resolver todo manualmente.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Automatizar lo repetible y mantener manual lo excepcional</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00005.html#consecuencias",
+    "href": "edr/00-general/EDR-00005.html#consecuencias",
+    "title": "6  Automatizar lo repetible y mantener manual lo excepcional",
+    "section": "6.4 Consecuencias",
+    "text": "6.4 Consecuencias\nSe reduce la superficie de mantenimiento y la complejidad accidental. La automatización crece cuando existe evidencia de repetición, no como anticipación especulativa.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Automatizar lo repetible y mantener manual lo excepcional</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00006.html",
+    "href": "edr/00-general/EDR-00006.html",
+    "title": "7  Limitar la velocidad del sistema a la capacidad humana sostenible",
+    "section": "",
+    "text": "7.1 Contexto\nLa disponibilidad continua de agentes elimina esperas que antes actuaban como pausas naturales. El humano puede encadenar decisiones de alta intensidad mientras la IA resuelve tareas paralelas, incluso cuando su capacidad de comprender y validar ya está disminuyendo.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Limitar la velocidad del sistema a la capacidad humana sostenible</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00006.html#decisión",
+    "href": "edr/00-general/EDR-00006.html#decisión",
+    "title": "7  Limitar la velocidad del sistema a la capacidad humana sostenible",
+    "section": "7.2 Decisión",
+    "text": "7.2 Decisión\nLa velocidad sostenible de IASI se diseñará alrededor de la capacidad humana para comprender, decidir, validar y asimilar, no alrededor de la velocidad máxima de los agentes. No se confundirá disponibilidad de la IA con disponibilidad humana.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Limitar la velocidad del sistema a la capacidad humana sostenible</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00006.html#alternativas-consideradas",
+    "href": "edr/00-general/EDR-00006.html#alternativas-consideradas",
+    "title": "7  Limitar la velocidad del sistema a la capacidad humana sostenible",
+    "section": "7.3 Alternativas consideradas",
+    "text": "7.3 Alternativas consideradas\n\nMaximizar siempre el paralelismo de agentes.\nMedir productividad solo por volumen o tiempo de ejecución.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Limitar la velocidad del sistema a la capacidad humana sostenible</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00006.html#consecuencias",
+    "href": "edr/00-general/EDR-00006.html#consecuencias",
+    "title": "7  Limitar la velocidad del sistema a la capacidad humana sostenible",
+    "section": "7.4 Consecuencias",
+    "text": "7.4 Consecuencias\nLos workflows deben admitir pausas, límites y momentos de asimilación. El rendimiento se evalúa por la calidad sostenible de las decisiones, no por mantener ocupados todos los agentes.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Limitar la velocidad del sistema a la capacidad humana sostenible</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00007.html",
+    "href": "edr/00-general/EDR-00007.html",
+    "title": "8  Organizar la obra de IASI en tres volúmenes",
+    "section": "",
+    "text": "8.1 Contexto\nEl material de IASI mezcla fundamentos, historia real de construcción y metodología consolidada. Un único volumen obliga a mezclar el porqué, el proceso y el resultado final.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Organizar la obra de IASI en tres volúmenes</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00007.html#decisión",
+    "href": "edr/00-general/EDR-00007.html#decisión",
+    "title": "8  Organizar la obra de IASI en tres volúmenes",
+    "section": "8.2 Decisión",
+    "text": "8.2 Decisión\nLa obra se separará en tres volúmenes: Volumen I para fundamentos y teoría, Volumen II para el viaje, errores y evolución, y Volumen III para la metodología o framework consolidado. Las partes se presentan con numeración romana y los capítulos mantienen numeración arábiga.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Organizar la obra de IASI en tres volúmenes</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00007.html#alternativas-consideradas",
+    "href": "edr/00-general/EDR-00007.html#alternativas-consideradas",
+    "title": "8  Organizar la obra de IASI en tres volúmenes",
+    "section": "8.3 Alternativas consideradas",
+    "text": "8.3 Alternativas consideradas\n\nUn único libro cronológico.\nUn libro puramente metodológico que oculte el proceso real.\nRepartir el contenido por tecnologías en lugar de por función narrativa.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Organizar la obra de IASI en tres volúmenes</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00007.html#consecuencias",
+    "href": "edr/00-general/EDR-00007.html#consecuencias",
+    "title": "8  Organizar la obra de IASI en tres volúmenes",
+    "section": "8.4 Consecuencias",
+    "text": "8.4 Consecuencias\nCada volumen puede mantener una voz y propósito propios sin perder coherencia. El lector puede distinguir teoría, evidencia del proceso y método final.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Organizar la obra de IASI en tres volúmenes</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00008.html",
+    "href": "edr/00-general/EDR-00008.html",
+    "title": "9  Separar el proceso vivido del resultado consolidado",
+    "section": "",
+    "text": "9.1 Contexto\nLas metodologías suelen describir únicamente el resultado final, pero IASI también quiere conservar el proceso efectivo: discusiones, errores, cambios de criterio y descubrimientos que llevaron a ese estado.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Separar el proceso vivido del resultado consolidado</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00008.html#decisión",
+    "href": "edr/00-general/EDR-00008.html#decisión",
+    "title": "9  Separar el proceso vivido del resultado consolidado",
+    "section": "9.2 Decisión",
+    "text": "9.2 Decisión\nEl Book contiene la versión final y correcta del conocimiento. iasi-journey conserva cómo se llegó a ella. Las entradas del Journey se tratan como registros inmutables del proceso y no se reescriben para hacer que el pasado parezca coherente con la decisión final.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Separar el proceso vivido del resultado consolidado</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00008.html#alternativas-consideradas",
+    "href": "edr/00-general/EDR-00008.html#alternativas-consideradas",
+    "title": "9  Separar el proceso vivido del resultado consolidado",
+    "section": "9.3 Alternativas consideradas",
+    "text": "9.3 Alternativas consideradas\n\nReescribir el Journey cuando cambia la conclusión.\nIncluir toda la conversación histórica dentro del Book.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Separar el proceso vivido del resultado consolidado</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00008.html#consecuencias",
+    "href": "edr/00-general/EDR-00008.html#consecuencias",
+    "title": "9  Separar el proceso vivido del resultado consolidado",
+    "section": "9.4 Consecuencias",
+    "text": "9.4 Consecuencias\nIASI puede mostrar tanto el conocimiento consolidado como el proceso real que lo produjo. La discrepancia histórica deja de ser ruido y se convierte en evidencia de evolución.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Separar el proceso vivido del resultado consolidado</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00009.html",
+    "href": "edr/00-general/EDR-00009.html",
+    "title": "10  Hacer emerger las prácticas desde necesidades reales",
+    "section": "",
+    "text": "10.1 Contexto\nIASI es a la vez metodología y caso de estudio de su propia construcción. Introducir de antemano skills, especificaciones, agentes o procesos completos convertiría el proyecto en una demostración prefabricada.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Hacer emerger las prácticas desde necesidades reales</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00009.html#decisión",
+    "href": "edr/00-general/EDR-00009.html#decisión",
+    "title": "10  Hacer emerger las prácticas desde necesidades reales",
+    "section": "10.2 Decisión",
+    "text": "10.2 Decisión\nLas prácticas, skills, automatizaciones y mecanismos de IASI deben surgir cuando una necesidad real del propio ecosistema los justifique. IASI se utilizará como caso de estudio vivo para validar esas decisiones.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Hacer emerger las prácticas desde necesidades reales</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00009.html#alternativas-consideradas",
+    "href": "edr/00-general/EDR-00009.html#alternativas-consideradas",
+    "title": "10  Hacer emerger las prácticas desde necesidades reales",
+    "section": "10.3 Alternativas consideradas",
+    "text": "10.3 Alternativas consideradas\n\nDiseñar por adelantado el framework completo y después buscar ejemplos.\nAdoptar una práctica porque sea habitual en otros ecosistemas.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Hacer emerger las prácticas desde necesidades reales</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00009.html#consecuencias",
+    "href": "edr/00-general/EDR-00009.html#consecuencias",
+    "title": "10  Hacer emerger las prácticas desde necesidades reales",
+    "section": "10.4 Consecuencias",
+    "text": "10.4 Consecuencias\nCada componente puede señalar la necesidad concreta que lo originó. El framework final se apoya en experiencia acumulada y no solo en diseño teórico.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Hacer emerger las prácticas desde necesidades reales</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00010.html",
+    "href": "edr/00-general/EDR-00010.html",
+    "title": "11  Adoptar desarrollo dirigido por especificaciones",
+    "section": "",
+    "text": "11.1 Contexto\nLa reducción del coste de implementación aumenta el valor relativo de decidir y especificar correctamente qué debe construirse. La implementación, humana o asistida por IA, no debe convertirse en el lugar donde se descubre implícitamente el comportamiento esperado.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Adoptar desarrollo dirigido por especificaciones</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00010.html#decisión",
+    "href": "edr/00-general/EDR-00010.html#decisión",
+    "title": "11  Adoptar desarrollo dirigido por especificaciones",
+    "section": "11.2 Decisión",
+    "text": "11.2 Decisión\nIASI adopta desarrollo dirigido por especificaciones. La especificación explícita es un artefacto principal y precede a la implementación cuando el cambio lo requiere. OpenSpec se utiliza como mecanismo para materializar este enfoque allí donde resulte aplicable.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Adoptar desarrollo dirigido por especificaciones</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00010.html#alternativas-consideradas",
+    "href": "edr/00-general/EDR-00010.html#alternativas-consideradas",
+    "title": "11  Adoptar desarrollo dirigido por especificaciones",
+    "section": "11.3 Alternativas consideradas",
+    "text": "11.3 Alternativas consideradas\n\nImplementar primero y documentar después.\nConfiar en prompts o conversaciones efímeras como única especificación.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Adoptar desarrollo dirigido por especificaciones</span>"
+    ]
+  },
+  {
+    "objectID": "edr/00-general/EDR-00010.html#consecuencias",
+    "href": "edr/00-general/EDR-00010.html#consecuencias",
+    "title": "11  Adoptar desarrollo dirigido por especificaciones",
+    "section": "11.4 Consecuencias",
+    "text": "11.4 Consecuencias\nLas implementaciones pueden cambiar de herramienta o agente sin perder la intención. La revisión se centra primero en qué debe ocurrir y después en cómo se implementa.",
+    "crumbs": [
+      "Inicio",
+      "General",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Adoptar desarrollo dirigido por especificaciones</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/index.html",
+    "href": "edr/10-functional/index.html",
+    "title": "Funcional",
+    "section": "",
+    "text": "Esta sección reúne los Engineering Decision Records clasificados en el área Funcional (10).\n\n\n\nID\nTítulo\n\n\n\n\nEDR-10001\nUsar iasi-home como puerta de entrada visual al ecosistema\n\n\nEDR-10002\nDistinguir libros de productos y artefactos en iasi-home\n\n\nEDR-10003\nOfrecer iasi-home en castellano e inglés con detección automática\n\n\nEDR-10004\nGenerar un catálogo por área de EDR\n\n\nEDR-10005\nCrear EDR mediante un Addin de RStudio",
+    "crumbs": [
+      "Inicio",
+      "Funcional"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10001.html",
+    "href": "edr/10-functional/EDR-10001.html",
+    "title": "12  Usar iasi-home como puerta de entrada visual al ecosistema",
+    "section": "",
+    "text": "12.1 Contexto\nIASI ya no es un único libro con repositorios auxiliares, sino un ecosistema con varios libros, productos y artefactos. Hace falta un punto de entrada que permita orientarse sin conocer previamente su estructura.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Usar iasi-home como puerta de entrada visual al ecosistema</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10001.html#decisión",
+    "href": "edr/10-functional/EDR-10001.html#decisión",
+    "title": "12  Usar iasi-home como puerta de entrada visual al ecosistema",
+    "section": "12.2 Decisión",
+    "text": "12.2 Decisión\niasi-home será la portada navegable del ecosistema IASI y concentrará el acceso visual a sus principales piezas.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Usar iasi-home como puerta de entrada visual al ecosistema</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10001.html#alternativas-consideradas",
+    "href": "edr/10-functional/EDR-10001.html#alternativas-consideradas",
+    "title": "12  Usar iasi-home como puerta de entrada visual al ecosistema",
+    "section": "12.3 Alternativas consideradas",
+    "text": "12.3 Alternativas consideradas\n\nUsar GitHub como única página de entrada.\nHacer que cada libro funcione como portada del ecosistema.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Usar iasi-home como puerta de entrada visual al ecosistema</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10001.html#consecuencias",
+    "href": "edr/10-functional/EDR-10001.html#consecuencias",
+    "title": "12  Usar iasi-home como puerta de entrada visual al ecosistema",
+    "section": "12.4 Consecuencias",
+    "text": "12.4 Consecuencias\nLa navegación comienza por el mapa del ecosistema y después desciende a cada pieza. iasi-home no necesita absorber el contenido de los productos, solo presentarlos y enlazarlos.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Usar iasi-home como puerta de entrada visual al ecosistema</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10002.html",
+    "href": "edr/10-functional/EDR-10002.html",
+    "title": "13  Distinguir libros de productos y artefactos en iasi-home",
+    "section": "",
+    "text": "13.1 Contexto\nLos libros y los repositorios reutilizables cumplen funciones diferentes. Presentarlos como una lista homogénea oculta esa diferencia y dificulta entender qué se lee y qué se usa.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Distinguir libros de productos y artefactos en iasi-home</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10002.html#decisión",
+    "href": "edr/10-functional/EDR-10002.html#decisión",
+    "title": "13  Distinguir libros de productos y artefactos en iasi-home",
+    "section": "13.2 Decisión",
+    "text": "13.2 Decisión\niasi-home distinguirá explícitamente los libros de los productos, artefactos o repositorios reutilizables. La estructura visual debe mostrar ambas familias sin confundir publicación editorial con herramienta.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Distinguir libros de productos y artefactos en iasi-home</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10002.html#alternativas-consideradas",
+    "href": "edr/10-functional/EDR-10002.html#alternativas-consideradas",
+    "title": "13  Distinguir libros de productos y artefactos en iasi-home",
+    "section": "13.3 Alternativas consideradas",
+    "text": "13.3 Alternativas consideradas\n\nUna única lista de repositorios.\nClasificar todo como documentación.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Distinguir libros de productos y artefactos en iasi-home</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10002.html#consecuencias",
+    "href": "edr/10-functional/EDR-10002.html#consecuencias",
+    "title": "13  Distinguir libros de productos y artefactos en iasi-home",
+    "section": "13.4 Consecuencias",
+    "text": "13.4 Consecuencias\nEl visitante entiende antes la naturaleza de cada pieza y puede elegir si quiere leer, explorar una metodología o utilizar un producto.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Distinguir libros de productos y artefactos en iasi-home</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10003.html",
+    "href": "edr/10-functional/EDR-10003.html",
+    "title": "14  Ofrecer iasi-home en castellano e inglés con detección automática",
+    "section": "",
+    "text": "14.1 Contexto\nLa landing necesita versiones en castellano e inglés sin duplicar toda la arquitectura del sitio ni obligar al visitante a escoger idioma antes de entrar.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Ofrecer iasi-home en castellano e inglés con detección automática</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10003.html#decisión",
+    "href": "edr/10-functional/EDR-10003.html#decisión",
+    "title": "14  Ofrecer iasi-home en castellano e inglés con detección automática",
+    "section": "14.2 Decisión",
+    "text": "14.2 Decisión\nLa raíz mantendrá index_es.qmd e index_en.qmd. index.qmd actuará como entrada de detección y el JavaScript común resolverá el idioma al cargar, permitiendo además el cambio explícito entre versiones. Los recursos compartidos permanecerán fuera de árboles específicos de idioma.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Ofrecer iasi-home en castellano e inglés con detección automática</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10003.html#alternativas-consideradas",
+    "href": "edr/10-functional/EDR-10003.html#alternativas-consideradas",
+    "title": "14  Ofrecer iasi-home en castellano e inglés con detección automática",
+    "section": "14.3 Alternativas consideradas",
+    "text": "14.3 Alternativas consideradas\n\nMantener una jerarquía completa pages/en/.\nPublicar solo un idioma.\nDuplicar recursos y páginas comunes por idioma.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Ofrecer iasi-home en castellano e inglés con detección automática</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10003.html#consecuencias",
+    "href": "edr/10-functional/EDR-10003.html#consecuencias",
+    "title": "14  Ofrecer iasi-home en castellano e inglés con detección automática",
+    "section": "14.4 Consecuencias",
+    "text": "14.4 Consecuencias\nLa estructura bilingüe permanece pequeña y predecible. Las páginas comunes pueden tener variantes de idioma sin replicar todo el sitio.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Ofrecer iasi-home en castellano e inglés con detección automática</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10004.html",
+    "href": "edr/10-functional/EDR-10004.html",
+    "title": "15  Generar un catálogo por área de EDR",
+    "section": "",
+    "text": "15.1 Contexto\nCada área de EDR necesita una entrada navegable incluso cuando todavía no contiene decisiones. Mantener manualmente listas de documentos introduce desajustes en cuanto se crea, mueve o renombra un registro.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Generar un catálogo por área de EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10004.html#decisión",
+    "href": "edr/10-functional/EDR-10004.html#decisión",
+    "title": "15  Generar un catálogo por área de EDR",
+    "section": "15.2 Decisión",
+    "text": "15.2 Decisión\nCada directorio de área tendrá un index.qmd generado automáticamente. El documento incluirá siempre una introducción que identifique el área y, cuando existan registros, una tabla simple ID | Título con enlaces. Si el área está vacía, mostrará un mensaje explícito en lugar de quedar sin contenido.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Generar un catálogo por área de EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10004.html#alternativas-consideradas",
+    "href": "edr/10-functional/EDR-10004.html#alternativas-consideradas",
+    "title": "15  Generar un catálogo por área de EDR",
+    "section": "15.3 Alternativas consideradas",
+    "text": "15.3 Alternativas consideradas\n\nMantener el catálogo a mano.\nNo crear páginas de área hasta que exista el primer EDR.\nMostrar metadatos completos en el catálogo.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Generar un catálogo por área de EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10004.html#consecuencias",
+    "href": "edr/10-functional/EDR-10004.html#consecuencias",
+    "title": "15  Generar un catálogo por área de EDR",
+    "section": "15.4 Consecuencias",
+    "text": "15.4 Consecuencias\nTodas las áreas son navegables desde el primer día y el catálogo refleja siempre los documentos realmente existentes.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Generar un catálogo por área de EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10005.html",
+    "href": "edr/10-functional/EDR-10005.html",
+    "title": "16  Crear EDR mediante un Addin de RStudio",
+    "section": "",
+    "text": "16.1 Contexto\nCrear un EDR a mano obliga a recordar área, secuencia, nombre de archivo, ruta y front matter. Es trabajo mecánico y además puede romper la consistencia del registro.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Crear EDR mediante un Addin de RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10005.html#decisión",
+    "href": "edr/10-functional/EDR-10005.html#decisión",
+    "title": "16  Crear EDR mediante un Addin de RStudio",
+    "section": "16.2 Decisión",
+    "text": "16.2 Decisión\nLa creación ordinaria de EDR se realizará mediante un Addin de RStudio apoyado en una plantilla. El usuario selecciona el área y proporciona el título; el sistema calcula el siguiente identificador, resuelve el directorio, genera el front matter y abre el documento creado.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Crear EDR mediante un Addin de RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10005.html#alternativas-consideradas",
+    "href": "edr/10-functional/EDR-10005.html#alternativas-consideradas",
+    "title": "16  Crear EDR mediante un Addin de RStudio",
+    "section": "16.3 Alternativas consideradas",
+    "text": "16.3 Alternativas consideradas\n\nCrear archivos manualmente.\nPedir al usuario que escriba el número de área y la secuencia.\nMantener un contador externo separado de los documentos.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Crear EDR mediante un Addin de RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "edr/10-functional/EDR-10005.html#consecuencias",
+    "href": "edr/10-functional/EDR-10005.html#consecuencias",
+    "title": "16  Crear EDR mediante un Addin de RStudio",
+    "section": "16.4 Consecuencias",
+    "text": "16.4 Consecuencias\nEl humano decide el contenido y la clasificación; el sistema mantiene la mecánica de identidad y ubicación. El flujo queda preparado para regenerar el índice de área después de crear el documento.",
+    "crumbs": [
+      "Inicio",
+      "Funcional",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Crear EDR mediante un Addin de RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/index.html",
+    "href": "edr/20-architecture/index.html",
+    "title": "Arquitectura",
+    "section": "",
+    "text": "Esta sección reúne los Engineering Decision Records clasificados en el área Arquitectura (20).\n\n\n\nID\nTítulo\n\n\n\n\nEDR-20001\nMantener iasi-edr como repositorio independiente\n\n\nEDR-20002\nPublicar iasi-edr como Quarto book estructurado\n\n\nEDR-20003\nDefinir las áreas EDR en _iasi.yml\n\n\nEDR-20004\nOrganizar físicamente los EDR por área\n\n\nEDR-20005\nRegenerar los índices EDR en pre-render\n\n\nEDR-20006\nMantener la lógica específica de EDR fuera de iasi.quarto\n\n\nEDR-20007\nSeparar la configuración común de los perfiles HTML y PDF\n\n\nEDR-20008\nUsar la navbar como navegación principal de iasi-edr en HTML\n\n\nEDR-20009\nComponer el estilo HTML con SCSS común y específico\n\n\nEDR-20010\nMantener iasi-graphics deliberadamente simple\n\n\nEDR-20011\nCrear un espacio dedicado para capacidades agentic de IASI",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20001.html",
+    "href": "edr/20-architecture/EDR-20001.html",
+    "title": "17  Mantener iasi-edr como repositorio independiente",
+    "section": "",
+    "text": "17.1 Contexto\nLas decisiones afectan a múltiples libros y productos. Si viven dentro de uno de ellos, ese repositorio adquiere una autoridad que no corresponde a decisiones transversales.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Mantener iasi-edr como repositorio independiente</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20001.html#decisión",
+    "href": "edr/20-architecture/EDR-20001.html#decisión",
+    "title": "17  Mantener iasi-edr como repositorio independiente",
+    "section": "17.2 Decisión",
+    "text": "17.2 Decisión\niasi-edr será un repositorio independiente del Book, Journey y demás productos de IASI.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Mantener iasi-edr como repositorio independiente</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20001.html#alternativas-consideradas",
+    "href": "edr/20-architecture/EDR-20001.html#alternativas-consideradas",
+    "title": "17  Mantener iasi-edr como repositorio independiente",
+    "section": "17.3 Alternativas consideradas",
+    "text": "17.3 Alternativas consideradas\n\nIntegrar los EDR en el repositorio principal de un libro.\nMantener un directorio ADR dentro de cada producto.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Mantener iasi-edr como repositorio independiente</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20001.html#consecuencias",
+    "href": "edr/20-architecture/EDR-20001.html#consecuencias",
+    "title": "17  Mantener iasi-edr como repositorio independiente",
+    "section": "17.4 Consecuencias",
+    "text": "17.4 Consecuencias\nEl registro de decisiones tiene ciclo de vida y publicación propios. Cualquier repositorio puede referenciarlo sin dependencia jerárquica.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Mantener iasi-edr como repositorio independiente</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20002.html",
+    "href": "edr/20-architecture/EDR-20002.html",
+    "title": "18  Publicar iasi-edr como Quarto book estructurado",
+    "section": "",
+    "text": "18.1 Contexto\nLos EDR son documentos individuales organizados por áreas, pero también forman una publicación consultable como conjunto. Una web plana perdería la relación natural entre área y documentos.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Publicar iasi-edr como Quarto book estructurado</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20002.html#decisión",
+    "href": "edr/20-architecture/EDR-20002.html#decisión",
+    "title": "18  Publicar iasi-edr como Quarto book estructurado",
+    "section": "18.2 Decisión",
+    "text": "18.2 Decisión\niasi-edr será un proyecto Quarto de tipo book y utilizará la estrategia de publicación structured de iasi.quarto.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Publicar iasi-edr como Quarto book estructurado</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20002.html#alternativas-consideradas",
+    "href": "edr/20-architecture/EDR-20002.html#alternativas-consideradas",
+    "title": "18  Publicar iasi-edr como Quarto book estructurado",
+    "section": "18.3 Alternativas consideradas",
+    "text": "18.3 Alternativas consideradas\n\nPublicarlo como website.\nMantener solo archivos QMD sin publicación conjunta.\nConstruir manualmente el book.chapters.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Publicar iasi-edr como Quarto book estructurado</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20002.html#consecuencias",
+    "href": "edr/20-architecture/EDR-20002.html#consecuencias",
+    "title": "18  Publicar iasi-edr como Quarto book estructurado",
+    "section": "18.4 Consecuencias",
+    "text": "18.4 Consecuencias\nCada área puede representarse como una parte del libro y cada EDR como documento de esa estructura, mientras iasi.quarto puede derivar el _book-structure.yml.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Publicar iasi-edr como Quarto book estructurado</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20003.html",
+    "href": "edr/20-architecture/EDR-20003.html",
+    "title": "19  Definir las áreas EDR en _iasi.yml",
+    "section": "",
+    "text": "19.1 Contexto\nEl generador de índices, el futuro Addin y cualquier validación necesitan conocer la correspondencia entre código, nombre y directorio de cada área. Duplicar esa información en scripts y páginas produciría divergencia.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Definir las áreas EDR en _iasi.yml</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20003.html#decisión",
+    "href": "edr/20-architecture/EDR-20003.html#decisión",
+    "title": "19  Definir las áreas EDR en _iasi.yml",
+    "section": "19.2 Decisión",
+    "text": "19.2 Decisión\n_iasi.yml será la fuente estructural legible por máquina para el catálogo de áreas EDR, incluyendo como mínimo id, name y path. index.qmd permanece como contenido humano y no se convierte en un contenedor de configuración oculto.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Definir las áreas EDR en _iasi.yml</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20003.html#alternativas-consideradas",
+    "href": "edr/20-architecture/EDR-20003.html#alternativas-consideradas",
+    "title": "19  Definir las áreas EDR en _iasi.yml",
+    "section": "19.3 Alternativas consideradas",
+    "text": "19.3 Alternativas consideradas\n\nCodificar las áreas directamente en R.\nMantener la tabla únicamente en index.qmd.\nCrear un catálogo duplicado por cada consumidor.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Definir las áreas EDR en _iasi.yml</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20003.html#consecuencias",
+    "href": "edr/20-architecture/EDR-20003.html#consecuencias",
+    "title": "19  Definir las áreas EDR en _iasi.yml",
+    "section": "19.4 Consecuencias",
+    "text": "19.4 Consecuencias\nLos consumidores comparten una única definición de estructura y el contenido editorial sigue separado de la configuración.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Definir las áreas EDR en _iasi.yml</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20004.html",
+    "href": "edr/20-architecture/EDR-20004.html",
+    "title": "20  Organizar físicamente los EDR por área",
+    "section": "",
+    "text": "20.1 Contexto\nLa clasificación del identificador debe reflejarse también en la organización física para que el repositorio sea comprensible sin necesidad de ejecutar herramientas.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Organizar físicamente los EDR por área</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20004.html#decisión",
+    "href": "edr/20-architecture/EDR-20004.html#decisión",
+    "title": "20  Organizar físicamente los EDR por área",
+    "section": "20.2 Decisión",
+    "text": "20.2 Decisión\nLos documentos vivirán bajo edr/&lt;nn-area&gt;/. La estructura estable incluye los directorios 00-general, 10-functional, 20-architecture, 30-constraints, 40-data, 50-integration, 60-security, 70-quality, 80-operation y 99-pending.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Organizar físicamente los EDR por área</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20004.html#alternativas-consideradas",
+    "href": "edr/20-architecture/EDR-20004.html#alternativas-consideradas",
+    "title": "20  Organizar físicamente los EDR por área",
+    "section": "20.3 Alternativas consideradas",
+    "text": "20.3 Alternativas consideradas\n\nGuardar todos los EDR en un único directorio.\nSepararlos por producto afectado.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Organizar físicamente los EDR por área</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20004.html#consecuencias",
+    "href": "edr/20-architecture/EDR-20004.html#consecuencias",
+    "title": "20  Organizar físicamente los EDR por área",
+    "section": "20.4 Consecuencias",
+    "text": "20.4 Consecuencias\nLa ruta física coincide con la clasificación primaria. Un documento tiene una sola ubicación principal, mientras que sus relaciones transversales se expresan mediante metadatos.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Organizar físicamente los EDR por área</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20005.html",
+    "href": "edr/20-architecture/EDR-20005.html",
+    "title": "21  Regenerar los índices EDR en pre-render",
+    "section": "",
+    "text": "21.1 Contexto\nLos índices de área son contenido derivado y deben estar actualizados cuando se publica, sin exigir una acción manual adicional después de crear o modificar un EDR.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Regenerar los índices EDR en pre-render</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20005.html#decisión",
+    "href": "edr/20-architecture/EDR-20005.html#decisión",
+    "title": "21  Regenerar los índices EDR en pre-render",
+    "section": "21.2 Decisión",
+    "text": "21.2 Decisión\nQuarto ejecutará R/create-index.R mediante project.pre-render. El script leerá las áreas desde _iasi.yml, recorrerá los EDR de cada directorio, extraerá id y title, validará la correspondencia con el área y regenerará el index.qmd correspondiente.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Regenerar los índices EDR en pre-render</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20005.html#alternativas-consideradas",
+    "href": "edr/20-architecture/EDR-20005.html#alternativas-consideradas",
+    "title": "21  Regenerar los índices EDR en pre-render",
+    "section": "21.3 Alternativas consideradas",
+    "text": "21.3 Alternativas consideradas\n\nActualizar índices desde el Addin únicamente.\nRegenerarlos mediante una tarea manual separada.\nIntegrar la lógica directamente en iasi.quarto.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Regenerar los índices EDR en pre-render</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20005.html#consecuencias",
+    "href": "edr/20-architecture/EDR-20005.html#consecuencias",
+    "title": "21  Regenerar los índices EDR en pre-render",
+    "section": "21.4 Consecuencias",
+    "text": "21.4 Consecuencias\nEl render siempre parte de índices frescos. La publicación falla si la estructura física contradice la configuración, evitando resultados silenciosamente incompletos.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Regenerar los índices EDR en pre-render</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20006.html",
+    "href": "edr/20-architecture/EDR-20006.html",
+    "title": "22  Mantener la lógica específica de EDR fuera de iasi.quarto",
+    "section": "",
+    "text": "22.1 Contexto\niasi.quarto proporciona infraestructura genérica de publicación. La generación de catálogos por áreas EDR responde a un modelo particular que, por ahora, no ha demostrado ser necesario en otras publicaciones.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Mantener la lógica específica de EDR fuera de iasi.quarto</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20006.html#decisión",
+    "href": "edr/20-architecture/EDR-20006.html#decisión",
+    "title": "22  Mantener la lógica específica de EDR fuera de iasi.quarto",
+    "section": "22.2 Decisión",
+    "text": "22.2 Decisión\nLa lógica específica de EDR permanecerá en iasi-edr, inicialmente bajo R/. Solo se promoverá a iasi.quarto cuando exista evidencia de reutilización real.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Mantener la lógica específica de EDR fuera de iasi.quarto</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20006.html#alternativas-consideradas",
+    "href": "edr/20-architecture/EDR-20006.html#alternativas-consideradas",
+    "title": "22  Mantener la lógica específica de EDR fuera de iasi.quarto",
+    "section": "22.3 Alternativas consideradas",
+    "text": "22.3 Alternativas consideradas\n\nIncorporar inmediatamente cualquier automatización nueva a iasi.quarto.\nDuplicar la lógica entre ambos repositorios.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Mantener la lógica específica de EDR fuera de iasi.quarto</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20006.html#consecuencias",
+    "href": "edr/20-architecture/EDR-20006.html#consecuencias",
+    "title": "22  Mantener la lógica específica de EDR fuera de iasi.quarto",
+    "section": "22.4 Consecuencias",
+    "text": "22.4 Consecuencias\niasi.quarto conserva una responsabilidad genérica y EDR puede evolucionar con rapidez sin convertir una necesidad local en contrato global.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Mantener la lógica específica de EDR fuera de iasi.quarto</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20007.html",
+    "href": "edr/20-architecture/EDR-20007.html",
+    "title": "23  Separar la configuración común de los perfiles HTML y PDF",
+    "section": "",
+    "text": "23.1 Contexto\nHTML y PDF comparten estructura documental pero requieren presentación, recursos y directorios de salida distintos. Mezclar ambas configuraciones en un único YAML hace difícil distinguir qué es común y qué depende del formato.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Separar la configuración común de los perfiles HTML y PDF</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20007.html#decisión",
+    "href": "edr/20-architecture/EDR-20007.html#decisión",
+    "title": "23  Separar la configuración común de los perfiles HTML y PDF",
+    "section": "23.2 Decisión",
+    "text": "23.2 Decisión\n_quarto.yml contendrá la configuración común y declarará el grupo de perfiles. _quarto-html.yml y _quarto-pdf.yml contendrán respectivamente la configuración específica de HTML y PDF.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Separar la configuración común de los perfiles HTML y PDF</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20007.html#alternativas-consideradas",
+    "href": "edr/20-architecture/EDR-20007.html#alternativas-consideradas",
+    "title": "23  Separar la configuración común de los perfiles HTML y PDF",
+    "section": "23.3 Alternativas consideradas",
+    "text": "23.3 Alternativas consideradas\n\nUn único _quarto.yml con condicionales o configuración acumulada.\nRepositorios separados para cada formato.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Separar la configuración común de los perfiles HTML y PDF</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20007.html#consecuencias",
+    "href": "edr/20-architecture/EDR-20007.html#consecuencias",
+    "title": "23  Separar la configuración común de los perfiles HTML y PDF",
+    "section": "23.4 Consecuencias",
+    "text": "23.4 Consecuencias\nCada perfil puede evolucionar sin contaminar al otro y la configuración común permanece visible en un único lugar.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Separar la configuración común de los perfiles HTML y PDF</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20008.html",
+    "href": "edr/20-architecture/EDR-20008.html",
+    "title": "24  Usar la navbar como navegación principal de iasi-edr en HTML",
+    "section": "",
+    "text": "24.1 Contexto\nUn Quarto Book ofrece por defecto sidebar de libro y TOC de página. En EDR esos dos elementos duplican la navegación porque las áreas ya forman un catálogo pequeño y estable accesible desde la cabecera.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Usar la navbar como navegación principal de iasi-edr en HTML</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20008.html#decisión",
+    "href": "edr/20-architecture/EDR-20008.html#decisión",
+    "title": "24  Usar la navbar como navegación principal de iasi-edr en HTML",
+    "section": "24.2 Decisión",
+    "text": "24.2 Decisión\nEn el perfil HTML de iasi-edr la navegación principal será la navbar con Inicio y las áreas EDR. La sidebar izquierda se desactiva y el TOC flotante derecho también se desactiva.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Usar la navbar como navegación principal de iasi-edr en HTML</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20008.html#alternativas-consideradas",
+    "href": "edr/20-architecture/EDR-20008.html#alternativas-consideradas",
+    "title": "24  Usar la navbar como navegación principal de iasi-edr en HTML",
+    "section": "24.3 Alternativas consideradas",
+    "text": "24.3 Alternativas consideradas\n\nMantener la navegación estándar de Quarto Book.\nUsar solo sidebar sin navbar.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Usar la navbar como navegación principal de iasi-edr en HTML</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20008.html#consecuencias",
+    "href": "edr/20-architecture/EDR-20008.html#consecuencias",
+    "title": "24  Usar la navbar como navegación principal de iasi-edr en HTML",
+    "section": "24.4 Consecuencias",
+    "text": "24.4 Consecuencias\nEl contenido gana anchura y el usuario dispone de un único mapa de navegación. Esta decisión afecta solo a HTML y no se incorpora a la configuración común del proyecto.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Usar la navbar como navegación principal de iasi-edr en HTML</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20009.html",
+    "href": "edr/20-architecture/EDR-20009.html",
+    "title": "25  Componer el estilo HTML con SCSS común y específico",
+    "section": "",
+    "text": "25.1 Contexto\nEl ecosistema necesita identidad visual compartida, pero cada producto puede requerir reglas propias. Un solo fichero global haría que ajustes locales terminasen afectando a publicaciones no relacionadas.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Componer el estilo HTML con SCSS común y específico</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20009.html#decisión",
+    "href": "edr/20-architecture/EDR-20009.html#decisión",
+    "title": "25  Componer el estilo HTML con SCSS común y específico",
+    "section": "25.2 Decisión",
+    "text": "25.2 Decisión\nLos estilos vivirán en resources/css/. iasi.scss contendrá la base visual común y edr.scss las especializaciones de EDR. El theme HTML cargará primero el estilo común y después el específico.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Componer el estilo HTML con SCSS común y específico</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20009.html#alternativas-consideradas",
+    "href": "edr/20-architecture/EDR-20009.html#alternativas-consideradas",
+    "title": "25  Componer el estilo HTML con SCSS común y específico",
+    "section": "25.3 Alternativas consideradas",
+    "text": "25.3 Alternativas consideradas\n\nMantener CSS independiente y duplicado en cada producto.\nIncluir todas las reglas EDR en el fichero común.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Componer el estilo HTML con SCSS común y específico</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20009.html#consecuencias",
+    "href": "edr/20-architecture/EDR-20009.html#consecuencias",
+    "title": "25  Componer el estilo HTML con SCSS común y específico",
+    "section": "25.4 Consecuencias",
+    "text": "25.4 Consecuencias\nEDR puede sobrescribir detalles sin romper la identidad general. El orden de carga deja explícita la relación base-especialización.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Componer el estilo HTML con SCSS común y específico</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20010.html",
+    "href": "edr/20-architecture/EDR-20010.html",
+    "title": "26  Mantener iasi-graphics deliberadamente simple",
+    "section": "",
+    "text": "26.1 Contexto\nLa mayoría de las necesidades repetibles de IASI son diagramas editoriales sencillos: cajas, círculos, relaciones y composiciones previsibles. Los casos visuales complejos son mucho menos frecuentes y necesitan iteración específica.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Mantener iasi-graphics deliberadamente simple</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20010.html#decisión",
+    "href": "edr/20-architecture/EDR-20010.html#decisión",
+    "title": "26  Mantener iasi-graphics deliberadamente simple",
+    "section": "26.2 Decisión",
+    "text": "26.2 Decisión\niasi-graphics se limitará en su fase actual a generar gráficos sencillos, claros y correctos. Las figuras complejas se resolverán excepcionalmente con herramientas de generación de imagen, PowerPoint u otra herramienta adecuada al caso.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Mantener iasi-graphics deliberadamente simple</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20010.html#alternativas-consideradas",
+    "href": "edr/20-architecture/EDR-20010.html#alternativas-consideradas",
+    "title": "26  Mantener iasi-graphics deliberadamente simple",
+    "section": "26.3 Alternativas consideradas",
+    "text": "26.3 Alternativas consideradas\n\nConstruir desde el inicio un motor gráfico general.\nResolver manualmente incluso los patrones sencillos repetidos.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Mantener iasi-graphics deliberadamente simple</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20010.html#consecuencias",
+    "href": "edr/20-architecture/EDR-20010.html#consecuencias",
+    "title": "26  Mantener iasi-graphics deliberadamente simple",
+    "section": "26.4 Consecuencias",
+    "text": "26.4 Consecuencias\nLa herramienta permanece pequeña y automatiza justo la parte repetible. Los casos raros no dictan la arquitectura del caso común.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Mantener iasi-graphics deliberadamente simple</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20011.html",
+    "href": "edr/20-architecture/EDR-20011.html",
+    "title": "27  Crear un espacio dedicado para capacidades agentic de IASI",
+    "section": "",
+    "text": "27.1 Contexto\nA medida que IASI incorpora comandos, skills, agentes y adaptadores, esas capacidades dejan de ser simples notas de uso de una herramienta concreta y forman una capa reutilizable del ecosistema.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Crear un espacio dedicado para capacidades agentic de IASI</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20011.html#decisión",
+    "href": "edr/20-architecture/EDR-20011.html#decisión",
+    "title": "27  Crear un espacio dedicado para capacidades agentic de IASI",
+    "section": "27.2 Decisión",
+    "text": "27.2 Decisión\nIASI mantendrá un espacio dedicado agentics para organizar comandos, skills, adaptadores y demás capacidades agentic que surjan de la metodología, separándolas de los libros y de la implementación de productos concretos.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Crear un espacio dedicado para capacidades agentic de IASI</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20011.html#alternativas-consideradas",
+    "href": "edr/20-architecture/EDR-20011.html#alternativas-consideradas",
+    "title": "27  Crear un espacio dedicado para capacidades agentic de IASI",
+    "section": "27.3 Alternativas consideradas",
+    "text": "27.3 Alternativas consideradas\n\nGuardar cada skill dentro del repositorio donde se utilizó por primera vez.\nAcoplar las capacidades a una única plataforma de agentes.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Crear un espacio dedicado para capacidades agentic de IASI</span>"
+    ]
+  },
+  {
+    "objectID": "edr/20-architecture/EDR-20011.html#consecuencias",
+    "href": "edr/20-architecture/EDR-20011.html#consecuencias",
+    "title": "27  Crear un espacio dedicado para capacidades agentic de IASI",
+    "section": "27.4 Consecuencias",
+    "text": "27.4 Consecuencias\nLa metodología puede definir capacidades propias y adaptar su ejecución a plataformas como Codex sin convertir la plataforma en la definición del comportamiento.",
+    "crumbs": [
+      "Inicio",
+      "Arquitectura",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Crear un espacio dedicado para capacidades agentic de IASI</span>"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/index.html",
+    "href": "edr/30-constraints/index.html",
+    "title": "Constraints",
+    "section": "",
+    "text": "Esta sección reúne los Engineering Decision Records clasificados en el área Constraints (30).\n\n\n\nID\nTítulo\n\n\n\n\nEDR-30001\nDiseñar las publicaciones IASI para escritorio\n\n\nEDR-30002\nEvitar la generalización prematura\n\n\nEDR-30003\nConstruir manualmente la infraestructura antes de automatizarla",
+    "crumbs": [
+      "Inicio",
+      "Constraints"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/EDR-30001.html",
+    "href": "edr/30-constraints/EDR-30001.html",
+    "title": "28  Diseñar las publicaciones IASI para escritorio",
+    "section": "",
+    "text": "28.1 Contexto\nEl uso principal previsto para las publicaciones IASI es escritorio. Ajustar continuamente layouts, tamaños y componentes para móvil añade trabajo y condiciona una interfaz que se está diseñando y evaluando en pantallas de escritorio.",
+    "crumbs": [
+      "Inicio",
+      "Constraints",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Diseñar las publicaciones IASI para escritorio</span>"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/EDR-30001.html#decisión",
+    "href": "edr/30-constraints/EDR-30001.html#decisión",
+    "title": "28  Diseñar las publicaciones IASI para escritorio",
+    "section": "28.2 Decisión",
+    "text": "28.2 Decisión\nLa referencia de diseño será escritorio. No se añadirán media queries ni ajustes responsive específicos para móvil salvo que una necesidad futura los justifique expresamente.",
+    "crumbs": [
+      "Inicio",
+      "Constraints",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Diseñar las publicaciones IASI para escritorio</span>"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/EDR-30001.html#alternativas-consideradas",
+    "href": "edr/30-constraints/EDR-30001.html#alternativas-consideradas",
+    "title": "28  Diseñar las publicaciones IASI para escritorio",
+    "section": "28.3 Alternativas consideradas",
+    "text": "28.3 Alternativas consideradas\n\nDiseñar mobile-first.\nMantener paridad visual obligatoria entre escritorio y móvil desde el inicio.",
+    "crumbs": [
+      "Inicio",
+      "Constraints",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Diseñar las publicaciones IASI para escritorio</span>"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/EDR-30001.html#consecuencias",
+    "href": "edr/30-constraints/EDR-30001.html#consecuencias",
+    "title": "28  Diseñar las publicaciones IASI para escritorio",
+    "section": "28.4 Consecuencias",
+    "text": "28.4 Consecuencias\nEl CSS permanece más pequeño y la revisión visual se hace contra una referencia estable. La ausencia de trabajo móvil es deliberada, no un olvido.",
+    "crumbs": [
+      "Inicio",
+      "Constraints",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Diseñar las publicaciones IASI para escritorio</span>"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/EDR-30002.html",
+    "href": "edr/30-constraints/EDR-30002.html",
+    "title": "29  Evitar la generalización prematura",
+    "section": "",
+    "text": "29.1 Contexto\nIASI genera patrones que podrían parecer reutilizables desde su primera aparición. Convertir inmediatamente cada patrón en infraestructura compartida crea APIs y dependencias antes de conocer sus verdaderos límites.",
+    "crumbs": [
+      "Inicio",
+      "Constraints",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Evitar la generalización prematura</span>"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/EDR-30002.html#decisión",
+    "href": "edr/30-constraints/EDR-30002.html#decisión",
+    "title": "29  Evitar la generalización prematura",
+    "section": "29.2 Decisión",
+    "text": "29.2 Decisión\nUna solución permanecerá local mientras solo exista una necesidad demostrada. La promoción a componente común se hará cuando aparezca reutilización real y pueda definirse un contrato estable.",
+    "crumbs": [
+      "Inicio",
+      "Constraints",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Evitar la generalización prematura</span>"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/EDR-30002.html#alternativas-consideradas",
+    "href": "edr/30-constraints/EDR-30002.html#alternativas-consideradas",
+    "title": "29  Evitar la generalización prematura",
+    "section": "29.3 Alternativas consideradas",
+    "text": "29.3 Alternativas consideradas\n\nCentralizar desde el primer uso.\nDiseñar extensibilidad para escenarios todavía hipotéticos.",
+    "crumbs": [
+      "Inicio",
+      "Constraints",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Evitar la generalización prematura</span>"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/EDR-30002.html#consecuencias",
+    "href": "edr/30-constraints/EDR-30002.html#consecuencias",
+    "title": "29  Evitar la generalización prematura",
+    "section": "29.4 Consecuencias",
+    "text": "29.4 Consecuencias\nLa arquitectura común crece por evidencia. Los productos conservan libertad para experimentar sin comprometer prematuramente a todo el ecosistema.",
+    "crumbs": [
+      "Inicio",
+      "Constraints",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Evitar la generalización prematura</span>"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/EDR-30003.html",
+    "href": "edr/30-constraints/EDR-30003.html",
+    "title": "30  Construir manualmente la infraestructura antes de automatizarla",
+    "section": "",
+    "text": "30.1 Contexto\nAutomatizar una máquina o entorno que todavía no se comprende convierte supuestos provisionales en código y dificulta distinguir necesidad real de accidente de la primera instalación.",
+    "crumbs": [
+      "Inicio",
+      "Constraints",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Construir manualmente la infraestructura antes de automatizarla</span>"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/EDR-30003.html#decisión",
+    "href": "edr/30-constraints/EDR-30003.html#decisión",
+    "title": "30  Construir manualmente la infraestructura antes de automatizarla",
+    "section": "30.2 Decisión",
+    "text": "30.2 Decisión\nLa construcción inicial de la máquina y la infraestructura se hará manualmente. Después de experimentar, aprender, documentar y especificar el entorno, se automatizarán las partes estables.",
+    "crumbs": [
+      "Inicio",
+      "Constraints",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Construir manualmente la infraestructura antes de automatizarla</span>"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/EDR-30003.html#alternativas-consideradas",
+    "href": "edr/30-constraints/EDR-30003.html#alternativas-consideradas",
+    "title": "30  Construir manualmente la infraestructura antes de automatizarla",
+    "section": "30.3 Alternativas consideradas",
+    "text": "30.3 Alternativas consideradas\n\nEmpezar directamente con infraestructura totalmente automatizada.\nMantener permanentemente una instalación manual.",
+    "crumbs": [
+      "Inicio",
+      "Constraints",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Construir manualmente la infraestructura antes de automatizarla</span>"
+    ]
+  },
+  {
+    "objectID": "edr/30-constraints/EDR-30003.html#consecuencias",
+    "href": "edr/30-constraints/EDR-30003.html#consecuencias",
+    "title": "30  Construir manualmente la infraestructura antes de automatizarla",
+    "section": "30.4 Consecuencias",
+    "text": "30.4 Consecuencias\nLa automatización captura conocimiento comprobado en lugar de congelar descubrimientos provisionales. El proceso manual inicial forma parte del aprendizaje.",
+    "crumbs": [
+      "Inicio",
+      "Constraints",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Construir manualmente la infraestructura antes de automatizarla</span>"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/index.html",
+    "href": "edr/40-data/index.html",
+    "title": "Datos",
+    "section": "",
+    "text": "Esta sección reúne los Engineering Decision Records clasificados en el área Datos (40).\n\n\n\nID\nTítulo\n\n\n\n\nEDR-40001\nUsar el front matter como fuente de metadatos del EDR\n\n\nEDR-40002\nTratar los índices de área como datos derivados\n\n\nEDR-40003\nHacer los EDR consultables por metadatos y texto completo",
+    "crumbs": [
+      "Inicio",
+      "Datos"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/EDR-40001.html",
+    "href": "edr/40-data/EDR-40001.html",
+    "title": "31  Usar el front matter como fuente de metadatos del EDR",
+    "section": "",
+    "text": "31.1 Contexto\nLos índices, búsquedas, validaciones y herramientas de creación necesitan leer información estructurada de cada decisión sin interpretar su prosa.",
+    "crumbs": [
+      "Inicio",
+      "Datos",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Usar el front matter como fuente de metadatos del EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/EDR-40001.html#decisión",
+    "href": "edr/40-data/EDR-40001.html#decisión",
+    "title": "31  Usar el front matter como fuente de metadatos del EDR",
+    "section": "31.2 Decisión",
+    "text": "31.2 Decisión\nCada EDR almacenará en el front matter, como mínimo, id, title, status, area, created, tags, affects, related, supersedes y superseded-by. El cuerpo del documento conserva el razonamiento.",
+    "crumbs": [
+      "Inicio",
+      "Datos",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Usar el front matter como fuente de metadatos del EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/EDR-40001.html#alternativas-consideradas",
+    "href": "edr/40-data/EDR-40001.html#alternativas-consideradas",
+    "title": "31  Usar el front matter como fuente de metadatos del EDR",
+    "section": "31.3 Alternativas consideradas",
+    "text": "31.3 Alternativas consideradas\n\nInferir metadatos del nombre del archivo.\nMantener un catálogo YAML externo con todos los documentos.\nExtraer clasificación mediante análisis del texto.",
+    "crumbs": [
+      "Inicio",
+      "Datos",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Usar el front matter como fuente de metadatos del EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/EDR-40001.html#consecuencias",
+    "href": "edr/40-data/EDR-40001.html#consecuencias",
+    "title": "31  Usar el front matter como fuente de metadatos del EDR",
+    "section": "31.4 Consecuencias",
+    "text": "31.4 Consecuencias\nCada documento es autocontenido y legible por máquina. Las herramientas pueden indexarlo sin mantener una segunda base de datos de metadatos.",
+    "crumbs": [
+      "Inicio",
+      "Datos",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Usar el front matter como fuente de metadatos del EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/EDR-40002.html",
+    "href": "edr/40-data/EDR-40002.html",
+    "title": "32  Tratar los índices de área como datos derivados",
+    "section": "",
+    "text": "32.1 Contexto\nUn index.qmd de área repite identificadores y títulos que ya existen en los EDR. Si se edita como fuente primaria puede quedar desincronizado del conjunto real de documentos.",
+    "crumbs": [
+      "Inicio",
+      "Datos",
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Tratar los índices de área como datos derivados</span>"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/EDR-40002.html#decisión",
+    "href": "edr/40-data/EDR-40002.html#decisión",
+    "title": "32  Tratar los índices de área como datos derivados",
+    "section": "32.2 Decisión",
+    "text": "32.2 Decisión\nLos EDR y su front matter son la fuente de verdad. Los index.qmd de área se regeneran a partir de ellos y pueden reemplazarse completamente en cada ejecución.",
+    "crumbs": [
+      "Inicio",
+      "Datos",
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Tratar los índices de área como datos derivados</span>"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/EDR-40002.html#alternativas-consideradas",
+    "href": "edr/40-data/EDR-40002.html#alternativas-consideradas",
+    "title": "32  Tratar los índices de área como datos derivados",
+    "section": "32.3 Alternativas consideradas",
+    "text": "32.3 Alternativas consideradas\n\nConsiderar el índice como catálogo maestro.\nExigir actualización manual simultánea del EDR y del índice.",
+    "crumbs": [
+      "Inicio",
+      "Datos",
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Tratar los índices de área como datos derivados</span>"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/EDR-40002.html#consecuencias",
+    "href": "edr/40-data/EDR-40002.html#consecuencias",
+    "title": "32  Tratar los índices de área como datos derivados",
+    "section": "32.4 Consecuencias",
+    "text": "32.4 Consecuencias\nNo hay doble escritura. Un índice puede borrarse y reconstruirse sin pérdida de información.",
+    "crumbs": [
+      "Inicio",
+      "Datos",
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Tratar los índices de área como datos derivados</span>"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/EDR-40003.html",
+    "href": "edr/40-data/EDR-40003.html",
+    "title": "33  Hacer los EDR consultables por metadatos y texto completo",
+    "section": "",
+    "text": "33.1 Contexto\nClasificar cada decisión en una sola área primaria no basta para responder preguntas transversales como qué decisiones afectan a un producto, cuáles están relacionadas o qué decisiones sustituyen a otras.",
+    "crumbs": [
+      "Inicio",
+      "Datos",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Hacer los EDR consultables por metadatos y texto completo</span>"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/EDR-40003.html#decisión",
+    "href": "edr/40-data/EDR-40003.html#decisión",
+    "title": "33  Hacer los EDR consultables por metadatos y texto completo",
+    "section": "33.2 Decisión",
+    "text": "33.2 Decisión\nEl modelo EDR incorporará metadatos de afectación y relaciones, y la publicación debe permitir consulta tanto por esos campos como por el texto completo del documento.",
+    "crumbs": [
+      "Inicio",
+      "Datos",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Hacer los EDR consultables por metadatos y texto completo</span>"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/EDR-40003.html#alternativas-consideradas",
+    "href": "edr/40-data/EDR-40003.html#alternativas-consideradas",
+    "title": "33  Hacer los EDR consultables por metadatos y texto completo",
+    "section": "33.3 Alternativas consideradas",
+    "text": "33.3 Alternativas consideradas\n\nCrear múltiples copias del mismo EDR en cada área afectada.\nLimitar la recuperación a la navegación por carpetas.",
+    "crumbs": [
+      "Inicio",
+      "Datos",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Hacer los EDR consultables por metadatos y texto completo</span>"
+    ]
+  },
+  {
+    "objectID": "edr/40-data/EDR-40003.html#consecuencias",
+    "href": "edr/40-data/EDR-40003.html#consecuencias",
+    "title": "33  Hacer los EDR consultables por metadatos y texto completo",
+    "section": "33.4 Consecuencias",
+    "text": "33.4 Consecuencias\nLa clasificación física sigue siendo simple mientras las relaciones transversales se expresan como datos. El registro puede evolucionar hacia búsquedas y vistas derivadas sin cambiar los documentos.",
+    "crumbs": [
+      "Inicio",
+      "Datos",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Hacer los EDR consultables por metadatos y texto completo</span>"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/index.html",
+    "href": "edr/50-integration/index.html",
+    "title": "Integración",
+    "section": "",
+    "text": "Esta sección reúne los Engineering Decision Records clasificados en el área Integración (50).\n\n\n\nID\nTítulo\n\n\n\n\nEDR-50001\nDistinguir MCP del servidor MCP\n\n\nEDR-50002\nExponer PlantUML como capacidad utilizable por modelos\n\n\nEDR-50003\nClasificar los productos técnicos por su forma de uso",
+    "crumbs": [
+      "Inicio",
+      "Integración"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/EDR-50001.html",
+    "href": "edr/50-integration/EDR-50001.html",
+    "title": "34  Distinguir MCP del servidor MCP",
+    "section": "",
+    "text": "34.1 Contexto\nUsar “MCP” para referirse tanto al protocolo como al software que se instala y configura mezcla dos conceptos distintos y dificulta explicar qué producto ofrece IASI.",
+    "crumbs": [
+      "Inicio",
+      "Integración",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Distinguir MCP del servidor MCP</span>"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/EDR-50001.html#decisión",
+    "href": "edr/50-integration/EDR-50001.html#decisión",
+    "title": "34  Distinguir MCP del servidor MCP",
+    "section": "34.2 Decisión",
+    "text": "34.2 Decisión\nMCP se utilizará para nombrar el Model Context Protocol. El componente ejecutable que expone capacidades a un modelo se denominará servidor MCP.",
+    "crumbs": [
+      "Inicio",
+      "Integración",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Distinguir MCP del servidor MCP</span>"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/EDR-50001.html#alternativas-consideradas",
+    "href": "edr/50-integration/EDR-50001.html#alternativas-consideradas",
+    "title": "34  Distinguir MCP del servidor MCP",
+    "section": "34.3 Alternativas consideradas",
+    "text": "34.3 Alternativas consideradas\n\nLlamar MCP indistintamente al protocolo y al servidor.\nInventar un nombre específico de IASI para evitar la terminología estándar.",
+    "crumbs": [
+      "Inicio",
+      "Integración",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Distinguir MCP del servidor MCP</span>"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/EDR-50001.html#consecuencias",
+    "href": "edr/50-integration/EDR-50001.html#consecuencias",
+    "title": "34  Distinguir MCP del servidor MCP",
+    "section": "34.4 Consecuencias",
+    "text": "34.4 Consecuencias\nLa documentación puede explicar con precisión qué estándar se usa y qué componente debe instalarse, configurarse y operarse.",
+    "crumbs": [
+      "Inicio",
+      "Integración",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Distinguir MCP del servidor MCP</span>"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/EDR-50002.html",
+    "href": "edr/50-integration/EDR-50002.html",
+    "title": "35  Exponer PlantUML como capacidad utilizable por modelos",
+    "section": "",
+    "text": "35.1 Contexto\nGenerar diagramas PlantUML desde un modelo requiere una frontera clara entre la intención del agente y la herramienta externa que procesa el diagrama.",
+    "crumbs": [
+      "Inicio",
+      "Integración",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Exponer PlantUML como capacidad utilizable por modelos</span>"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/EDR-50002.html#decisión",
+    "href": "edr/50-integration/EDR-50002.html#decisión",
+    "title": "35  Exponer PlantUML como capacidad utilizable por modelos",
+    "section": "35.2 Decisión",
+    "text": "35.2 Decisión\nPlantUML se tratará como una herramienta que puede exponerse mediante un servidor MCP para que un modelo solicite la creación o renderizado de diagramas sin incorporar PlantUML al propio modelo.",
+    "crumbs": [
+      "Inicio",
+      "Integración",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Exponer PlantUML como capacidad utilizable por modelos</span>"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/EDR-50002.html#alternativas-consideradas",
+    "href": "edr/50-integration/EDR-50002.html#alternativas-consideradas",
+    "title": "35  Exponer PlantUML como capacidad utilizable por modelos",
+    "section": "35.3 Alternativas consideradas",
+    "text": "35.3 Alternativas consideradas\n\nAcoplar la generación a una interfaz manual.\nTratar PlantUML como parte intrínseca del agente.",
+    "crumbs": [
+      "Inicio",
+      "Integración",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Exponer PlantUML como capacidad utilizable por modelos</span>"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/EDR-50002.html#consecuencias",
+    "href": "edr/50-integration/EDR-50002.html#consecuencias",
+    "title": "35  Exponer PlantUML como capacidad utilizable por modelos",
+    "section": "35.4 Consecuencias",
+    "text": "35.4 Consecuencias\nLa capacidad puede reutilizarse desde distintos modelos o plataformas y conserva una interfaz explícita de integración.",
+    "crumbs": [
+      "Inicio",
+      "Integración",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Exponer PlantUML como capacidad utilizable por modelos</span>"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/EDR-50003.html",
+    "href": "edr/50-integration/EDR-50003.html",
+    "title": "36  Clasificar los productos técnicos por su forma de uso",
+    "section": "",
+    "text": "36.1 Contexto\nEl ecosistema contiene componentes de naturaleza distinta. Llamarlos a todos “herramientas” oculta cómo se consumen y qué debe instalar o configurar el usuario.",
+    "crumbs": [
+      "Inicio",
+      "Integración",
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Clasificar los productos técnicos por su forma de uso</span>"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/EDR-50003.html#decisión",
+    "href": "edr/50-integration/EDR-50003.html#decisión",
+    "title": "36  Clasificar los productos técnicos por su forma de uso",
+    "section": "36.2 Decisión",
+    "text": "36.2 Decisión\nLa documentación distinguirá al menos tres tipos de producto técnico: Herramienta, Extensión y Servidor MCP. Cada producto se presenta según su forma real de integración.",
+    "crumbs": [
+      "Inicio",
+      "Integración",
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Clasificar los productos técnicos por su forma de uso</span>"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/EDR-50003.html#alternativas-consideradas",
+    "href": "edr/50-integration/EDR-50003.html#alternativas-consideradas",
+    "title": "36  Clasificar los productos técnicos por su forma de uso",
+    "section": "36.3 Alternativas consideradas",
+    "text": "36.3 Alternativas consideradas\n\nUsar “MCP” como categoría de producto.\nPresentar todos los repositorios bajo una única etiqueta genérica.",
+    "crumbs": [
+      "Inicio",
+      "Integración",
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Clasificar los productos técnicos por su forma de uso</span>"
+    ]
+  },
+  {
+    "objectID": "edr/50-integration/EDR-50003.html#consecuencias",
+    "href": "edr/50-integration/EDR-50003.html#consecuencias",
+    "title": "36  Clasificar los productos técnicos por su forma de uso",
+    "section": "36.4 Consecuencias",
+    "text": "36.4 Consecuencias\nLa navegación y la documentación pueden comunicar de inmediato el modo de consumo esperado de cada pieza.",
+    "crumbs": [
+      "Inicio",
+      "Integración",
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Clasificar los productos técnicos por su forma de uso</span>"
+    ]
+  },
+  {
+    "objectID": "edr/60-security/index.html",
+    "href": "edr/60-security/index.html",
+    "title": "Seguridad",
+    "section": "",
+    "text": "Esta sección reúne los Engineering Decision Records clasificados en el área Seguridad (60).\nActualmente no hay EDR registrados en esta área.",
+    "crumbs": [
+      "Inicio",
+      "Seguridad"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/index.html",
+    "href": "edr/70-quality/index.html",
+    "title": "Calidad",
+    "section": "",
+    "text": "Esta sección reúne los Engineering Decision Records clasificados en el área Calidad (70).\n\n\n\nID\nTítulo\n\n\n\n\nEDR-70001\nValidar la estructura Quarto antes de preparar o renderizar\n\n\nEDR-70002\nFallar ante inconsistencias estructurales del registro EDR\n\n\nEDR-70003\nRegenerar de forma determinista los artefactos derivados",
+    "crumbs": [
+      "Inicio",
+      "Calidad"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/EDR-70001.html",
+    "href": "edr/70-quality/EDR-70001.html",
+    "title": "37  Validar la estructura Quarto antes de preparar o renderizar",
+    "section": "",
+    "text": "37.1 Contexto\nUn pipeline puede avanzar bastante antes de fallar si faltan archivos esenciales o la configuración no es coherente con el tipo de proyecto.",
+    "crumbs": [
+      "Inicio",
+      "Calidad",
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Validar la estructura Quarto antes de preparar o renderizar</span>"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/EDR-70001.html#decisión",
+    "href": "edr/70-quality/EDR-70001.html#decisión",
+    "title": "37  Validar la estructura Quarto antes de preparar o renderizar",
+    "section": "37.2 Decisión",
+    "text": "37.2 Decisión\niasi.quarto validará al inicio la existencia de _quarto.yml y _iasi.yml, determinará el tipo de proyecto Quarto y verificará la configuración específica requerida por ese tipo antes de continuar con prepare/build. Para publicaciones con perfiles se comprobará la presencia de las configuraciones declaradas.",
+    "crumbs": [
+      "Inicio",
+      "Calidad",
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Validar la estructura Quarto antes de preparar o renderizar</span>"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/EDR-70001.html#alternativas-consideradas",
+    "href": "edr/70-quality/EDR-70001.html#alternativas-consideradas",
+    "title": "37  Validar la estructura Quarto antes de preparar o renderizar",
+    "section": "37.3 Alternativas consideradas",
+    "text": "37.3 Alternativas consideradas\n\nDelegar todos los errores a quarto render.\nValidar solo después de haber generado artefactos.",
+    "crumbs": [
+      "Inicio",
+      "Calidad",
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Validar la estructura Quarto antes de preparar o renderizar</span>"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/EDR-70001.html#consecuencias",
+    "href": "edr/70-quality/EDR-70001.html#consecuencias",
+    "title": "37  Validar la estructura Quarto antes de preparar o renderizar",
+    "section": "37.4 Consecuencias",
+    "text": "37.4 Consecuencias\nLos errores de configuración aparecen cerca de su causa y antes de modificar artefactos derivados. El pipeline puede detenerse con mensajes específicos de IASI.",
+    "crumbs": [
+      "Inicio",
+      "Calidad",
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Validar la estructura Quarto antes de preparar o renderizar</span>"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/EDR-70002.html",
+    "href": "edr/70-quality/EDR-70002.html",
+    "title": "38  Fallar ante inconsistencias estructurales del registro EDR",
+    "section": "",
+    "text": "38.1 Contexto\nOmitir silenciosamente un directorio, un identificador incorrecto o un front matter incompleto permitiría publicar un catálogo aparentemente correcto pero parcial.",
+    "crumbs": [
+      "Inicio",
+      "Calidad",
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>Fallar ante inconsistencias estructurales del registro EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/EDR-70002.html#decisión",
+    "href": "edr/70-quality/EDR-70002.html#decisión",
+    "title": "38  Fallar ante inconsistencias estructurales del registro EDR",
+    "section": "38.2 Decisión",
+    "text": "38.2 Decisión\nLas herramientas EDR fallarán ante inconsistencias relevantes: directorios configurados que no existen, documentos sin id o title, identificadores que no corresponden al área y duplicados detectables.",
+    "crumbs": [
+      "Inicio",
+      "Calidad",
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>Fallar ante inconsistencias estructurales del registro EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/EDR-70002.html#alternativas-consideradas",
+    "href": "edr/70-quality/EDR-70002.html#alternativas-consideradas",
+    "title": "38  Fallar ante inconsistencias estructurales del registro EDR",
+    "section": "38.3 Alternativas consideradas",
+    "text": "38.3 Alternativas consideradas\n\nEmitir warnings y continuar siempre.\nIgnorar archivos problemáticos durante la generación del índice.",
+    "crumbs": [
+      "Inicio",
+      "Calidad",
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>Fallar ante inconsistencias estructurales del registro EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/EDR-70002.html#consecuencias",
+    "href": "edr/70-quality/EDR-70002.html#consecuencias",
+    "title": "38  Fallar ante inconsistencias estructurales del registro EDR",
+    "section": "38.4 Consecuencias",
+    "text": "38.4 Consecuencias\nUn render fallido es preferible a una publicación incompleta que parezca válida. Los errores estructurales se convierten en defectos visibles y corregibles.",
+    "crumbs": [
+      "Inicio",
+      "Calidad",
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>Fallar ante inconsistencias estructurales del registro EDR</span>"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/EDR-70003.html",
+    "href": "edr/70-quality/EDR-70003.html",
+    "title": "39  Regenerar de forma determinista los artefactos derivados",
+    "section": "",
+    "text": "39.1 Contexto\nLos archivos generados introducen incertidumbre si su contenido depende del estado previo o de modificaciones manuales.",
+    "crumbs": [
+      "Inicio",
+      "Calidad",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Regenerar de forma determinista los artefactos derivados</span>"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/EDR-70003.html#decisión",
+    "href": "edr/70-quality/EDR-70003.html#decisión",
+    "title": "39  Regenerar de forma determinista los artefactos derivados",
+    "section": "39.2 Decisión",
+    "text": "39.2 Decisión\nLos artefactos derivados se reconstruirán completamente a partir de sus fuentes y con orden estable. En EDR, los índices se ordenarán por identificador y no conservarán contenido manual entre ejecuciones.",
+    "crumbs": [
+      "Inicio",
+      "Calidad",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Regenerar de forma determinista los artefactos derivados</span>"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/EDR-70003.html#alternativas-consideradas",
+    "href": "edr/70-quality/EDR-70003.html#alternativas-consideradas",
+    "title": "39  Regenerar de forma determinista los artefactos derivados",
+    "section": "39.3 Alternativas consideradas",
+    "text": "39.3 Alternativas consideradas\n\nActualizar incrementalmente los índices existentes.\nPreservar secciones manuales dentro de archivos generados.",
+    "crumbs": [
+      "Inicio",
+      "Calidad",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Regenerar de forma determinista los artefactos derivados</span>"
+    ]
+  },
+  {
+    "objectID": "edr/70-quality/EDR-70003.html#consecuencias",
+    "href": "edr/70-quality/EDR-70003.html#consecuencias",
+    "title": "39  Regenerar de forma determinista los artefactos derivados",
+    "section": "39.4 Consecuencias",
+    "text": "39.4 Consecuencias\nDos ejecuciones sobre las mismas fuentes producen el mismo resultado. Los cambios generados son revisables y no esconden estado acumulado.",
+    "crumbs": [
+      "Inicio",
+      "Calidad",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Regenerar de forma determinista los artefactos derivados</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/index.html",
+    "href": "edr/80-operation/index.html",
+    "title": "Operación",
+    "section": "",
+    "text": "Esta sección reúne los Engineering Decision Records clasificados en el área Operación (80).\n\n\n\nID\nTítulo\n\n\n\n\nEDR-80001\nUsar HTML como perfil por defecto\n\n\nEDR-80002\nSeparar los directorios de salida por perfil\n\n\nEDR-80003\nUsar scripts R reutilizables para preview y render\n\n\nEDR-80004\nSeparar herramientas principales de trabajo y laboratorios locales",
+    "crumbs": [
+      "Inicio",
+      "Operación"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80001.html",
+    "href": "edr/80-operation/EDR-80001.html",
+    "title": "40  Usar HTML como perfil por defecto",
+    "section": "",
+    "text": "40.1 Contexto\nDurante la edición y revisión ordinaria la salida HTML es la más rápida y navegable. PDF sigue siendo una publicación necesaria, pero no necesita activarse implícitamente en cada render.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Usar HTML como perfil por defecto</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80001.html#decisión",
+    "href": "edr/80-operation/EDR-80001.html#decisión",
+    "title": "40  Usar HTML como perfil por defecto",
+    "section": "40.2 Decisión",
+    "text": "40.2 Decisión\nLos proyectos Quarto con perfiles HTML/PDF usarán html como perfil por defecto. PDF se solicitará de forma explícita mediante su perfil.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Usar HTML como perfil por defecto</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80001.html#alternativas-consideradas",
+    "href": "edr/80-operation/EDR-80001.html#alternativas-consideradas",
+    "title": "40  Usar HTML como perfil por defecto",
+    "section": "40.3 Alternativas consideradas",
+    "text": "40.3 Alternativas consideradas\n\nNo declarar perfil por defecto.\nRenderizar ambos perfiles siempre.\nUsar PDF como perfil predeterminado.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Usar HTML como perfil por defecto</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80001.html#consecuencias",
+    "href": "edr/80-operation/EDR-80001.html#consecuencias",
+    "title": "40  Usar HTML como perfil por defecto",
+    "section": "40.4 Consecuencias",
+    "text": "40.4 Consecuencias\nEl comando de render habitual produce HTML sin opciones adicionales y el coste de PDF se paga solo cuando se necesita esa salida.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Usar HTML como perfil por defecto</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80002.html",
+    "href": "edr/80-operation/EDR-80002.html",
+    "title": "41  Separar los directorios de salida por perfil",
+    "section": "",
+    "text": "41.1 Contexto\nHTML produce un sitio con múltiples archivos mientras PDF produce un artefacto documental distinto. Mezclar ambas salidas dificulta limpieza, despliegue y revisión.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Separar los directorios de salida por perfil</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80002.html#decisión",
+    "href": "edr/80-operation/EDR-80002.html#decisión",
+    "title": "41  Separar los directorios de salida por perfil",
+    "section": "41.2 Decisión",
+    "text": "41.2 Decisión\nEl perfil HTML escribirá en outputs/html y el perfil PDF en outputs/pdf. El output-dir pertenece a la configuración específica de cada perfil.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Separar los directorios de salida por perfil</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80002.html#alternativas-consideradas",
+    "href": "edr/80-operation/EDR-80002.html#alternativas-consideradas",
+    "title": "41  Separar los directorios de salida por perfil",
+    "section": "41.3 Alternativas consideradas",
+    "text": "41.3 Alternativas consideradas\n\nUn único directorio de salida para todos los formatos.\nConfigurar el directorio común en _quarto.yml.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Separar los directorios de salida por perfil</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80002.html#consecuencias",
+    "href": "edr/80-operation/EDR-80002.html#consecuencias",
+    "title": "41  Separar los directorios de salida por perfil",
+    "section": "41.4 Consecuencias",
+    "text": "41.4 Consecuencias\nCada formato puede limpiarse, publicarse o inspeccionarse de manera independiente.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Separar los directorios de salida por perfil</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80003.html",
+    "href": "edr/80-operation/EDR-80003.html",
+    "title": "42  Usar scripts R reutilizables para preview y render",
+    "section": "",
+    "text": "42.1 Contexto\nRepetir comandos largos de Quarto en terminal dispersa conocimiento operativo y facilita variaciones entre ejecuciones.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Usar scripts R reutilizables para preview y render</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80003.html#decisión",
+    "href": "edr/80-operation/EDR-80003.html#decisión",
+    "title": "42  Usar scripts R reutilizables para preview y render",
+    "section": "42.2 Decisión",
+    "text": "42.2 Decisión\nIASI utilizará scripts R reutilizables para las operaciones recurrentes de preview y render, como mínimo para HTML y PDF, en lugar de depender únicamente de comandos manuales recordados por el usuario.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Usar scripts R reutilizables para preview y render</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80003.html#alternativas-consideradas",
+    "href": "edr/80-operation/EDR-80003.html#alternativas-consideradas",
+    "title": "42  Usar scripts R reutilizables para preview y render",
+    "section": "42.3 Alternativas consideradas",
+    "text": "42.3 Alternativas consideradas\n\nEjecutar siempre comandos Quarto manualmente.\nOcultar todo el proceso dentro del IDE sin scripts versionados.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Usar scripts R reutilizables para preview y render</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80003.html#consecuencias",
+    "href": "edr/80-operation/EDR-80003.html#consecuencias",
+    "title": "42  Usar scripts R reutilizables para preview y render",
+    "section": "42.4 Consecuencias",
+    "text": "42.4 Consecuencias\nLas operaciones frecuentes quedan documentadas como código y pueden evolucionar junto al proyecto.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Usar scripts R reutilizables para preview y render</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80004.html",
+    "href": "edr/80-operation/EDR-80004.html",
+    "title": "43  Separar herramientas principales de trabajo y laboratorios locales",
+    "section": "",
+    "text": "43.1 Contexto\nEl entorno de trabajo puede aprovechar servicios como Codex y Copilot sin renunciar a experimentar con modelos locales. Obligar a todos los componentes a usar el mismo backend reduciría el valor del laboratorio.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Separar herramientas principales de trabajo y laboratorios locales</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80004.html#decisión",
+    "href": "edr/80-operation/EDR-80004.html#decisión",
+    "title": "43  Separar herramientas principales de trabajo y laboratorios locales",
+    "section": "43.2 Decisión",
+    "text": "43.2 Decisión\nCodex y Copilot se utilizarán como herramientas principales del workspace cuando resulten adecuadas. Ollama se mantendrá para experimentación local y laboratorios, incluyendo el desarrollo exploratorio de iasi-graphics.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Separar herramientas principales de trabajo y laboratorios locales</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80004.html#alternativas-consideradas",
+    "href": "edr/80-operation/EDR-80004.html#alternativas-consideradas",
+    "title": "43  Separar herramientas principales de trabajo y laboratorios locales",
+    "section": "43.3 Alternativas consideradas",
+    "text": "43.3 Alternativas consideradas\n\nEstandarizar todo IASI sobre un único proveedor o runtime de modelos.\nExcluir modelos locales del entorno por no ser la herramienta principal.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Separar herramientas principales de trabajo y laboratorios locales</span>"
+    ]
+  },
+  {
+    "objectID": "edr/80-operation/EDR-80004.html#consecuencias",
+    "href": "edr/80-operation/EDR-80004.html#consecuencias",
+    "title": "43  Separar herramientas principales de trabajo y laboratorios locales",
+    "section": "43.4 Consecuencias",
+    "text": "43.4 Consecuencias\nLos experimentos pueden evaluar capacidades locales sin condicionar el flujo principal. La metodología y los productos permanecen desacoplados de una única plataforma de IA.",
+    "crumbs": [
+      "Inicio",
+      "Operación",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Separar herramientas principales de trabajo y laboratorios locales</span>"
+    ]
+  },
+  {
+    "objectID": "edr/99-pending/index.html",
+    "href": "edr/99-pending/index.html",
+    "title": "Pendiente de clasificar",
+    "section": "",
+    "text": "Esta sección reúne los Engineering Decision Records clasificados en el área Pendiente de clasificar (99).\nActualmente no hay EDR registrados en esta área.",
+    "crumbs": [
+      "Inicio",
+      "Pendiente de clasificar"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html",
+    "href": "areas-edr.html",
+    "title": "44  Áreas EDR",
+    "section": "",
+    "text": "45 Áreas EDR\nLos Engineering Decision Records de IASI utilizan identificadores con la forma:\ndonde:\nEl área permite conocer la naturaleza principal de una decisión antes incluso de abrir el EDR.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#áreas",
+    "href": "areas-edr.html#áreas",
+    "title": "44  Áreas EDR",
+    "section": "45.1 Áreas",
+    "text": "45.1 Áreas\nO, si quieres la cabecera compacta, solo para echo:\n\n::: {.cell tbl-colwidths='[10,20,70]'}\n::: {.cell-output-display}\n\n\n| nn |Área                    |Criterio                                                                                            |\n|:--:|:-----------------------|:---------------------------------------------------------------------------------------------------|\n| 00 |General                 |Decisiones transversales o relativas al propio funcionamiento de IASI.                              |\n| 10 |Funcional               |Qué debe hacer el sistema y qué comportamiento debe ofrecer.                                        |\n| 20 |Arquitectura            |Estructura del sistema, componentes, responsabilidades y relaciones.                                |\n| 30 |Constraints             |Restricciones que condicionan o limitan las posibles soluciones.                                    |\n| 40 |Datos                   |Modelos, persistencia, intercambio, ciclo de vida y gobierno del dato.                              |\n| 50 |Integración             |Interfaces, protocolos y comunicación entre sistemas o componentes.                                 |\n| 60 |Seguridad               |Identidad, acceso, protección, amenazas y controles.                                                |\n| 70 |Calidad                 |Validación, pruebas, observabilidad y atributos de calidad.                                         |\n| 80 |Operación               |Despliegue, ejecución, configuración, infraestructura y explotación.                                |\n| 99 |Pendiente de clasificar |Decisiones registradas provisionalmente cuya clasificación definitiva todavía no se ha determinado. |\n\n\n:::\n:::\n\n\n## Reglas de clasificación\n\nCada EDR pertenece a **una única área principal**.\n\nEl área representa la naturaleza de la decisión, no:\n\n- la herramienta utilizada;\n- la tecnología elegida;\n- el repositorio donde se implementa;\n- el equipo responsable.\n\nCuando una decisión afecta a varios ámbitos, se asigna al área que mejor represente **el objeto principal de la decisión**.\n\nLos efectos secundarios pueden expresarse mediante los metadatos del EDR.\n\n## Área `00` — General\n\n`00` está reservado para decisiones generales o transversales.\n\nTambién pertenece a esta área cualquier decisión relacionada con el propio sistema de Engineering Decision Records.\n\nPor ejemplo:\n\n``` text\nEDR-00001\npuede definir el modelo, estructura y reglas de los propios EDR.\n00 no debe utilizarse simplemente porque una decisión resulte difícil de clasificar.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#área-10-funcional",
+    "href": "areas-edr.html#área-10-funcional",
+    "title": "44  Áreas EDR",
+    "section": "45.2 Área 10 — Funcional",
+    "text": "45.2 Área 10 — Funcional\nEl área 10 agrupa decisiones relacionadas con qué debe hacer el sistema.\nIncluye decisiones sobre:\n\ncomportamiento funcional;\ncapacidades ofrecidas;\nreglas de negocio;\ninteracción entre el sistema y sus usuarios;\nresultados esperados;\ncriterios funcionales.\n\nUna decisión pertenece a esta área cuando su cuestión principal puede formularse aproximadamente como:\n\n¿Qué comportamiento debe ofrecer el sistema?",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#área-20-arquitectura",
+    "href": "areas-edr.html#área-20-arquitectura",
+    "title": "44  Áreas EDR",
+    "section": "45.3 Área 20 — Arquitectura",
+    "text": "45.3 Área 20 — Arquitectura\nEl área 20 agrupa decisiones relacionadas con cómo se estructura el sistema.\nIncluye decisiones sobre:\n\ncomponentes;\nresponsabilidades;\nrelaciones entre componentes;\nseparación de responsabilidades;\norganización interna;\nestilos y patrones arquitectónicos;\ndistribución de capacidades;\nfronteras entre subsistemas.\n\nUna decisión pertenece a esta área cuando su cuestión principal puede formularse aproximadamente como:\n\n¿Cómo organizamos el sistema para satisfacer sus necesidades?",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#área-30-constraints",
+    "href": "areas-edr.html#área-30-constraints",
+    "title": "44  Áreas EDR",
+    "section": "45.4 Área 30 — Constraints",
+    "text": "45.4 Área 30 — Constraints\nEl área 30 agrupa decisiones derivadas de restricciones que condicionan el espacio de soluciones posibles.\nIncluye restricciones:\n\ntécnicas;\norganizativas;\noperativas;\nregulatorias;\neconómicas;\ntemporales;\nde compatibilidad;\nde plataforma;\nimpuestas por sistemas externos.\n\nUna decisión pertenece a esta área cuando su cuestión principal parte de una condición que no puede ignorarse libremente.\nLos constraints no describen necesariamente qué queremos hacer, sino qué límites debe respetar cualquier solución válida.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#área-40-datos",
+    "href": "areas-edr.html#área-40-datos",
+    "title": "44  Áreas EDR",
+    "section": "45.5 Área 40 — Datos",
+    "text": "45.5 Área 40 — Datos\nEl área 40 agrupa decisiones relacionadas con la representación, persistencia, intercambio y ciclo de vida de los datos.\nIncluye decisiones sobre:\n\nmodelos de datos;\nestructuras y formatos;\nalmacenamiento y persistencia;\nmigraciones;\nretención y ciclo de vida;\ncalidad y gobierno del dato;\nintercambio y transformación de información.\n\nUna decisión pertenece a esta área cuando el elemento principal sobre el que se decide es el dato y su tratamiento.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#área-50-integración",
+    "href": "areas-edr.html#área-50-integración",
+    "title": "44  Áreas EDR",
+    "section": "45.6 Área 50 — Integración",
+    "text": "45.6 Área 50 — Integración\nEl área 50 agrupa decisiones relacionadas con la comunicación entre sistemas, servicios o componentes.\nIncluye decisiones sobre:\n\ninterfaces;\nAPIs;\nprotocolos;\nmensajería;\ncontratos de integración;\ninteroperabilidad;\nmecanismos de comunicación;\ndependencias con sistemas externos.\n\nUna decisión pertenece a esta área cuando su cuestión principal es cómo se relacionan o intercambian información distintos elementos del sistema.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#área-60-seguridad",
+    "href": "areas-edr.html#área-60-seguridad",
+    "title": "44  Áreas EDR",
+    "section": "45.7 Área 60 — Seguridad",
+    "text": "45.7 Área 60 — Seguridad\nEl área 60 agrupa decisiones relacionadas con la protección del sistema, sus usuarios y su información.\nIncluye decisiones sobre:\n\nidentidad;\nautenticación;\nautorización;\ngestión de secretos;\nprotección de datos;\namenazas;\ncontroles;\naislamiento;\ntrazabilidad de seguridad.\n\nUna decisión pertenece a esta área cuando su propósito principal es reducir riesgos o establecer mecanismos de protección.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#área-70-calidad",
+    "href": "areas-edr.html#área-70-calidad",
+    "title": "44  Áreas EDR",
+    "section": "45.8 Área 70 — Calidad",
+    "text": "45.8 Área 70 — Calidad\nEl área 70 agrupa decisiones relacionadas con la validación del sistema y sus atributos de calidad.\nIncluye decisiones sobre:\n\npruebas;\nacceptance tests;\nvalidación;\nverificación;\nobservabilidad;\nmétricas;\nrendimiento;\nfiabilidad;\nmantenibilidad;\ncriterios de calidad.\n\nUna decisión pertenece a esta área cuando define cómo demostrar, medir o asegurar que el sistema cumple las propiedades esperadas.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#área-80-operación",
+    "href": "areas-edr.html#área-80-operación",
+    "title": "44  Áreas EDR",
+    "section": "45.9 Área 80 — Operación",
+    "text": "45.9 Área 80 — Operación\nEl área 80 agrupa decisiones relacionadas con la ejecución y explotación del sistema.\nIncluye decisiones sobre:\n\ndespliegue;\nconfiguración;\ninfraestructura;\nentornos;\nejecución;\nautomatización operativa;\nmonitorización;\nrecuperación;\nmantenimiento en producción.\n\nUna decisión pertenece a esta área cuando su cuestión principal es cómo ejecutar, desplegar, configurar o mantener el sistema en funcionamiento.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#área-99-pendiente-de-clasificar",
+    "href": "areas-edr.html#área-99-pendiente-de-clasificar",
+    "title": "44  Áreas EDR",
+    "section": "45.10 Área 99 — Pendiente de clasificar",
+    "text": "45.10 Área 99 — Pendiente de clasificar\n99 está reservado para decisiones que deben registrarse, pero cuya clasificación definitiva todavía no está clara.\nSu uso es provisional.\nDebe utilizarse para evitar dos problemas:\n\nretrasar el registro de una decisión porque todavía no se sabe dónde clasificarla;\nforzar una clasificación prematura que después resulte incorrecta.\n\n99 no es una categoría residual ni un destino permanente.\nCuando se determine el área correcta, la decisión debe trasladarse a su clasificación definitiva.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#criterio-de-asignación",
+    "href": "areas-edr.html#criterio-de-asignación",
+    "title": "44  Áreas EDR",
+    "section": "45.11 Criterio de asignación",
+    "text": "45.11 Criterio de asignación\nPara determinar nn, debe identificarse primero la naturaleza principal de la decisión.\nPuede utilizarse esta secuencia:\n\n¿Cuál es el problema que estamos resolviendo?\n¿Qué aspecto de la ingeniería estamos decidiendo?\n¿Dónde tendría sentido buscar esta decisión dentro de varios años?\n¿Seguiría perteneciendo a la misma área si cambiase la tecnología utilizada?\n\nLa respuesta determina el área principal.\nEn caso de duda entre varias áreas, debe seleccionarse aquella que mejor represente la razón por la que existe la decisión.\nSi todavía no existe información suficiente para hacerlo con criterio, se utiliza provisionalmente el área 99.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#una-única-clasificación-principal",
+    "href": "areas-edr.html#una-única-clasificación-principal",
+    "title": "44  Áreas EDR",
+    "section": "45.12 Una única clasificación principal",
+    "text": "45.12 Una única clasificación principal\nUna decisión puede afectar simultáneamente a múltiples ámbitos.\nPor ejemplo, una decisión arquitectónica puede tener consecuencias funcionales, operativas o de seguridad.\nEsto no implica que deba pertenecer a varias áreas.\nCada EDR tiene un único nn.\nLos demás efectos se expresan mediante metadatos como:\ntags:\n  - publication\n  - validation\n\naffects:\n  - iasi-quarto\n  - iasi-book-I\n\nrelated:\n  - EDR-20002\nEl identificador proporciona la clasificación principal.\nLos metadatos proporcionan el contexto adicional.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#el-área-no-depende-de-la-implementación",
+    "href": "areas-edr.html#el-área-no-depende-de-la-implementación",
+    "title": "44  Áreas EDR",
+    "section": "45.13 El área no depende de la implementación",
+    "text": "45.13 El área no depende de la implementación\nnn no debe asignarse según:\n\nel lenguaje de programación;\nel framework;\nla herramienta;\nel producto;\nel repositorio;\nel proveedor;\nel agente de IA que implemente la decisión.\n\nPor ejemplo, una decisión sobre cómo se estructura la publicación de IASI puede implementarse inicialmente en iasi-quarto.\nEso no convierte automáticamente la decisión en una decisión sobre Quarto.\nLa pregunta relevante es qué se está decidiendo desde el punto de vista de ingeniería.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#estabilidad",
+    "href": "areas-edr.html#estabilidad",
+    "title": "44  Áreas EDR",
+    "section": "45.14 Estabilidad",
+    "text": "45.14 Estabilidad\nUna vez asignado un código nn a un área:\n\nsu significado no cambia;\nno se reutiliza para otro ámbito;\nlos EDR clasificados conservan su identificador.\n\nLos códigos de área son permanentes.\nEl área 99 constituye la excepción: representa explícitamente un estado provisional pendiente de clasificación.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#separación-entre-áreas",
+    "href": "areas-edr.html#separación-entre-áreas",
+    "title": "44  Áreas EDR",
+    "section": "45.15 Separación entre áreas",
+    "text": "45.15 Separación entre áreas\nLos códigos se asignan con separación deliberada:\n00\n10\n20\n30\n40\n50\n60\n70\n80\n99\nEsto mantiene una clasificación legible y deja espacio para incorporar nuevas áreas si la evolución de IASI lo hace necesario.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#creación-de-nuevas-áreas",
+    "href": "areas-edr.html#creación-de-nuevas-áreas",
+    "title": "44  Áreas EDR",
+    "section": "45.16 Creación de nuevas áreas",
+    "text": "45.16 Creación de nuevas áreas\nLa lista de áreas no pretende definir anticipadamente todos los ámbitos posibles de la ingeniería.\nSe crearán nuevas áreas cuando las decisiones reales de IASI hagan necesaria una nueva categoría estable.\nAntes de crear una nueva área debe comprobarse que:\n\nninguna de las áreas existentes representa adecuadamente la decisión;\nel nuevo ámbito tiene significado propio desde el punto de vista de ingeniería;\nno representa simplemente una herramienta, tecnología o producto;\nprevisiblemente podrá contener múltiples decisiones;\nsu significado puede mantenerse estable en el tiempo.\n\nLa taxonomía debe evolucionar a partir de necesidades reales.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#principio-de-evolución",
+    "href": "areas-edr.html#principio-de-evolución",
+    "title": "44  Áreas EDR",
+    "section": "45.17 Principio de evolución",
+    "text": "45.17 Principio de evolución\nIASI no pretende construir anticipadamente una clasificación completa de todas las decisiones de ingeniería posibles.\nLas áreas se incorporarán cuando aparezcan decisiones reales que justifiquen su existencia.\n\nLas áreas no se inventan por anticipado. Se descubren cuando las decisiones de ingeniería las hacen necesarias.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  },
+  {
+    "objectID": "areas-edr.html#regla-fundamental",
+    "href": "areas-edr.html#regla-fundamental",
+    "title": "44  Áreas EDR",
+    "section": "45.18 Regla fundamental",
+    "text": "45.18 Regla fundamental\n\nnn clasifica la naturaleza principal de la decisión. Los metadatos describen todo lo demás.\n\nEl identificador debe permitir saber dónde buscar una decisión.\nEl contenido y los metadatos explican su alcance, sus relaciones y sus consecuencias.",
+    "crumbs": [
+      "Inicio",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Áreas EDR</span>"
+    ]
+  }
+]
