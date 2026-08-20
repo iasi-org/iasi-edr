@@ -242,3 +242,15 @@ p {
 blockquote, ul, ol {
   margin-bottom: 0.5em;
 }
+
+/******************************************************************************/
+/* Icono para abrir iframes en otro ventana
+/******************************************************************************/
+
+a[href="#iasi-open-external"] {
+  display: none;
+}
+
+.iasi-embedded a[href="#iasi-open-external"] {
+  display: inline-flex;
+}
