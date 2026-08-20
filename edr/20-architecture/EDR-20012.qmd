@@ -1,0 +1,54 @@
+---
+id: EDR-20012
+title: "Separar el entorno de laboratorios mediante una máquina virtual dedicada"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-19
+tags:
+  - "labs"
+  - "infra"
+  - "virtualización"
+  - "entornos"
+affects:
+  - "iasi-book-II"
+  - "iasi-labs"
+  - "iasi-infra"
+related:
+  - "EDR-30003"
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Los primeros laboratorios pueden realizarse prácticamente desde cualquier entorno, pero a medida que avanzan empiezan a necesitar herramientas, runtimes, servicios, contenedores y productos propios de IASI.
+
+Utilizar para ellos la misma máquina empleada para desarrollar IASI mezclaría dos contextos diferentes. El entorno de desarrollo contiene repositorios fuente, herramientas internas y configuraciones que un usuario de los labs no debería necesitar.
+
+Además, utilizar un entorno separado permite comprobar que los productos IASI funcionan fuera de la máquina en la que fueron desarrollados.
+
+## Decisión
+
+Los laboratorios que requieran una infraestructura específica utilizarán una **máquina virtual dedicada a labs**, separada del entorno `iasi-dev`.
+
+El Lab 10 del Volumen II será responsable de construir ese entorno de referencia. Los laboratorios posteriores podrán asumir la infraestructura creada a partir de ese punto.
+
+La máquina podrá conservar estados reproducibles mediante checkpoints cuando resulte útil para la ejecución o repetición de los laboratorios.
+
+## Alternativas consideradas
+
+- Utilizar directamente la máquina de desarrollo `iasi-dev`.
+- Instalar las dependencias de los labs sobre la máquina habitual del usuario.
+- Crear un entorno completamente automatizado antes de realizar manualmente los laboratorios de infraestructura.
+
+## Consecuencias
+
+El entorno donde se construye IASI queda separado del entorno donde se utiliza IASI.
+
+Los laboratorios permiten comprobar que los productos pueden instalarse y utilizarse sin depender de sus repositorios fuente.
+
+La máquina virtual proporciona aislamiento y permite conservar estados conocidos para repetir experimentos o recuperar el entorno.
+
+La infraestructura de labs pasa a ser un elemento explícito que deberá mantenerse y evolucionar junto con los propios laboratorios.

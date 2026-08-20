@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>47&nbsp; Áreas EDR</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./edr/99-pending/index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-f0d95b717b6dd9e0cac1ec75e9ec4278.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">IASI EDR</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./edr/00-general/index.html"> 
+<span class="menu-text">General</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./edr/10-functional/index.html"> 
+<span class="menu-text">Funcional</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./edr/20-architecture/index.html"> 
+<span class="menu-text">Arquitectura</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./edr/30-constraints/index.html"> 
+<span class="menu-text">Constraints</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./edr/40-data/index.html"> 
+<span class="menu-text">Datos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./edr/50-integration/index.html"> 
+<span class="menu-text">Integración</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./edr/60-security/index.html"> 
+<span class="menu-text">Seguridad</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./edr/70-quality/index.html"> 
+<span class="menu-text">Calidad</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./edr/80-operation/index.html"> 
+<span class="menu-text">Operación</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./edr/99-pending/index.html"> 
+<span class="menu-text">Pendientes</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Áreas EDR</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="áreas-edr" class="level1" data-number="48">
+<h1 data-number="48"><span class="header-section-number">48</span> Áreas EDR</h1>
+<p>Los Engineering Decision Records de IASI utilizan identificadores con la forma:</p>
+<pre class="text"><code>EDR-nnmmm</code></pre>
+<p>donde:</p>
+<ul>
+<li><code>nn</code> identifica el <strong>área principal de ingeniería</strong> de la decisión.</li>
+<li><code>mmm</code> identifica secuencialmente la decisión dentro de esa área.</li>
+</ul>
+<p>El área permite conocer la naturaleza principal de una decisión antes incluso de abrir el EDR.</p>
+<section id="áreas" class="level2" data-number="48.1">
+<h2 data-number="48.1" class="anchored" data-anchor-id="áreas"><span class="header-section-number">48.1</span> Áreas</h2>
+<p>O, si quieres la cabecera compacta, solo para <code>echo</code>:</p>
+<pre class="qmd"><code>
+::: {.cell tbl-colwidths='[10,20,70]'}
+::: {.cell-output-display}
+
+
+| nn |Área                    |Criterio                                                                                            |
+|:--:|:-----------------------|:---------------------------------------------------------------------------------------------------|
+| 00 |General                 |Decisiones transversales o relativas al propio funcionamiento de IASI.                              |
+| 10 |Funcional               |Qué debe hacer el sistema y qué comportamiento debe ofrecer.                                        |
+| 20 |Arquitectura            |Estructura del sistema, componentes, responsabilidades y relaciones.                                |
+| 30 |Constraints             |Restricciones que condicionan o limitan las posibles soluciones.                                    |
+| 40 |Datos                   |Modelos, persistencia, intercambio, ciclo de vida y gobierno del dato.                              |
+| 50 |Integración             |Interfaces, protocolos y comunicación entre sistemas o componentes.                                 |
+| 60 |Seguridad               |Identidad, acceso, protección, amenazas y controles.                                                |
+| 70 |Calidad                 |Validación, pruebas, observabilidad y atributos de calidad.                                         |
+| 80 |Operación               |Despliegue, ejecución, configuración, infraestructura y explotación.                                |
+| 99 |Pendiente de clasificar |Decisiones registradas provisionalmente cuya clasificación definitiva todavía no se ha determinado. |
+
+
+:::
+:::
+
+
+## Reglas de clasificación
+
+Cada EDR pertenece a **una única área principal**.
+
+El área representa la naturaleza de la decisión, no:
+
+- la herramienta utilizada;
+- la tecnología elegida;
+- el repositorio donde se implementa;
+- el equipo responsable.
+
+Cuando una decisión afecta a varios ámbitos, se asigna al área que mejor represente **el objeto principal de la decisión**.
+
+Los efectos secundarios pueden expresarse mediante los metadatos del EDR.
+
+## Área `00` — General
+
+`00` está reservado para decisiones generales o transversales.
+
+También pertenece a esta área cualquier decisión relacionada con el propio sistema de Engineering Decision Records.
+
+Por ejemplo:
+
+``` text
+EDR-00001</code></pre>
+<p>puede definir el modelo, estructura y reglas de los propios EDR.</p>
+<p><code>00</code> no debe utilizarse simplemente porque una decisión resulte difícil de clasificar.</p>
+</section>
+<section id="área-10-funcional" class="level2" data-number="48.2">
+<h2 data-number="48.2" class="anchored" data-anchor-id="área-10-funcional"><span class="header-section-number">48.2</span> Área <code>10</code> — Funcional</h2>
+<p>El área <code>10</code> agrupa decisiones relacionadas con <strong>qué debe hacer el sistema</strong>.</p>
+<p>Incluye decisiones sobre:</p>
+<ul>
+<li>comportamiento funcional;</li>
+<li>capacidades ofrecidas;</li>
+<li>reglas de negocio;</li>
+<li>interacción entre el sistema y sus usuarios;</li>
+<li>resultados esperados;</li>
+<li>criterios funcionales.</li>
+</ul>
+<p>Una decisión pertenece a esta área cuando su cuestión principal puede formularse aproximadamente como:</p>
+<blockquote class="blockquote">
+<p>¿Qué comportamiento debe ofrecer el sistema?</p>
+</blockquote>
+</section>
+<section id="área-20-arquitectura" class="level2" data-number="48.3">
+<h2 data-number="48.3" class="anchored" data-anchor-id="área-20-arquitectura"><span class="header-section-number">48.3</span> Área <code>20</code> — Arquitectura</h2>
+<p>El área <code>20</code> agrupa decisiones relacionadas con <strong>cómo se estructura el sistema</strong>.</p>
+<p>Incluye decisiones sobre:</p>
+<ul>
+<li>componentes;</li>
+<li>responsabilidades;</li>
+<li>relaciones entre componentes;</li>
+<li>separación de responsabilidades;</li>
+<li>organización interna;</li>
+<li>estilos y patrones arquitectónicos;</li>
+<li>distribución de capacidades;</li>
+<li>fronteras entre subsistemas.</li>
+</ul>
+<p>Una decisión pertenece a esta área cuando su cuestión principal puede formularse aproximadamente como:</p>
+<blockquote class="blockquote">
+<p>¿Cómo organizamos el sistema para satisfacer sus necesidades?</p>
+</blockquote>
+</section>
+<section id="área-30-constraints" class="level2" data-number="48.4">
+<h2 data-number="48.4" class="anchored" data-anchor-id="área-30-constraints"><span class="header-section-number">48.4</span> Área <code>30</code> — Constraints</h2>
+<p>El área <code>30</code> agrupa decisiones derivadas de <strong>restricciones que condicionan el espacio de soluciones posibles</strong>.</p>
+<p>Incluye restricciones:</p>
+<ul>
+<li>técnicas;</li>
+<li>organizativas;</li>
+<li>operativas;</li>
+<li>regulatorias;</li>
+<li>económicas;</li>
+<li>temporales;</li>
+<li>de compatibilidad;</li>
+<li>de plataforma;</li>
+<li>impuestas por sistemas externos.</li>
+</ul>
+<p>Una decisión pertenece a esta área cuando su cuestión principal parte de una condición que no puede ignorarse libremente.</p>
+<p>Los constraints no describen necesariamente qué queremos hacer, sino <strong>qué límites debe respetar cualquier solución válida</strong>.</p>
+</section>
+<section id="área-40-datos" class="level2" data-number="48.5">
+<h2 data-number="48.5" class="anchored" data-anchor-id="área-40-datos"><span class="header-section-number">48.5</span> Área <code>40</code> — Datos</h2>
+<p>El área <code>40</code> agrupa decisiones relacionadas con la <strong>representación, persistencia, intercambio y ciclo de vida de los datos</strong>.</p>
+<p>Incluye decisiones sobre:</p>
+<ul>
+<li>modelos de datos;</li>
+<li>estructuras y formatos;</li>
+<li>almacenamiento y persistencia;</li>
+<li>migraciones;</li>
+<li>retención y ciclo de vida;</li>
+<li>calidad y gobierno del dato;</li>
+<li>intercambio y transformación de información.</li>
+</ul>
+<p>Una decisión pertenece a esta área cuando el elemento principal sobre el que se decide es el dato y su tratamiento.</p>
+</section>
+<section id="área-50-integración" class="level2" data-number="48.6">
+<h2 data-number="48.6" class="anchored" data-anchor-id="área-50-integración"><span class="header-section-number">48.6</span> Área <code>50</code> — Integración</h2>
+<p>El área <code>50</code> agrupa decisiones relacionadas con la <strong>comunicación entre sistemas, servicios o componentes</strong>.</p>
+<p>Incluye decisiones sobre:</p>
+<ul>
+<li>interfaces;</li>
+<li>APIs;</li>
+<li>protocolos;</li>
+<li>mensajería;</li>
+<li>contratos de integración;</li>
+<li>interoperabilidad;</li>
+<li>mecanismos de comunicación;</li>
+<li>dependencias con sistemas externos.</li>
+</ul>
+<p>Una decisión pertenece a esta área cuando su cuestión principal es cómo se relacionan o intercambian información distintos elementos del sistema.</p>
+</section>
+<section id="área-60-seguridad" class="level2" data-number="48.7">
+<h2 data-number="48.7" class="anchored" data-anchor-id="área-60-seguridad"><span class="header-section-number">48.7</span> Área <code>60</code> — Seguridad</h2>
+<p>El área <code>60</code> agrupa decisiones relacionadas con la <strong>protección del sistema, sus usuarios y su información</strong>.</p>
+<p>Incluye decisiones sobre:</p>
+<ul>
+<li>identidad;</li>
+<li>autenticación;</li>
+<li>autorización;</li>
+<li>gestión de secretos;</li>
+<li>protección de datos;</li>
+<li>amenazas;</li>
+<li>controles;</li>
+<li>aislamiento;</li>
+<li>trazabilidad de seguridad.</li>
+</ul>
+<p>Una decisión pertenece a esta área cuando su propósito principal es reducir riesgos o establecer mecanismos de protección.</p>
+</section>
+<section id="área-70-calidad" class="level2" data-number="48.8">
+<h2 data-number="48.8" class="anchored" data-anchor-id="área-70-calidad"><span class="header-section-number">48.8</span> Área <code>70</code> — Calidad</h2>
+<p>El área <code>70</code> agrupa decisiones relacionadas con la <strong>validación del sistema y sus atributos de calidad</strong>.</p>
+<p>Incluye decisiones sobre:</p>
+<ul>
+<li>pruebas;</li>
+<li>acceptance tests;</li>
+<li>validación;</li>
+<li>verificación;</li>
+<li>observabilidad;</li>
+<li>métricas;</li>
+<li>rendimiento;</li>
+<li>fiabilidad;</li>
+<li>mantenibilidad;</li>
+<li>criterios de calidad.</li>
+</ul>
+<p>Una decisión pertenece a esta área cuando define cómo demostrar, medir o asegurar que el sistema cumple las propiedades esperadas.</p>
+</section>
+<section id="área-80-operación" class="level2" data-number="48.9">
+<h2 data-number="48.9" class="anchored" data-anchor-id="área-80-operación"><span class="header-section-number">48.9</span> Área <code>80</code> — Operación</h2>
+<p>El área <code>80</code> agrupa decisiones relacionadas con la <strong>ejecución y explotación del sistema</strong>.</p>
+<p>Incluye decisiones sobre:</p>
+<ul>
+<li>despliegue;</li>
+<li>configuración;</li>
+<li>infraestructura;</li>
+<li>entornos;</li>
+<li>ejecución;</li>
+<li>automatización operativa;</li>
+<li>monitorización;</li>
+<li>recuperación;</li>
+<li>mantenimiento en producción.</li>
+</ul>
+<p>Una decisión pertenece a esta área cuando su cuestión principal es cómo ejecutar, desplegar, configurar o mantener el sistema en funcionamiento.</p>
+</section>
+<section id="área-99-pendiente-de-clasificar" class="level2" data-number="48.10">
+<h2 data-number="48.10" class="anchored" data-anchor-id="área-99-pendiente-de-clasificar"><span class="header-section-number">48.10</span> Área <code>99</code> — Pendiente de clasificar</h2>
+<p><code>99</code> está reservado para decisiones que deben registrarse, pero cuya clasificación definitiva todavía no está clara.</p>
+<p>Su uso es <strong>provisional</strong>.</p>
+<p>Debe utilizarse para evitar dos problemas:</p>
+<ul>
+<li>retrasar el registro de una decisión porque todavía no se sabe dónde clasificarla;</li>
+<li>forzar una clasificación prematura que después resulte incorrecta.</li>
+</ul>
+<p><code>99</code> no es una categoría residual ni un destino permanente.</p>
+<p>Cuando se determine el área correcta, la decisión debe trasladarse a su clasificación definitiva.</p>
+</section>
+<section id="criterio-de-asignación" class="level2" data-number="48.11">
+<h2 data-number="48.11" class="anchored" data-anchor-id="criterio-de-asignación"><span class="header-section-number">48.11</span> Criterio de asignación</h2>
+<p>Para determinar <code>nn</code>, debe identificarse primero la naturaleza principal de la decisión.</p>
+<p>Puede utilizarse esta secuencia:</p>
+<ol type="1">
+<li>¿Cuál es el problema que estamos resolviendo?</li>
+<li>¿Qué aspecto de la ingeniería estamos decidiendo?</li>
+<li>¿Dónde tendría sentido buscar esta decisión dentro de varios años?</li>
+<li>¿Seguiría perteneciendo a la misma área si cambiase la tecnología utilizada?</li>
+</ol>
+<p>La respuesta determina el área principal.</p>
+<p>En caso de duda entre varias áreas, debe seleccionarse aquella que mejor represente <strong>la razón por la que existe la decisión</strong>.</p>
+<p>Si todavía no existe información suficiente para hacerlo con criterio, se utiliza provisionalmente el área <code>99</code>.</p>
+</section>
+<section id="una-única-clasificación-principal" class="level2" data-number="48.12">
+<h2 data-number="48.12" class="anchored" data-anchor-id="una-única-clasificación-principal"><span class="header-section-number">48.12</span> Una única clasificación principal</h2>
+<p>Una decisión puede afectar simultáneamente a múltiples ámbitos.</p>
+<p>Por ejemplo, una decisión arquitectónica puede tener consecuencias funcionales, operativas o de seguridad.</p>
+<p>Esto no implica que deba pertenecer a varias áreas.</p>
+<p>Cada EDR tiene un único <code>nn</code>.</p>
+<p>Los demás efectos se expresan mediante metadatos como:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tags</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> publication</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> validation</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">affects</span><span class="kw">:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> iasi-quarto</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> iasi-book-I</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">related</span><span class="kw">:</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> EDR-20002</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>El identificador proporciona la clasificación principal.</p>
+<p>Los metadatos proporcionan el contexto adicional.</p>
+</section>
+<section id="el-área-no-depende-de-la-implementación" class="level2" data-number="48.13">
+<h2 data-number="48.13" class="anchored" data-anchor-id="el-área-no-depende-de-la-implementación"><span class="header-section-number">48.13</span> El área no depende de la implementación</h2>
+<p><code>nn</code> no debe asignarse según:</p>
+<ul>
+<li>el lenguaje de programación;</li>
+<li>el framework;</li>
+<li>la herramienta;</li>
+<li>el producto;</li>
+<li>el repositorio;</li>
+<li>el proveedor;</li>
+<li>el agente de IA que implemente la decisión.</li>
+</ul>
+<p>Por ejemplo, una decisión sobre cómo se estructura la publicación de IASI puede implementarse inicialmente en <code>iasi-quarto</code>.</p>
+<p>Eso no convierte automáticamente la decisión en una decisión sobre Quarto.</p>
+<p>La pregunta relevante es qué se está decidiendo desde el punto de vista de ingeniería.</p>
+</section>
+<section id="estabilidad" class="level2" data-number="48.14">
+<h2 data-number="48.14" class="anchored" data-anchor-id="estabilidad"><span class="header-section-number">48.14</span> Estabilidad</h2>
+<p>Una vez asignado un código <code>nn</code> a un área:</p>
+<ul>
+<li>su significado no cambia;</li>
+<li>no se reutiliza para otro ámbito;</li>
+<li>los EDR clasificados conservan su identificador.</li>
+</ul>
+<p>Los códigos de área son permanentes.</p>
+<p>El área <code>99</code> constituye la excepción: representa explícitamente un estado provisional pendiente de clasificación.</p>
+</section>
+<section id="separación-entre-áreas" class="level2" data-number="48.15">
+<h2 data-number="48.15" class="anchored" data-anchor-id="separación-entre-áreas"><span class="header-section-number">48.15</span> Separación entre áreas</h2>
+<p>Los códigos se asignan con separación deliberada:</p>
+<pre class="text"><code>00
+10
+20
+30
+40
+50
+60
+70
+80
+99</code></pre>
+<p>Esto mantiene una clasificación legible y deja espacio para incorporar nuevas áreas si la evolución de IASI lo hace necesario.</p>
+</section>
+<section id="creación-de-nuevas-áreas" class="level2" data-number="48.16">
+<h2 data-number="48.16" class="anchored" data-anchor-id="creación-de-nuevas-áreas"><span class="header-section-number">48.16</span> Creación de nuevas áreas</h2>
+<p>La lista de áreas no pretende definir anticipadamente todos los ámbitos posibles de la ingeniería.</p>
+<p>Se crearán nuevas áreas cuando las decisiones reales de IASI hagan necesaria una nueva categoría estable.</p>
+<p>Antes de crear una nueva área debe comprobarse que:</p>
+<ol type="1">
+<li>ninguna de las áreas existentes representa adecuadamente la decisión;</li>
+<li>el nuevo ámbito tiene significado propio desde el punto de vista de ingeniería;</li>
+<li>no representa simplemente una herramienta, tecnología o producto;</li>
+<li>previsiblemente podrá contener múltiples decisiones;</li>
+<li>su significado puede mantenerse estable en el tiempo.</li>
+</ol>
+<p>La taxonomía debe evolucionar a partir de necesidades reales.</p>
+</section>
+<section id="principio-de-evolución" class="level2" data-number="48.17">
+<h2 data-number="48.17" class="anchored" data-anchor-id="principio-de-evolución"><span class="header-section-number">48.17</span> Principio de evolución</h2>
+<p>IASI no pretende construir anticipadamente una clasificación completa de todas las decisiones de ingeniería posibles.</p>
+<p>Las áreas se incorporarán cuando aparezcan decisiones reales que justifiquen su existencia.</p>
+<blockquote class="blockquote">
+<p><strong>Las áreas no se inventan por anticipado. Se descubren cuando las decisiones de ingeniería las hacen necesarias.</strong></p>
+</blockquote>
+</section>
+<section id="regla-fundamental" class="level2" data-number="48.18">
+<h2 data-number="48.18" class="anchored" data-anchor-id="regla-fundamental"><span class="header-section-number">48.18</span> Regla fundamental</h2>
+<blockquote class="blockquote">
+<p><strong><code>nn</code> clasifica la naturaleza principal de la decisión. Los metadatos describen todo lo demás.</strong></p>
+</blockquote>
+<p>El identificador debe permitir saber dónde buscar una decisión.</p>
+<p>El contenido y los metadatos explican su alcance, sus relaciones y sus consecuencias.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./edr/99-pending/index.html" class="pagination-link" aria-label="Pendiente de clasificar">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Pendiente de clasificar</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

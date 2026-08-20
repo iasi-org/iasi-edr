@@ -1,0 +1,301 @@
+---
+id: EDR-00011
+title: "Lab execution model"
+status: accepted
+area:
+  id: "00"
+  name: "General"
+created: 2026-08-20
+tags: []
+affects: []
+related: []
+supersedes: []
+superseded-by: []
+---
+
+# Lab execution model
+
+## Contexto
+
+Algunos labs de IASI pueden resolverse como ejercicios pequeños y autocontenidos. Otros, sin embargo, deben trabajar sobre **proyectos reales**, con repositorios propios, historia Git, código, configuración y evolución independiente.
+
+`iasi-graphics` es un ejemplo de este segundo caso.
+
+El objetivo del lab no es simplemente construir el proyecto final. El objetivo es **observar y validar cómo IASI avanza a medida que recibe información**, qué puede hacer en cada momento, qué debe rechazar por falta de información y cómo transforma sucesivos inputs en decisiones, definitions, planes y resultados.
+
+El lab debe permitir repetir ese proceso de forma controlada y reproducible.
+
+## Decisión
+
+Los labs que trabajen sobre proyectos reales se ejecutarán sobre el **repositorio real del proyecto**.
+
+El lab define el experimento y su secuencia de pasos. El repositorio contiene el estado real producido durante su ejecución.
+
+```text
+Book II / Lab
+      │
+      │ define y explica
+      ▼
+secuencia de pasos
+      │
+      │ inputs sucesivos
+      ▼
+repositorio real
+      │
+      ├── estado paso 1
+      ├── estado paso 2
+      ├── estado paso 3
+      └── ...
+```
+
+No se mantendrá una copia paralela del proyecto dentro del lab.
+
+## El lab como secuencia
+
+Un lab no representa únicamente un resultado final.
+
+Representa una **secuencia controlada de estados**.
+
+Por ejemplo, un lab sobre `iasi-graphics` podría comenzar con un input externo:
+
+```text
+Queremos hacer un filtro y un MCP que genere gráficos.
+```
+
+Con esa información, IASI puede entender parte de la intención, pero no dispone necesariamente de información suficiente para diseñar o implementar la solución.
+
+El comportamiento correcto puede ser detenerse y declarar que existen huecos que impiden continuar.
+
+Posteriormente puede recibirse un nuevo input interno:
+
+```text
+Por ahora únicamente crea el proyecto.
+```
+
+Esta nueva instrucción sí permite realizar una acción concreta: crear el proyecto, aunque siga sin existir información suficiente para diseñar el sistema completo.
+
+El lab continúa de esta forma:
+
+```text
+input
+  ↓
+análisis
+  ↓
+estado de conocimiento
+  ↓
+acción posible o bloqueo
+  ↓
+resultado
+  ↓
+nuevo input
+  ↓
+...
+```
+
+Cada paso valida que IASI actúa únicamente con la información disponible en ese momento.
+
+IASI no debe anticipar decisiones futuras ni completar mediante suposiciones aquello que todavía no ha sido definido.
+
+## Separación entre lab y proyecto
+
+El lab y el proyecto tienen responsabilidades diferentes.
+
+### El lab contiene
+
+* la pregunta o propósito del experimento;
+* la secuencia de pasos;
+* los inputs que se introducen en cada paso;
+* las condiciones esperadas;
+* aquello que IASI puede hacer;
+* aquello que IASI todavía no debe hacer;
+* las evidencias y conclusiones del experimento.
+
+### El repositorio contiene
+
+* el proyecto real;
+* los inputs incorporados durante la ejecución;
+* las definitions producidas;
+* los planes;
+* el código;
+* la configuración;
+* los artefactos generados;
+* la historia Git resultante.
+
+Por tanto:
+
+> **El lab controla el experimento; el repositorio contiene el proyecto.**
+
+## Estados oficiales del lab
+
+Cada paso significativo tendrá asociado un **estado oficial reproducible** del repositorio.
+
+Estos estados se identificarán mediante tags Git.
+
+Por ejemplo:
+
+```text
+lab-graphics-step-01
+lab-graphics-step-02
+lab-graphics-step-03
+```
+
+Cada tag identifica el estado exacto del proyecto correspondiente a un determinado punto del experimento.
+
+Los tags forman parte del repositorio oficial utilizado para ejecutar el lab.
+
+No representan la historia particular de cada usuario.
+
+Representan los **checkpoints oficiales del experimento**.
+
+## Identidad y orden editorial
+
+El número utilizado para ordenar un lab dentro de Book II no forma parte de su identidad.
+
+Por ejemplo:
+
+```text
+005-graphics/
+```
+
+puede pasar posteriormente a:
+
+```text
+010-graphics/
+```
+
+sin que la identidad del lab cambie.
+
+Por esta razón, los tags no incorporarán el número editorial.
+
+Se utilizará:
+
+```text
+lab-graphics-step-01
+```
+
+y no:
+
+```text
+lab-005-step-01
+```
+
+Esto evita que una reorganización editorial obligue a modificar la historia Git de los proyectos.
+
+El principio es:
+
+> **El número ordena. El nombre identifica.**
+
+## Historia del usuario
+
+Una vez iniciado el lab, el repositorio pertenece operativamente al usuario.
+
+El usuario puede:
+
+* modificar archivos;
+* experimentar;
+* cometer errores;
+* crear sus propios commits;
+* crear ramas;
+* realizar soluciones alternativas;
+* desviarse de la secuencia prevista.
+
+IASI Labs no necesita controlar esa historia.
+
+Los commits creados durante el trabajo son parte de la experiencia del usuario.
+
+Los tags oficiales permanecen como referencias estables.
+
+Por tanto:
+
+> **Los commits son del usuario; los tags son del lab.**
+
+## Regreso a un checkpoint
+
+Si el usuario se pierde, rompe el proyecto o desea repetir una parte del experimento, puede regresar a cualquiera de los estados oficiales.
+
+Por ejemplo:
+
+```bash
+git switch --detach lab-graphics-step-05
+```
+
+El repositorio volverá al estado exacto correspondiente a ese paso.
+
+Desde ahí puede:
+
+* inspeccionar el estado;
+* repetir el paso;
+* crear una nueva rama;
+* continuar el experimento de otra forma.
+
+El usuario puede haber realizado posteriormente otros labs o haber avanzado mucho más en el repositorio.
+
+Eso no impide volver a un checkpoint anterior.
+
+Por ejemplo, puede haber completado:
+
+```text
+lab-graphics-step-05
+lab-mcp-step-03
+```
+
+y regresar conscientemente a:
+
+```text
+lab-graphics-step-05
+```
+
+El estado posterior dejará de estar visible en ese checkout, pero no desaparece.
+
+Puede recuperarse nuevamente mediante su tag correspondiente.
+
+Los tags funcionan así como **puntos de restauración oficiales del recorrido experimental**.
+
+## Reproducibilidad
+
+Este modelo permite que distintas personas ejecuten el mismo lab manteniendo historias Git completamente diferentes.
+
+Dos usuarios pueden partir del mismo checkpoint:
+
+```text
+lab-graphics-step-03
+```
+
+y producir soluciones diferentes.
+
+El lab sigue siendo reproducible porque ambos conocen exactamente el estado inicial desde el que parte el paso.
+
+La reproducibilidad no exige que todos produzcan los mismos commits.
+
+Exige que los puntos de partida oficiales sean conocidos y recuperables.
+
+## Consecuencias
+
+Este modelo permite que un lab evolucione naturalmente hacia un proyecto real sin necesidad de mantener una versión artificial específica para formación.
+
+El mismo repositorio puede ser simultáneamente:
+
+* un proyecto real de IASI;
+* el sujeto de uno o varios labs;
+* una fuente de evidencias sobre el funcionamiento de la metodología;
+* un entorno donde el usuario puede experimentar libremente.
+
+El lab no simula el desarrollo del proyecto.
+
+**El lab utiliza el desarrollo real como experimento.**
+
+Esto permite probar no solo el resultado final de IASI, sino su comportamiento durante todo el proceso: cuándo puede avanzar, cuándo debe detenerse, qué información utiliza y cómo cambia el proyecto conforme aparecen nuevos inputs.
+
+## Principios derivados
+
+> **El lab controla el experimento; el repositorio contiene el proyecto.**
+
+> **Los commits son del usuario; los tags son del lab.**
+
+> **El número ordena; el nombre identifica.**
+
+> **Cada paso del lab debe poder partir de un estado oficial conocido.**
+
+> **IASI debe actuar únicamente con la información disponible en cada paso.**
+
+> **Los labs no simulan proyectos reales: pueden ejecutarse directamente sobre ellos.**

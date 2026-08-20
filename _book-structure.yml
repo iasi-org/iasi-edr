@@ -13,6 +13,7 @@ book:
         - "edr/00-general/EDR-00008.qmd"
         - "edr/00-general/EDR-00009.qmd"
         - "edr/00-general/EDR-00010.qmd"
+        - "edr/00-general/EDR-00011.qmd"
     - part: "edr/10-functional/index.qmd"
       chapters:
         - "edr/10-functional/EDR-10001.qmd"
@@ -33,11 +34,13 @@ book:
         - "edr/20-architecture/EDR-20009.qmd"
         - "edr/20-architecture/EDR-20010.qmd"
         - "edr/20-architecture/EDR-20011.qmd"
+        - "edr/20-architecture/EDR-20012.qmd"
     - part: "edr/30-constraints/index.qmd"
       chapters:
         - "edr/30-constraints/EDR-30001.qmd"
         - "edr/30-constraints/EDR-30002.qmd"
         - "edr/30-constraints/EDR-30003.qmd"
+        - "edr/30-constraints/EDR-30004.qmd"
     - part: "edr/40-data/index.qmd"
       chapters:
         - "edr/40-data/EDR-40001.qmd"

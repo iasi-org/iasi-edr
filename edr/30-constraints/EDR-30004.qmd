@@ -1,0 +1,53 @@
+---
+id: EDR-30004
+title: "Usar Windows como sistema operativo de referencia para los labs"
+status: accepted
+area:
+  id: "30"
+  name: "Constraints"
+created: 2026-08-19
+tags:
+  - "labs"
+  - "windows"
+  - "infra"
+  - "plataforma"
+affects:
+  - "iasi-book-II"
+  - "iasi-labs"
+related:
+  - "EDR-20012"
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Los laboratorios necesitan un entorno de referencia concreto para poder describir instalaciones, comandos, rutas, herramientas y procedimientos de manera reproducible.
+
+Intentar documentar desde el principio cada laboratorio simultáneamente para Windows, Linux, macOS y otras combinaciones multiplicaría las variantes y desviaría el contenido del objetivo del propio laboratorio.
+
+IASI no pretende depender de un único sistema operativo, pero los labs necesitan un camino principal que podamos ejecutar, verificar y mantener.
+
+## Decisión
+
+**Windows será el sistema operativo de referencia por defecto para los laboratorios de IASI.**
+
+Las instrucciones principales de los labs se escribirán y verificarán sobre Windows.
+
+Esto no implica que IASI sea un proyecto exclusivo de Windows ni que los laboratorios no puedan realizarse sobre otros sistemas operativos. Otros entornos podrán utilizarse cuando sea posible, pero no será obligatorio mantener una variante equivalente de cada paso.
+
+## Alternativas consideradas
+
+- Utilizar Linux como sistema operativo de referencia.
+- Mantener instrucciones equivalentes para varios sistemas operativos desde el inicio.
+- No establecer ningún sistema operativo de referencia.
+
+## Consecuencias
+
+Los laboratorios disponen de una plataforma base conocida sobre la que pueden escribirse instrucciones reproducibles.
+
+Se reduce la complejidad editorial y de validación al evitar una matriz de procedimientos por sistema operativo.
+
+La metodología y los productos IASI deberán continuar evitando dependencias innecesarias de Windows cuando no formen parte de una necesidad real.
+
+La compatibilidad con otros sistemas podrá desarrollarse y validarse posteriormente sin condicionar el diseño inicial de cada lab.
