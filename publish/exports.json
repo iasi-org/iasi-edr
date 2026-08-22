@@ -1,0 +1,5 @@
+{
+  "exports": [
+    {"profile": "pdf", "text": "PDF", "href": "../pdf/iasi-edr.pdf"}
+  ]
+}
