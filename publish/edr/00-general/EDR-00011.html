@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>12&nbsp; Lab execution model</title>
+<title>12  Lab execution model</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -59,27 +57,13 @@ div.sourceCode
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
-
-
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script><script src="../../site_libs/quarto-nav/headroom.min.js"></script><script src="../../site_libs/clipboard/clipboard.min.js"></script><script src="../../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../../site_libs/quarto-search/fuse.min.js"></script><script src="../../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../../">
 <link href="../../edr/10-functional/index.html" rel="next">
 <link href="../../edr/00-general/EDR-00010.html" rel="prev">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script><script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../../site_libs/quarto-html/popper.min.js"></script><script src="../../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../../site_libs/quarto-html/anchor.min.js"></script><link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c43ac4dfc7fb5df8f9c604ada62dc7c8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script><link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-d8dd415b512466812c95913ac8b7a92c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,18 +89,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<style>html{ scroll-behavior: smooth; }</style>
-
-
+}</script><style>html{ scroll-behavior: smooth; }</style>
 </head>
-
 <body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">IASI EDR</span>
@@ -128,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
@@ -173,23 +151,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Pendientes</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../edr/00-general/index.html">General</a></li><li class="breadcrumb-item"><a href="../../edr/00-general/EDR-00011.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lab execution model</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lab execution model</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="../../edr/00-general/index.html">General</a></li>
+<li class="breadcrumb-item"><a href="../../edr/00-general/EDR-00011.html"><span class="chapter-number">12</span>  <span class="chapter-title">Lab execution model</span></a></li>
+</ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">12</span>  <span class="chapter-title">Lab execution model</span>
+</h1>
 </div>
 
 
@@ -203,25 +180,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header>
-
-
-<div class="edr-meta">
+</header><div class="edr-meta">
 <div class="edr-meta-summary">
 <span class="edr-id">EDR-00011</span> · <span class="edr-area">General</span> · <span class="edr-status">accepted</span> · <span class="edr-created">2026-08-20</span>
 </div>
 </div>
-<section id="lab-execution-model" class="level1" data-number="13">
-<h1 data-number="13"><span class="header-section-number">13</span> Lab execution model</h1>
-<section id="contexto" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="contexto"><span class="header-section-number">13.1</span> Contexto</h2>
+<section id="lab-execution-model" class="level1" data-number="13"><h1 data-number="13">
+<span class="header-section-number">13</span> Lab execution model</h1>
+<section id="contexto" class="level2" data-number="13.1"><h2 data-number="13.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">13.1</span> Contexto</h2>
 <p>Algunos labs de IASI pueden resolverse como ejercicios pequeños y autocontenidos. Otros, sin embargo, deben trabajar sobre <strong>proyectos reales</strong>, con repositorios propios, historia Git, código, configuración y evolución independiente.</p>
 <p><code>iasi-graphics</code> es un ejemplo de este segundo caso.</p>
 <p>El objetivo del lab no es simplemente construir el proyecto final. El objetivo es <strong>observar y validar cómo IASI avanza a medida que recibe información</strong>, qué puede hacer en cada momento, qué debe rechazar por falta de información y cómo transforma sucesivos inputs en decisiones, definitions, planes y resultados.</p>
 <p>El lab debe permitir repetir ese proceso de forma controlada y reproducible.</p>
-</section>
-<section id="decisión" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="decisión"><span class="header-section-number">13.2</span> Decisión</h2>
+</section><section id="decisión" class="level2" data-number="13.2"><h2 data-number="13.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">13.2</span> Decisión</h2>
 <p>Los labs que trabajen sobre proyectos reales se ejecutarán sobre el <strong>repositorio real del proyecto</strong>.</p>
 <p>El lab define el experimento y su secuencia de pasos. El repositorio contiene el estado real producido durante su ejecución.</p>
 <pre class="text"><code>Book II / Lab
@@ -239,9 +212,8 @@ repositorio real
       ├── estado paso 3
       └── ...</code></pre>
 <p>No se mantendrá una copia paralela del proyecto dentro del lab.</p>
-</section>
-<section id="el-lab-como-secuencia" class="level2" data-number="13.3">
-<h2 data-number="13.3" class="anchored" data-anchor-id="el-lab-como-secuencia"><span class="header-section-number">13.3</span> El lab como secuencia</h2>
+</section><section id="el-lab-como-secuencia" class="level2" data-number="13.3"><h2 data-number="13.3" class="anchored" data-anchor-id="el-lab-como-secuencia">
+<span class="header-section-number">13.3</span> El lab como secuencia</h2>
 <p>Un lab no representa únicamente un resultado final.</p>
 <p>Representa una <strong>secuencia controlada de estados</strong>.</p>
 <p>Por ejemplo, un lab sobre <code>iasi-graphics</code> podría comenzar con un input externo:</p>
@@ -267,12 +239,11 @@ nuevo input
 ...</code></pre>
 <p>Cada paso valida que IASI actúa únicamente con la información disponible en ese momento.</p>
 <p>IASI no debe anticipar decisiones futuras ni completar mediante suposiciones aquello que todavía no ha sido definido.</p>
-</section>
-<section id="separación-entre-lab-y-proyecto" class="level2" data-number="13.4">
-<h2 data-number="13.4" class="anchored" data-anchor-id="separación-entre-lab-y-proyecto"><span class="header-section-number">13.4</span> Separación entre lab y proyecto</h2>
+</section><section id="separación-entre-lab-y-proyecto" class="level2" data-number="13.4"><h2 data-number="13.4" class="anchored" data-anchor-id="separación-entre-lab-y-proyecto">
+<span class="header-section-number">13.4</span> Separación entre lab y proyecto</h2>
 <p>El lab y el proyecto tienen responsabilidades diferentes.</p>
-<section id="el-lab-contiene" class="level3" data-number="13.4.1">
-<h3 data-number="13.4.1" class="anchored" data-anchor-id="el-lab-contiene"><span class="header-section-number">13.4.1</span> El lab contiene</h3>
+<section id="el-lab-contiene" class="level3" data-number="13.4.1"><h3 data-number="13.4.1" class="anchored" data-anchor-id="el-lab-contiene">
+<span class="header-section-number">13.4.1</span> El lab contiene</h3>
 <ul>
 <li>la pregunta o propósito del experimento;</li>
 <li>la secuencia de pasos;</li>
@@ -281,10 +252,8 @@ nuevo input
 <li>aquello que IASI puede hacer;</li>
 <li>aquello que IASI todavía no debe hacer;</li>
 <li>las evidencias y conclusiones del experimento.</li>
-</ul>
-</section>
-<section id="el-repositorio-contiene" class="level3" data-number="13.4.2">
-<h3 data-number="13.4.2" class="anchored" data-anchor-id="el-repositorio-contiene"><span class="header-section-number">13.4.2</span> El repositorio contiene</h3>
+</ul></section><section id="el-repositorio-contiene" class="level3" data-number="13.4.2"><h3 data-number="13.4.2" class="anchored" data-anchor-id="el-repositorio-contiene">
+<span class="header-section-number">13.4.2</span> El repositorio contiene</h3>
 <ul>
 <li>el proyecto real;</li>
 <li>los inputs incorporados durante la ejecución;</li>
@@ -299,10 +268,8 @@ nuevo input
 <blockquote class="blockquote">
 <p><strong>El lab controla el experimento; el repositorio contiene el proyecto.</strong></p>
 </blockquote>
-</section>
-</section>
-<section id="estados-oficiales-del-lab" class="level2" data-number="13.5">
-<h2 data-number="13.5" class="anchored" data-anchor-id="estados-oficiales-del-lab"><span class="header-section-number">13.5</span> Estados oficiales del lab</h2>
+</section></section><section id="estados-oficiales-del-lab" class="level2" data-number="13.5"><h2 data-number="13.5" class="anchored" data-anchor-id="estados-oficiales-del-lab">
+<span class="header-section-number">13.5</span> Estados oficiales del lab</h2>
 <p>Cada paso significativo tendrá asociado un <strong>estado oficial reproducible</strong> del repositorio.</p>
 <p>Estos estados se identificarán mediante tags Git.</p>
 <p>Por ejemplo:</p>
@@ -313,9 +280,8 @@ lab-graphics-step-03</code></pre>
 <p>Los tags forman parte del repositorio oficial utilizado para ejecutar el lab.</p>
 <p>No representan la historia particular de cada usuario.</p>
 <p>Representan los <strong>checkpoints oficiales del experimento</strong>.</p>
-</section>
-<section id="identidad-y-orden-editorial" class="level2" data-number="13.6">
-<h2 data-number="13.6" class="anchored" data-anchor-id="identidad-y-orden-editorial"><span class="header-section-number">13.6</span> Identidad y orden editorial</h2>
+</section><section id="identidad-y-orden-editorial" class="level2" data-number="13.6"><h2 data-number="13.6" class="anchored" data-anchor-id="identidad-y-orden-editorial">
+<span class="header-section-number">13.6</span> Identidad y orden editorial</h2>
 <p>El número utilizado para ordenar un lab dentro de Book II no forma parte de su identidad.</p>
 <p>Por ejemplo:</p>
 <pre class="text"><code>005-graphics/</code></pre>
@@ -332,9 +298,8 @@ lab-graphics-step-03</code></pre>
 <blockquote class="blockquote">
 <p><strong>El número ordena. El nombre identifica.</strong></p>
 </blockquote>
-</section>
-<section id="historia-del-usuario" class="level2" data-number="13.7">
-<h2 data-number="13.7" class="anchored" data-anchor-id="historia-del-usuario"><span class="header-section-number">13.7</span> Historia del usuario</h2>
+</section><section id="historia-del-usuario" class="level2" data-number="13.7"><h2 data-number="13.7" class="anchored" data-anchor-id="historia-del-usuario">
+<span class="header-section-number">13.7</span> Historia del usuario</h2>
 <p>Una vez iniciado el lab, el repositorio pertenece operativamente al usuario.</p>
 <p>El usuario puede:</p>
 <ul>
@@ -353,12 +318,14 @@ lab-graphics-step-03</code></pre>
 <blockquote class="blockquote">
 <p><strong>Los commits son del usuario; los tags son del lab.</strong></p>
 </blockquote>
-</section>
-<section id="regreso-a-un-checkpoint" class="level2" data-number="13.8">
-<h2 data-number="13.8" class="anchored" data-anchor-id="regreso-a-un-checkpoint"><span class="header-section-number">13.8</span> Regreso a un checkpoint</h2>
+</section><section id="regreso-a-un-checkpoint" class="level2" data-number="13.8"><h2 data-number="13.8" class="anchored" data-anchor-id="regreso-a-un-checkpoint">
+<span class="header-section-number">13.8</span> Regreso a un checkpoint</h2>
 <p>Si el usuario se pierde, rompe el proyecto o desea repetir una parte del experimento, puede regresar a cualquiera de los estados oficiales.</p>
 <p>Por ejemplo:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">--detach</span> lab-graphics-step-05</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold">
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">--detach</span> lab-graphics-step-05</span></code></pre></div>
+<button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button>
+</div>
 <p>El repositorio volverá al estado exacto correspondiente a ese paso.</p>
 <p>Desde ahí puede:</p>
 <ul>
@@ -377,9 +344,8 @@ lab-mcp-step-03</code></pre>
 <p>El estado posterior dejará de estar visible en ese checkout, pero no desaparece.</p>
 <p>Puede recuperarse nuevamente mediante su tag correspondiente.</p>
 <p>Los tags funcionan así como <strong>puntos de restauración oficiales del recorrido experimental</strong>.</p>
-</section>
-<section id="reproducibilidad" class="level2" data-number="13.9">
-<h2 data-number="13.9" class="anchored" data-anchor-id="reproducibilidad"><span class="header-section-number">13.9</span> Reproducibilidad</h2>
+</section><section id="reproducibilidad" class="level2" data-number="13.9"><h2 data-number="13.9" class="anchored" data-anchor-id="reproducibilidad">
+<span class="header-section-number">13.9</span> Reproducibilidad</h2>
 <p>Este modelo permite que distintas personas ejecuten el mismo lab manteniendo historias Git completamente diferentes.</p>
 <p>Dos usuarios pueden partir del mismo checkpoint:</p>
 <pre class="text"><code>lab-graphics-step-03</code></pre>
@@ -387,9 +353,8 @@ lab-mcp-step-03</code></pre>
 <p>El lab sigue siendo reproducible porque ambos conocen exactamente el estado inicial desde el que parte el paso.</p>
 <p>La reproducibilidad no exige que todos produzcan los mismos commits.</p>
 <p>Exige que los puntos de partida oficiales sean conocidos y recuperables.</p>
-</section>
-<section id="consecuencias" class="level2" data-number="13.10">
-<h2 data-number="13.10" class="anchored" data-anchor-id="consecuencias"><span class="header-section-number">13.10</span> Consecuencias</h2>
+</section><section id="consecuencias" class="level2" data-number="13.10"><h2 data-number="13.10" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">13.10</span> Consecuencias</h2>
 <p>Este modelo permite que un lab evolucione naturalmente hacia un proyecto real sin necesidad de mantener una versión artificial específica para formación.</p>
 <p>El mismo repositorio puede ser simultáneamente:</p>
 <ul>
@@ -401,9 +366,8 @@ lab-mcp-step-03</code></pre>
 <p>El lab no simula el desarrollo del proyecto.</p>
 <p><strong>El lab utiliza el desarrollo real como experimento.</strong></p>
 <p>Esto permite probar no solo el resultado final de IASI, sino su comportamiento durante todo el proceso: cuándo puede avanzar, cuándo debe detenerse, qué información utiliza y cómo cambia el proyecto conforme aparecen nuevos inputs.</p>
-</section>
-<section id="principios-derivados" class="level2" data-number="13.11">
-<h2 data-number="13.11" class="anchored" data-anchor-id="principios-derivados"><span class="header-section-number">13.11</span> Principios derivados</h2>
+</section><section id="principios-derivados" class="level2" data-number="13.11"><h2 data-number="13.11" class="anchored" data-anchor-id="principios-derivados">
+<span class="header-section-number">13.11</span> Principios derivados</h2>
 <blockquote class="blockquote">
 <p><strong>El lab controla el experimento; el repositorio contiene el proyecto.</strong></p>
 </blockquote>
@@ -424,11 +388,7 @@ lab-mcp-step-03</code></pre>
 </blockquote>
 
 
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -827,11 +787,9 @@ lab-mcp-step-03</code></pre>
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../../edr/00-general/EDR-00010.html" class="pagination-link" aria-label="Adoptar desarrollo dirigido por especificaciones">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Adoptar desarrollo dirigido por especificaciones</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>  <span class="chapter-title">Adoptar desarrollo dirigido por especificaciones</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -846,4 +804,5 @@ lab-mcp-step-03</code></pre>
 
 
 <script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
-</body></html>
+</body>
+</html>

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>38&nbsp; Exponer PlantUML como capacidad utilizable por modelos</title>
+<title>38  Exponer PlantUML como capacidad utilizable por modelos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -24,27 +22,13 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
-
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script><script src="../../site_libs/quarto-nav/headroom.min.js"></script><script src="../../site_libs/clipboard/clipboard.min.js"></script><script src="../../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../../site_libs/quarto-search/fuse.min.js"></script><script src="../../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../../">
 <link href="../../edr/50-integration/EDR-50003.html" rel="next">
 <link href="../../edr/50-integration/EDR-50001.html" rel="prev">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script><script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../../site_libs/quarto-html/popper.min.js"></script><script src="../../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../../site_libs/quarto-html/anchor.min.js"></script><link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c43ac4dfc7fb5df8f9c604ada62dc7c8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script><link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-d8dd415b512466812c95913ac8b7a92c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,18 +54,12 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<style>html{ scroll-behavior: smooth; }</style>
-
-
+}</script><style>html{ scroll-behavior: smooth; }</style>
 </head>
-
 <body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">IASI EDR</span>
@@ -93,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
@@ -138,23 +116,22 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Pendientes</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../edr/50-integration/index.html">Integración</a></li><li class="breadcrumb-item"><a href="../../edr/50-integration/EDR-50002.html"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Exponer PlantUML como capacidad utilizable por modelos</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Exponer PlantUML como capacidad utilizable por modelos</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="../../edr/50-integration/index.html">Integración</a></li>
+<li class="breadcrumb-item"><a href="../../edr/50-integration/EDR-50002.html"><span class="chapter-number">38</span>  <span class="chapter-title">Exponer PlantUML como capacidad utilizable por modelos</span></a></li>
+</ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">38</span>  <span class="chapter-title">Exponer PlantUML como capacidad utilizable por modelos</span>
+</h1>
 </div>
 
 
@@ -168,10 +145,7 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
-
-
-<div class="edr-meta">
+</header><div class="edr-meta">
 <div class="edr-meta-summary">
 <span class="edr-id">EDR-50002</span> · <span class="edr-area">Integración</span> · <span class="edr-status">accepted</span> · <span class="edr-created">2026-08-16</span>
 </div>
@@ -179,30 +153,23 @@ ul.task-list li input[type="checkbox"] {
 <span class="edr-tags-label">Tags</span> <code class="edr-tag">plantuml</code> <code class="edr-tag">mcp</code> <code class="edr-tag">diagramas</code>
 </div>
 </div>
-<section id="contexto" class="level2" data-number="38.1">
-<h2 data-number="38.1" class="anchored" data-anchor-id="contexto"><span class="header-section-number">38.1</span> Contexto</h2>
+<section id="contexto" class="level2" data-number="38.1"><h2 data-number="38.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">38.1</span> Contexto</h2>
 <p>Generar diagramas PlantUML desde un modelo requiere una frontera clara entre la intención del agente y la herramienta externa que procesa el diagrama.</p>
-</section>
-<section id="decisión" class="level2" data-number="38.2">
-<h2 data-number="38.2" class="anchored" data-anchor-id="decisión"><span class="header-section-number">38.2</span> Decisión</h2>
+</section><section id="decisión" class="level2" data-number="38.2"><h2 data-number="38.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">38.2</span> Decisión</h2>
 <p>PlantUML se tratará como una herramienta que puede exponerse mediante un servidor MCP para que un modelo solicite la creación o renderizado de diagramas sin incorporar PlantUML al propio modelo.</p>
-</section>
-<section id="alternativas-consideradas" class="level2" data-number="38.3">
-<h2 data-number="38.3" class="anchored" data-anchor-id="alternativas-consideradas"><span class="header-section-number">38.3</span> Alternativas consideradas</h2>
+</section><section id="alternativas-consideradas" class="level2" data-number="38.3"><h2 data-number="38.3" class="anchored" data-anchor-id="alternativas-consideradas">
+<span class="header-section-number">38.3</span> Alternativas consideradas</h2>
 <ul>
 <li>Acoplar la generación a una interfaz manual.</li>
 <li>Tratar PlantUML como parte intrínseca del agente.</li>
-</ul>
-</section>
-<section id="consecuencias" class="level2" data-number="38.4">
-<h2 data-number="38.4" class="anchored" data-anchor-id="consecuencias"><span class="header-section-number">38.4</span> Consecuencias</h2>
+</ul></section><section id="consecuencias" class="level2" data-number="38.4"><h2 data-number="38.4" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">38.4</span> Consecuencias</h2>
 <p>La capacidad puede reutilizarse desde distintos modelos o plataformas y conserva una interfaz explícita de integración.</p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -601,16 +568,14 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../../edr/50-integration/EDR-50001.html" class="pagination-link" aria-label="Distinguir MCP del servidor MCP">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Distinguir MCP del servidor MCP</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">37</span>  <span class="chapter-title">Distinguir MCP del servidor MCP</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../edr/50-integration/EDR-50003.html" class="pagination-link" aria-label="Clasificar los productos técnicos por su forma de uso">
-        <span class="nav-page-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Clasificar los productos técnicos por su forma de uso</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">39</span>  <span class="chapter-title">Clasificar los productos técnicos por su forma de uso</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -620,4 +585,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
-</body></html>
+</body>
+</html>
