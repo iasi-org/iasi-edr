@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>General</title>
+<title>47  Postprocesar la salida de Quarto sin forzar su comportamiento</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,8 +26,8 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script><script src="../../site_libs/quarto-nav/headroom.min.js"></script><script src="../../site_libs/clipboard/clipboard.min.js"></script><script src="../../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../../site_libs/quarto-search/fuse.min.js"></script><script src="../../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../../">
-<link href="../../edr/00-general/EDR-00001.html" rel="next">
-<link href="../../index.html" rel="prev">
+<link href="../../edr/99-pending/index.html" rel="next">
+<link href="../../edr/80-operation/EDR-80004.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script><script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../../site_libs/quarto-html/popper.min.js"></script><script src="../../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../../site_libs/quarto-html/anchor.min.js"></script><link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script><link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../edr/00-general/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../edr/00-general/index.html"> 
 <span class="menu-text">General</span></a>
   </li>  
   <li class="nav-item">
@@ -128,8 +128,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">General</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="../../edr/80-operation/index.html">Operación</a></li>
+<li class="breadcrumb-item"><a href="../../edr/80-operation/EDR-80005.html"><span class="chapter-number">47</span>  <span class="chapter-title">Postprocesar la salida de Quarto sin forzar su comportamiento</span></a></li>
+</ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">47</span>  <span class="chapter-title">Postprocesar la salida de Quarto sin forzar su comportamiento</span>
+</h1>
 </div>
 
 
@@ -143,59 +148,53 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header><p>Esta sección reúne los Engineering Decision Records clasificados en el área <strong>General</strong> (<code>00</code>).</p>
-<table class="caption-top table">
-<thead><tr class="header">
-<th>ID</th>
-<th>Título</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><a href="../../edr/00-general/EDR-00001.html">EDR-00001</a></td>
-<td>Registro único de decisiones de ingeniería</td>
-</tr>
-<tr class="even">
-<td><a href="../../edr/00-general/EDR-00002.html">EDR-00002</a></td>
-<td>Identificación y clasificación de los EDR</td>
-</tr>
-<tr class="odd">
-<td><a href="../../edr/00-general/EDR-00003.html">EDR-00003</a></td>
-<td>Partir de la necesidad y no de las herramientas disponibles</td>
-</tr>
-<tr class="even">
-<td><a href="../../edr/00-general/EDR-00004.html">EDR-00004</a></td>
-<td>Encapsular la complejidad interna</td>
-</tr>
-<tr class="odd">
-<td><a href="../../edr/00-general/EDR-00005.html">EDR-00005</a></td>
-<td>Automatizar lo repetible y mantener manual lo excepcional</td>
-</tr>
-<tr class="even">
-<td><a href="../../edr/00-general/EDR-00006.html">EDR-00006</a></td>
-<td>Limitar la velocidad del sistema a la capacidad humana sostenible</td>
-</tr>
-<tr class="odd">
-<td><a href="../../edr/00-general/EDR-00007.html">EDR-00007</a></td>
-<td>Organizar la obra de IASI en tres volúmenes</td>
-</tr>
-<tr class="even">
-<td><a href="../../edr/00-general/EDR-00008.html">EDR-00008</a></td>
-<td>Separar el proceso vivido del resultado consolidado</td>
-</tr>
-<tr class="odd">
-<td><a href="../../edr/00-general/EDR-00009.html">EDR-00009</a></td>
-<td>Hacer emerger las prácticas desde necesidades reales</td>
-</tr>
-<tr class="even">
-<td><a href="../../edr/00-general/EDR-00010.html">EDR-00010</a></td>
-<td>Adoptar desarrollo dirigido por especificaciones</td>
-</tr>
-<tr class="odd">
-<td><a href="../../edr/00-general/EDR-00011.html">EDR-00011</a></td>
-<td>Lab execution model</td>
-</tr>
-</tbody>
-</table></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</header><div class="edr-meta">
+<div class="edr-meta-summary">
+<span class="edr-id">EDR-80005</span> · <span class="edr-area">Operación</span> · <span class="edr-status">accepted</span> · <span class="edr-created">2026-08-24</span>
+</div>
+<div class="edr-tags">
+<span class="edr-tags-label">Tags</span> <code class="edr-tag">quarto</code> <code class="edr-tag">render</code> <code class="edr-tag">postprocess</code> <code class="edr-tag">tooling</code>
+</div>
+</div>
+<section id="contexto" class="level2" data-number="47.1"><h2 data-number="47.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">47.1</span> Contexto</h2>
+<p>Quarto resuelve correctamente su responsabilidad principal: transformar las fuentes del proyecto en salidas HTML, PDF u otros formatos soportados. Sin embargo, algunas necesidades editoriales, estructurales o de publicación de IASI no encajan de forma natural en su modelo de configuración o en su ciclo de renderizado.</p>
+<p>Intentar resolver esas necesidades forzando <code>_quarto.yml</code>, perfiles, Pandoc, filtros, hooks u otros mecanismos internos aumenta el acoplamiento con Quarto y convierte cada excepción en una negociación con la herramienta.</p>
+<p>IASI no necesita que Quarto conozca todas sus reglas. Necesita una salida correcta de Quarto sobre la que pueda aplicar después sus propias transformaciones.</p>
+</section><section id="decisión" class="level2" data-number="47.2"><h2 data-number="47.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">47.2</span> Decisión</h2>
+<p>IASI utilizará Quarto dentro de los límites naturales de su responsabilidad y aplicará, cuando sea necesario, una fase explícita de <strong>postprocesado</strong> sobre la salida generada.</p>
+<p>El flujo conceptual será:</p>
+<pre class="text"><code>source
+  ↓
+Quarto
+  ↓
+output de Quarto
+  ↓
+postprocesado IASI
+  ↓
+validación
+  ↓
+artefacto final</code></pre>
+<p>Quarto realizará el renderizado. IASI actuará después sobre el resultado para resolver necesidades que no corresponda implementar dentro de Quarto.</p>
+<p>El postprocesado podrá incluir, entre otras operaciones, ajustes editoriales, transformación o reorganización de recursos, incorporación de metadatos, empaquetado y preparación de artefactos para publicación.</p>
+<p>No se modificará ni forzará el comportamiento interno de Quarto cuando la misma necesidad pueda resolverse de forma más simple y desacoplada después del renderizado.</p>
+</section><section id="alternativas-consideradas" class="level2" data-number="47.3"><h2 data-number="47.3" class="anchored" data-anchor-id="alternativas-consideradas">
+<span class="header-section-number">47.3</span> Alternativas consideradas</h2>
+<ul>
+<li>Resolver todas las necesidades mediante configuración nativa de Quarto.</li>
+<li>Introducir filtros, hooks o extensiones para cada ajuste requerido por IASI.</li>
+<li>Modificar la salida fuente antes del render para inducir el resultado deseado.</li>
+<li>Mantener lógica específica de publicación mezclada con la configuración de Quarto.</li>
+</ul></section><section id="consecuencias" class="level2" data-number="47.4"><h2 data-number="47.4" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">47.4</span> Consecuencias</h2>
+<p>Quarto queda tratado como un motor de renderizado con una responsabilidad clara, mientras IASI conserva el control de su propio proceso de publicación.</p>
+<p>Las particularidades de IASI pueden evolucionar sin depender de detalles internos de Quarto ni aumentar innecesariamente la complejidad de su configuración.</p>
+<p>La salida directa de Quarto pasa a ser un artefacto intermedio cuando exista postprocesado. El artefacto final es el resultado posterior a las transformaciones y validaciones de IASI.</p>
+<p>Esta decisión establece además un criterio general de ingeniería: <strong>no luchar contra una herramienta para obligarla a resolver aquello que queda fuera de su responsabilidad natural; utilizarla para lo que hace bien y continuar el proceso fuera de ella</strong>.</p>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -595,13 +594,13 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../../index.html" class="pagination-link" aria-label="Áreas EDR">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>  <span class="chapter-title">Áreas EDR</span></span>
+      <a href="../../edr/80-operation/EDR-80004.html" class="pagination-link" aria-label="Separar herramientas principales de trabajo y laboratorios locales">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">46</span>  <span class="chapter-title">Separar herramientas principales de trabajo y laboratorios locales</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../edr/00-general/EDR-00001.html" class="pagination-link" aria-label="Registro único de decisiones de ingeniería">
-        <span class="nav-page-text"><span class="chapter-number">2</span>  <span class="chapter-title">Registro único de decisiones de ingeniería</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../edr/99-pending/index.html" class="pagination-link" aria-label="Pendiente de clasificar">
+        <span class="nav-page-text">Pendiente de clasificar</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

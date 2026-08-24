@@ -1,0 +1,88 @@
+---
+id: EDR-80005
+title: "Postprocesar la salida de Quarto sin forzar su comportamiento"
+status: accepted
+area:
+  id: "80"
+  name: "Operación"
+created: 2026-08-24
+tags:
+  - "quarto"
+  - "render"
+  - "postprocess"
+  - "tooling"
+affects:
+  - "iasi-quarto"
+  - "iasi-books"
+  - "outputs"
+related:
+  - "EDR-20006"
+  - "EDR-80002"
+  - "EDR-80003"
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Quarto resuelve correctamente su responsabilidad principal: transformar las fuentes del proyecto en salidas
+HTML, PDF u otros formatos soportados. Sin embargo, algunas necesidades editoriales, estructurales o de
+publicación de IASI no encajan de forma natural en su modelo de configuración o en su ciclo de renderizado.
+
+Intentar resolver esas necesidades forzando `_quarto.yml`, perfiles, Pandoc, filtros, hooks u otros mecanismos
+internos aumenta el acoplamiento con Quarto y convierte cada excepción en una negociación con la herramienta.
+
+IASI no necesita que Quarto conozca todas sus reglas. Necesita una salida correcta de Quarto sobre la que pueda
+aplicar después sus propias transformaciones.
+
+## Decisión
+
+IASI utilizará Quarto dentro de los límites naturales de su responsabilidad y aplicará, cuando sea necesario,
+una fase explícita de **postprocesado** sobre la salida generada.
+
+El flujo conceptual será:
+
+```text
+source
+  ↓
+Quarto
+  ↓
+output de Quarto
+  ↓
+postprocesado IASI
+  ↓
+validación
+  ↓
+artefacto final
+```
+
+Quarto realizará el renderizado. IASI actuará después sobre el resultado para resolver necesidades que no
+corresponda implementar dentro de Quarto.
+
+El postprocesado podrá incluir, entre otras operaciones, ajustes editoriales, transformación o reorganización
+de recursos, incorporación de metadatos, empaquetado y preparación de artefactos para publicación.
+
+No se modificará ni forzará el comportamiento interno de Quarto cuando la misma necesidad pueda resolverse de
+forma más simple y desacoplada después del renderizado.
+
+## Alternativas consideradas
+
+- Resolver todas las necesidades mediante configuración nativa de Quarto.
+- Introducir filtros, hooks o extensiones para cada ajuste requerido por IASI.
+- Modificar la salida fuente antes del render para inducir el resultado deseado.
+- Mantener lógica específica de publicación mezclada con la configuración de Quarto.
+
+## Consecuencias
+
+Quarto queda tratado como un motor de renderizado con una responsabilidad clara, mientras IASI conserva el
+control de su propio proceso de publicación.
+
+Las particularidades de IASI pueden evolucionar sin depender de detalles internos de Quarto ni aumentar
+innecesariamente la complejidad de su configuración.
+
+La salida directa de Quarto pasa a ser un artefacto intermedio cuando exista postprocesado. El artefacto final
+es el resultado posterior a las transformaciones y validaciones de IASI.
+
+Esta decisión establece además un criterio general de ingeniería: **no luchar contra una herramienta para
+obligarla a resolver aquello que queda fuera de su responsabilidad natural; utilizarla para lo que hace bien y
+continuar el proceso fuera de ella**.

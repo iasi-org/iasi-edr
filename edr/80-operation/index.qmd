@@ -10,4 +10,5 @@ Esta sección reúne los Engineering Decision Records clasificados en el área *
 | [EDR-80002](EDR-80002.qmd) | Separar los directorios de salida por perfil |
 | [EDR-80003](EDR-80003.qmd) | Usar scripts R reutilizables para preview y render |
 | [EDR-80004](EDR-80004.qmd) | Separar herramientas principales de trabajo y laboratorios locales |
+| [EDR-80005](EDR-80005.qmd) | Postprocesar la salida de Quarto sin forzar su comportamiento |
 
