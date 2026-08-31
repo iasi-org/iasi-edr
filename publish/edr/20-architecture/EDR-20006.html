@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>23  Mantener la lógica específica de EDR fuera de iasi.quarto</title>
+<title>25  Mantener la lógica específica de EDR fuera de iasi.quarto</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -130,10 +130,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="../../edr/20-architecture/index.html">Arquitectura</a></li>
-<li class="breadcrumb-item"><a href="../../edr/20-architecture/EDR-20006.html"><span class="chapter-number">23</span>  <span class="chapter-title">Mantener la lógica específica de EDR fuera de iasi.quarto</span></a></li>
+<li class="breadcrumb-item"><a href="../../edr/20-architecture/EDR-20006.html"><span class="chapter-number">25</span>  <span class="chapter-title">Mantener la lógica específica de EDR fuera de iasi.quarto</span></a></li>
 </ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">23</span>  <span class="chapter-title">Mantener la lógica específica de EDR fuera de iasi.quarto</span>
+<span class="chapter-number">25</span>  <span class="chapter-title">Mantener la lógica específica de EDR fuera de iasi.quarto</span>
 </h1>
 </div>
 
@@ -156,19 +156,19 @@ ul.task-list li input[type="checkbox"] {
 <span class="edr-tags-label">Tags</span> <code class="edr-tag">separación</code> <code class="edr-tag">iasi-quarto</code> <code class="edr-tag">edr</code>
 </div>
 </div>
-<section id="contexto" class="level2" data-number="23.1"><h2 data-number="23.1" class="anchored" data-anchor-id="contexto">
-<span class="header-section-number">23.1</span> Contexto</h2>
+<section id="contexto" class="level2" data-number="25.1"><h2 data-number="25.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">25.1</span> Contexto</h2>
 <p><code>iasi.quarto</code> proporciona infraestructura genérica de publicación. La generación de catálogos por áreas EDR responde a un modelo particular que, por ahora, no ha demostrado ser necesario en otras publicaciones.</p>
-</section><section id="decisión" class="level2" data-number="23.2"><h2 data-number="23.2" class="anchored" data-anchor-id="decisión">
-<span class="header-section-number">23.2</span> Decisión</h2>
+</section><section id="decisión" class="level2" data-number="25.2"><h2 data-number="25.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">25.2</span> Decisión</h2>
 <p>La lógica específica de EDR permanecerá en <code>iasi-edr</code>, inicialmente bajo <code>R/</code>. Solo se promoverá a <code>iasi.quarto</code> cuando exista evidencia de reutilización real.</p>
-</section><section id="alternativas-consideradas" class="level2" data-number="23.3"><h2 data-number="23.3" class="anchored" data-anchor-id="alternativas-consideradas">
-<span class="header-section-number">23.3</span> Alternativas consideradas</h2>
+</section><section id="alternativas-consideradas" class="level2" data-number="25.3"><h2 data-number="25.3" class="anchored" data-anchor-id="alternativas-consideradas">
+<span class="header-section-number">25.3</span> Alternativas consideradas</h2>
 <ul>
 <li>Incorporar inmediatamente cualquier automatización nueva a <code>iasi.quarto</code>.</li>
 <li>Duplicar la lógica entre ambos repositorios.</li>
-</ul></section><section id="consecuencias" class="level2" data-number="23.4"><h2 data-number="23.4" class="anchored" data-anchor-id="consecuencias">
-<span class="header-section-number">23.4</span> Consecuencias</h2>
+</ul></section><section id="consecuencias" class="level2" data-number="25.4"><h2 data-number="25.4" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">25.4</span> Consecuencias</h2>
 <p><code>iasi.quarto</code> conserva una responsabilidad genérica y EDR puede evolucionar con rapidez sin convertir una necesidad local en contrato global.</p>
 
 
@@ -573,12 +573,12 @@ ul.task-list li input[type="checkbox"] {
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../../edr/20-architecture/EDR-20005.html" class="pagination-link" aria-label="Regenerar los índices EDR en pre-render">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>  <span class="chapter-title">Regenerar los índices EDR en pre-render</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">24</span>  <span class="chapter-title">Regenerar los índices EDR en pre-render</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../edr/20-architecture/EDR-20007.html" class="pagination-link" aria-label="Separar la configuración común de los perfiles HTML y PDF">
-        <span class="nav-page-text"><span class="chapter-number">24</span>  <span class="chapter-title">Separar la configuración común de los perfiles HTML y PDF</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">26</span>  <span class="chapter-title">Separar la configuración común de los perfiles HTML y PDF</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

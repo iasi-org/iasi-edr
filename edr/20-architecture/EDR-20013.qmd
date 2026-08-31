@@ -1,0 +1,180 @@
+---
+id: EDR-20013
+title: "Usar HTMLSlides para materializar Introducing IASI"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-30
+tags:
+  - "presentation"
+  - "html"
+  - "htmlslides"
+  - "tooling"
+  - "authoring"
+affects:
+  - "introducing-iasi"
+related:
+  - "EDR-10006"
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Una vez identificada la necesidad de crear una presentación de IASI apareció inmediatamente la cuestión de qué herramienta utilizar para materializarla.
+
+La primera reacción fue asumir **PowerPoint** y buscar la mejor forma de producir la presentación con esa tecnología. A partir de ahí se consideraron también otras herramientas de presentación.
+
+Ese enfoque reveló un problema metodológico: se estaba seleccionando una solución antes de terminar de definir la necesidad.
+
+Esto contradecía un principio fundamental de IASI:
+
+> No partir de una herramienta o metodología y preguntar cómo resolver el problema con ella. Partir de la necesidad y evaluar después qué solución la satisface mejor.
+
+Se volvió por tanto a la necesidad.
+
+La presentación debía:
+
+- seguir siendo una **presentación**, no convertirse en un sitio web ni en documentación;
+- permitir una narrativa progresiva y controlada;
+- ser extremadamente limpia y visual;
+- permitir interacción y revelado progresivo cuando resulte útil;
+- ofrecer control completo sobre el lenguaje visual de IASI;
+- poder mantenerse como un artefacto textual, versionable y reproducible;
+- poder ser leído y modificado por agentes dentro del workspace;
+- evitar que la identidad visual quede determinada por la herramienta utilizada;
+- poder ejecutarse y distribuirse con la menor dependencia posible de un entorno de autoría específico.
+
+Con estos criterios se reevaluaron las alternativas.
+
+## Decisión
+
+La presentación **Introducing IASI** se materializará inicialmente mediante **HTMLSlides**.
+
+HTMLSlides se utilizará como infraestructura de presentación y renderer, no como definición del lenguaje visual de IASI.
+
+El diseño, la tipografía, la composición, los diagramas y el resto de decisiones visuales pertenecen a IASI y deberán poder expresarse posteriormente mediante otros renderers cuando sea necesario.
+
+La salida principal será una presentación HTML ejecutable en navegador y mantenida como artefacto versionable dentro del proyecto.
+
+## Alternativas consideradas
+
+### PowerPoint
+
+**Ventajas**
+
+- Herramienta ampliamente conocida y utilizada.
+- Muy buen soporte para edición manual de slides.
+- Flujo de presentación maduro.
+- Amplias capacidades gráficas, de animación y composición.
+- Buena interoperabilidad en contextos corporativos.
+
+**Inconvenientes**
+
+- El formato de autoría no es especialmente adecuado para inspección y edición textual.
+- El control de versiones y la revisión de cambios son menos naturales que sobre fuentes de texto.
+- La automatización y modificación por agentes introduce una capa adicional de herramientas.
+- Favorece un flujo de trabajo centrado en la herramienta de edición.
+- La decisión inicial de usar PowerPoint se había tomado antes de definir correctamente la necesidad.
+
+**Resultado**
+
+Descartado como tecnología principal para esta presentación. Puede seguir siendo útil para materializaciones o casos concretos futuros.
+
+### Gamma
+
+**Ventajas**
+
+- Generación rápida de presentaciones con asistencia de IA.
+- Buenos resultados visuales iniciales con poco trabajo.
+- Publicación y compartición web sencillas.
+- Reduce considerablemente el esfuerzo de composición inicial.
+
+**Inconvenientes**
+
+- Introduce dependencia de un servicio externo y de su flujo de trabajo.
+- Parte de la lógica de autoría y presentación queda controlada por la plataforma.
+- Menor control sobre una fuente canónica completamente gobernada por IASI.
+- La reproducibilidad y evolución mediante el workspace son menos directas.
+- Sus decisiones visuales y de composición pueden condicionar el lenguaje visual de IASI.
+
+**Resultado**
+
+Descartado porque optimiza la generación de presentaciones, pero proporciona menos control sobre el artefacto y su proceso de ingeniería.
+
+### Prezi
+
+**Ventajas**
+
+- Narrativa visual diferenciada.
+- Permite relaciones espaciales y navegación no lineal.
+- Puede producir presentaciones visualmente muy expresivas.
+
+**Inconvenientes**
+
+- Su modelo de navegación condiciona fuertemente la narrativa.
+- El movimiento y la estructura espacial no son una necesidad de Introducing IASI.
+- Introduce dependencia de una plataforma y un formato de autoría específicos.
+- Resulta menos natural como artefacto textual y versionable dentro del workspace.
+
+**Resultado**
+
+Descartado porque su principal ventaja no responde a una necesidad identificada y añadiría una forma narrativa impuesta por la herramienta.
+
+### HTML desarrollado específicamente para la presentación
+
+**Ventajas**
+
+- Control completo sobre presentación, comportamiento y lenguaje visual.
+- Fuente textual y directamente versionable.
+- Ejecución universal mediante navegador.
+- Fácil integración con agentes y herramientas del workspace.
+- Posibilidad de generar un único artefacto HTML autocontenido.
+
+**Inconvenientes**
+
+- Obliga a construir y mantener desde cero comportamiento propio de una presentación.
+- Navegación, ajuste al viewport, teclado, notas, progresión y otras capacidades básicas pasarían a ser responsabilidad del proyecto.
+- Introduciría infraestructura propia antes de demostrar que realmente es necesaria.
+
+**Resultado**
+
+La aproximación HTML se considera adecuada, pero se evita construir desde cero la infraestructura que ya puede proporcionar una solución especializada.
+
+### HTMLSlides
+
+**Ventajas**
+
+- Mantiene HTML como fuente y como materialización natural.
+- Permite trabajar con archivos textuales, versionables e inspeccionables.
+- Puede ser leído y modificado directamente por agentes.
+- Proporciona una estructura específica de slides y capacidades básicas de presentación.
+- Se ejecuta directamente en navegador.
+- Permite producir una presentación autocontenida con muy pocas dependencias.
+- Conserva un alto grado de control sobre HTML, CSS y comportamiento.
+- No obliga a adoptar una identidad visual concreta.
+- Permite que el lenguaje visual de IASI se defina independientemente del renderer.
+
+**Inconvenientes**
+
+- Tiene un ecosistema y una madurez menores que PowerPoint.
+- Requiere trabajo propio de diseño y CSS.
+- Algunas capacidades avanzadas deberán implementarse o adaptarse cuando aparezca la necesidad.
+- La interoperabilidad directa con formatos tradicionales de presentación no es su objetivo principal.
+
+**Resultado**
+
+Seleccionado porque proporciona suficiente infraestructura de presentación sin apropiarse del diseño ni del proceso de ingeniería.
+
+## Consecuencias
+
+`introducing-iasi` tendrá como materialización principal una presentación HTML basada en HTMLSlides.
+
+El contenido, la narrativa y el lenguaje visual permanecen bajo control de IASI.
+
+HTMLSlides se considera un renderer sustituible. La presentación no debe diseñarse conceptualmente alrededor de las limitaciones o convenciones propias de HTMLSlides.
+
+La elección permite mantener la presentación como artefacto textual, reproducible, versionable y accesible a agentes dentro del workspace.
+
+La decisión podrá revisarse si las necesidades reales de la presentación dejan de estar bien cubiertas por HTMLSlides. La herramienta es consecuencia de la necesidad, no una restricción impuesta al problema.

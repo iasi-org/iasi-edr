@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>31  Evitar la generalización prematura</title>
+<title>36  Evitar la generalización prematura</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -130,10 +130,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="../../edr/30-constraints/index.html">Constraints</a></li>
-<li class="breadcrumb-item"><a href="../../edr/30-constraints/EDR-30002.html"><span class="chapter-number">31</span>  <span class="chapter-title">Evitar la generalización prematura</span></a></li>
+<li class="breadcrumb-item"><a href="../../edr/30-constraints/EDR-30002.html"><span class="chapter-number">36</span>  <span class="chapter-title">Evitar la generalización prematura</span></a></li>
 </ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">31</span>  <span class="chapter-title">Evitar la generalización prematura</span>
+<span class="chapter-number">36</span>  <span class="chapter-title">Evitar la generalización prematura</span>
 </h1>
 </div>
 
@@ -156,19 +156,19 @@ ul.task-list li input[type="checkbox"] {
 <span class="edr-tags-label">Tags</span> <code class="edr-tag">simplicidad</code> <code class="edr-tag">generalización</code> <code class="edr-tag">arquitectura</code>
 </div>
 </div>
-<section id="contexto" class="level2" data-number="31.1"><h2 data-number="31.1" class="anchored" data-anchor-id="contexto">
-<span class="header-section-number">31.1</span> Contexto</h2>
+<section id="contexto" class="level2" data-number="36.1"><h2 data-number="36.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">36.1</span> Contexto</h2>
 <p>IASI genera patrones que podrían parecer reutilizables desde su primera aparición. Convertir inmediatamente cada patrón en infraestructura compartida crea APIs y dependencias antes de conocer sus verdaderos límites.</p>
-</section><section id="decisión" class="level2" data-number="31.2"><h2 data-number="31.2" class="anchored" data-anchor-id="decisión">
-<span class="header-section-number">31.2</span> Decisión</h2>
+</section><section id="decisión" class="level2" data-number="36.2"><h2 data-number="36.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">36.2</span> Decisión</h2>
 <p>Una solución permanecerá local mientras solo exista una necesidad demostrada. La promoción a componente común se hará cuando aparezca reutilización real y pueda definirse un contrato estable.</p>
-</section><section id="alternativas-consideradas" class="level2" data-number="31.3"><h2 data-number="31.3" class="anchored" data-anchor-id="alternativas-consideradas">
-<span class="header-section-number">31.3</span> Alternativas consideradas</h2>
+</section><section id="alternativas-consideradas" class="level2" data-number="36.3"><h2 data-number="36.3" class="anchored" data-anchor-id="alternativas-consideradas">
+<span class="header-section-number">36.3</span> Alternativas consideradas</h2>
 <ul>
 <li>Centralizar desde el primer uso.</li>
 <li>Diseñar extensibilidad para escenarios todavía hipotéticos.</li>
-</ul></section><section id="consecuencias" class="level2" data-number="31.4"><h2 data-number="31.4" class="anchored" data-anchor-id="consecuencias">
-<span class="header-section-number">31.4</span> Consecuencias</h2>
+</ul></section><section id="consecuencias" class="level2" data-number="36.4"><h2 data-number="36.4" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">36.4</span> Consecuencias</h2>
 <p>La arquitectura común crece por evidencia. Los productos conservan libertad para experimentar sin comprometer prematuramente a todo el ecosistema.</p>
 
 
@@ -573,12 +573,12 @@ ul.task-list li input[type="checkbox"] {
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../../edr/30-constraints/EDR-30001.html" class="pagination-link" aria-label="Diseñar las publicaciones IASI para escritorio">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">30</span>  <span class="chapter-title">Diseñar las publicaciones IASI para escritorio</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">35</span>  <span class="chapter-title">Diseñar las publicaciones IASI para escritorio</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../edr/30-constraints/EDR-30003.html" class="pagination-link" aria-label="Construir manualmente la infraestructura antes de automatizarla">
-        <span class="nav-page-text"><span class="chapter-number">32</span>  <span class="chapter-title">Construir manualmente la infraestructura antes de automatizarla</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">37</span>  <span class="chapter-title">Construir manualmente la infraestructura antes de automatizarla</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

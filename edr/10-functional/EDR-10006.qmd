@@ -1,0 +1,55 @@
+---
+id: EDR-10006
+title: "Crear una presentación de introducción a IASI"
+status: accepted
+area:
+  id: "10"
+  name: "Funcional"
+created: 2026-08-30
+tags:
+  - "iasi"
+  - "presentation"
+  - "communication"
+  - "introduction"
+affects:
+  - "introducing-iasi"
+related:
+  - "EDR-20013"
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+IASI dispone de libros, documentación, repositorios, artefactos y una presencia web, pero esos medios no sustituyen una presentación concebida específicamente para **introducir IASI de forma progresiva y visual**.
+
+La necesidad no es crear nueva documentación ni resumir un libro. Se necesita un artefacto que permita presentar IASI ante otras personas, explicar sus ideas fundamentales de forma secuencial y apoyar una exposición oral.
+
+La presentación debe poder evolucionar a medida que evolucione la comprensión de IASI y debe formar parte del propio ecosistema de artefactos del proyecto.
+
+## Decisión
+
+Se creará una presentación específica denominada **Introducing IASI**, desarrollada como el proyecto `introducing-iasi`.
+
+Su función será introducir IASI progresivamente, priorizando la comunicación visual y la exposición de conceptos antes que la acumulación de texto explicativo.
+
+La presentación será un artefacto propio de IASI y se desarrollará aplicando el propio enfoque IASI a su construcción.
+
+## Alternativas consideradas
+
+- Utilizar directamente los libros de IASI como material de presentación.
+- Utilizar `iasi-home` como sustituto de una presentación.
+- Preparar un documento estático de introducción.
+- No crear por ahora un artefacto específico de presentación.
+
+Estas alternativas permiten explicar o documentar IASI, pero no proporcionan el tipo de narrativa secuencial, visual y orientada a exposición que requiere una presentación.
+
+## Consecuencias
+
+IASI dispone de un artefacto específico para su presentación pública.
+
+La narrativa de introducción puede evolucionar independientemente de los libros, la documentación y el portal web.
+
+`introducing-iasi` se convierte además en un caso real sobre el que aplicar y validar IASI durante la construcción de un nuevo artefacto.
+
+La tecnología utilizada para materializar la presentación se decide de forma independiente en `EDR-20013`.

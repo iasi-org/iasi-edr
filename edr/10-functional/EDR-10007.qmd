@@ -1,0 +1,117 @@
+---
+id: EDR-10007
+title: "Proporcionar un agente IASI capaz de ejecutar trabajo sobre el workspace"
+status: accepted
+area:
+  id: "10"
+  name: "Funcional"
+created: 2026-08-31
+tags:
+  - "agent"
+  - "workspace"
+  - "local-models"
+  - "execution"
+affects:
+  - "iasi-agent"
+related:
+  - "EDR-20011"
+  - "EDR-20014"
+  - "EDR-20015"
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+La infraestructura local de IASI ya permite ejecutar modelos mediante Ollama.
+
+Sin embargo, disponer de un modelo local no equivale a disponer de un agente capaz de realizar trabajo de ingeniería.
+
+Un modelo utilizado en modo chat o prompt puede recibir contexto y generar una respuesta, pero no dispone necesariamente de las capacidades necesarias para trabajar sobre un proyecto real:
+
+```text
+prompt
+  ↓
+model
+  ↓
+response
+```
+
+Para ejecutar trabajo IASI se necesita una capa adicional capaz de operar sobre el workspace.
+
+La necesidad se hizo explícita al intentar utilizar los modelos locales como alternativa de ejecución: el modelo estaba disponible, pero faltaba el componente capaz de leer el proyecto, comprender una tarea, utilizar herramientas, modificar los artefactos permitidos y materializar resultados.
+
+La existencia de agentes externos como Codex demostró además que la tarea y el ejecutor pueden separarse. Una misma tarea IASI puede ser ejecutada por distintos agentes sin redefinir el trabajo.
+
+## Decisión
+
+IASI dispondrá de un agente denominado inicialmente `iasi-agent`, capaz de ejecutar trabajo directamente sobre un workspace IASI.
+
+Su objetivo es proporcionar la capa de ejecución que convierte un modelo en un ejecutor de ingeniería.
+
+Conceptualmente:
+
+```text
+MODEL
+  ↓
+IASI AGENT
+  ↓
+WORKSPACE
+```
+
+`iasi-agent` deberá poder, según las reglas y permisos aplicables:
+
+- comprender la tarea solicitada;
+- descubrir e inspeccionar la estructura del proyecto;
+- leer los artefactos relevantes;
+- utilizar herramientas;
+- ejecutar comandos cuando corresponda;
+- crear o modificar únicamente los artefactos permitidos;
+- materializar resultados;
+- validar el trabajo realizado.
+
+La capacidad de acceder al workspace no implica autorización para modificar cualquier contenido.
+
+Las reglas de IASI siguen gobernando qué puede leerse, modificarse o producirse. Los artefactos definidos como inmutables continúan siendo inmutables independientemente del agente que ejecute el trabajo.
+
+La ejecución local será una capacidad de primer nivel. `iasi-agent` deberá poder utilizar modelos locales cuando estos sean suficientes para la tarea.
+
+## Alternativas consideradas
+
+### Utilizar únicamente Ollama u Open WebUI
+
+Permiten ejecutar e interactuar con modelos locales, pero no proporcionan por sí mismos el agente de workspace que necesita IASI.
+
+Resuelven la inferencia y la conversación, no la ejecución completa del trabajo de ingeniería.
+
+### Depender exclusivamente de agentes externos
+
+Agentes como Codex ya ofrecen excelentes capacidades sobre el workspace.
+
+Sin embargo, hacer depender toda la ejecución de IASI de un único agente externo introduciría una dependencia innecesaria entre la metodología y un ejecutor concreto.
+
+Además, disponibilidad, cuotas, conectividad o evolución del producto podrían impedir temporalmente la ejecución sin que haya cambiado la tarea.
+
+### Construir inmediatamente un agente completo desde cero
+
+Proporcionaría control total, pero obligaría a desarrollar antes de tiempo capacidades ya resueltas por plataformas agentic existentes: gestión de modelos, herramientas, sesiones, permisos, edición de archivos, ejecución de comandos e integración con protocolos externos.
+
+IASI necesita definir primero qué espera de un agente y reutilizar infraestructura existente siempre que satisfaga esa necesidad.
+
+## Consecuencias
+
+El modelo deja de confundirse con el agente.
+
+Ollama permanece como runtime de modelos y `iasi-agent` proporciona la capa de ejecución sobre el workspace.
+
+IASI puede utilizar diferentes modelos sin redefinir el agente y diferentes agentes sin redefinir la tarea.
+
+Las tareas permanecen independientes del ejecutor.
+
+`iasi-agent` se convierte en uno de los posibles ejecutores de IASI, no en el workflow de IASI.
+
+La arquitectura permite trabajar localmente cuando exista un modelo suficiente para la tarea y utilizar otros ejecutores cuando resulte más apropiado.
+
+Se establece como principio:
+
+> **El agente es un ejecutor, no el workflow.**

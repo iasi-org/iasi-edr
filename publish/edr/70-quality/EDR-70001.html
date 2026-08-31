@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>40  Validar la estructura Quarto antes de preparar o renderizar</title>
+<title>45  Validar la estructura Quarto antes de preparar o renderizar</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -130,10 +130,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="../../edr/70-quality/index.html">Calidad</a></li>
-<li class="breadcrumb-item"><a href="../../edr/70-quality/EDR-70001.html"><span class="chapter-number">40</span>  <span class="chapter-title">Validar la estructura Quarto antes de preparar o renderizar</span></a></li>
+<li class="breadcrumb-item"><a href="../../edr/70-quality/EDR-70001.html"><span class="chapter-number">45</span>  <span class="chapter-title">Validar la estructura Quarto antes de preparar o renderizar</span></a></li>
 </ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">40</span>  <span class="chapter-title">Validar la estructura Quarto antes de preparar o renderizar</span>
+<span class="chapter-number">45</span>  <span class="chapter-title">Validar la estructura Quarto antes de preparar o renderizar</span>
 </h1>
 </div>
 
@@ -156,19 +156,19 @@ ul.task-list li input[type="checkbox"] {
 <span class="edr-tags-label">Tags</span> <code class="edr-tag">validation</code> <code class="edr-tag">quarto</code> <code class="edr-tag">iasi-quarto</code>
 </div>
 </div>
-<section id="contexto" class="level2" data-number="40.1"><h2 data-number="40.1" class="anchored" data-anchor-id="contexto">
-<span class="header-section-number">40.1</span> Contexto</h2>
+<section id="contexto" class="level2" data-number="45.1"><h2 data-number="45.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">45.1</span> Contexto</h2>
 <p>Un pipeline puede avanzar bastante antes de fallar si faltan archivos esenciales o la configuración no es coherente con el tipo de proyecto.</p>
-</section><section id="decisión" class="level2" data-number="40.2"><h2 data-number="40.2" class="anchored" data-anchor-id="decisión">
-<span class="header-section-number">40.2</span> Decisión</h2>
+</section><section id="decisión" class="level2" data-number="45.2"><h2 data-number="45.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">45.2</span> Decisión</h2>
 <p><code>iasi.quarto</code> validará al inicio la existencia de <code>_quarto.yml</code> y <code>_iasi.yml</code>, determinará el tipo de proyecto Quarto y verificará la configuración específica requerida por ese tipo antes de continuar con prepare/build. Para publicaciones con perfiles se comprobará la presencia de las configuraciones declaradas.</p>
-</section><section id="alternativas-consideradas" class="level2" data-number="40.3"><h2 data-number="40.3" class="anchored" data-anchor-id="alternativas-consideradas">
-<span class="header-section-number">40.3</span> Alternativas consideradas</h2>
+</section><section id="alternativas-consideradas" class="level2" data-number="45.3"><h2 data-number="45.3" class="anchored" data-anchor-id="alternativas-consideradas">
+<span class="header-section-number">45.3</span> Alternativas consideradas</h2>
 <ul>
 <li>Delegar todos los errores a <code>quarto render</code>.</li>
 <li>Validar solo después de haber generado artefactos.</li>
-</ul></section><section id="consecuencias" class="level2" data-number="40.4"><h2 data-number="40.4" class="anchored" data-anchor-id="consecuencias">
-<span class="header-section-number">40.4</span> Consecuencias</h2>
+</ul></section><section id="consecuencias" class="level2" data-number="45.4"><h2 data-number="45.4" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">45.4</span> Consecuencias</h2>
 <p>Los errores de configuración aparecen cerca de su causa y antes de modificar artefactos derivados. El pipeline puede detenerse con mensajes específicos de IASI.</p>
 
 
@@ -578,7 +578,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../edr/70-quality/EDR-70002.html" class="pagination-link" aria-label="Fallar ante inconsistencias estructurales del registro EDR">
-        <span class="nav-page-text"><span class="chapter-number">41</span>  <span class="chapter-title">Fallar ante inconsistencias estructurales del registro EDR</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">46</span>  <span class="chapter-title">Fallar ante inconsistencias estructurales del registro EDR</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

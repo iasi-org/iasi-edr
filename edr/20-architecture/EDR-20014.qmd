@@ -1,0 +1,91 @@
+---
+id: EDR-20014
+title: "Mantener iasi-agent como proyecto separado de IASI"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-31
+tags:
+  - "agent"
+  - "separation"
+  - "experimentation"
+  - "architecture"
+affects:
+  - "iasi-agent"
+  - "IASI"
+related:
+  - "EDR-10007"
+  - "EDR-20011"
+  - "EDR-20015"
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+IASI ya dispone de un runtime y de comandos destinados a soportar la aplicación de la metodología.
+
+Por otra parte, `iasi-dev` es el entorno utilizado para desarrollar IASI.
+
+La aparición de la necesidad de experimentar con un agente local capaz de trabajar sobre el workspace no implica que esa implementación deba incorporarse directamente al runtime de IASI.
+
+Todavía se están descubriendo las capacidades que debe tener un agente IASI, la forma de conectarlo con modelos locales, la relación con skills, comandos y herramientas, y el grado de adaptación necesario sobre plataformas agentic existentes.
+
+Introducir esa experimentación directamente dentro de IASI mezclaría una capacidad todavía en evolución con el núcleo que define y ejecuta la metodología.
+
+## Decisión
+
+Se mantendrá `iasi-agent` como un proyecto separado de IASI.
+
+`iasi-agent` será el espacio donde experimentar, integrar y validar una implementación de agente capaz de ejecutar trabajo IASI sobre un workspace.
+
+La separación conceptual será:
+
+```text
+IASI
+  ↓
+define el trabajo, reglas y workflow
+
+iasi-agent
+  ↓
+ejecuta trabajo IASI como uno de sus posibles agentes
+```
+
+IASI no dependerá de `iasi-agent` para definir la metodología.
+
+`iasi-agent` dependerá de los contratos y artefactos que IASI establezca para poder ejecutar trabajo correctamente.
+
+El nombre `iasi-agent` identifica esta línea de trabajo y puede evolucionar si la comprensión posterior del producto lo requiere.
+
+## Alternativas consideradas
+
+### Incorporar el agente directamente dentro de IASI
+
+Reduciría inicialmente el número de proyectos, pero acoplaría el runtime de la metodología con una implementación agentic concreta todavía experimental.
+
+También dificultaría distinguir qué comportamiento pertenece a IASI y qué comportamiento pertenece al ejecutor.
+
+### Tratar el agente como parte de `iasi-dev`
+
+`iasi-dev` es un entorno de desarrollo, no un producto de ejecución IASI.
+
+Ubicar allí el agente confundiría infraestructura de desarrollo con una capacidad reutilizable del ecosistema.
+
+### Utilizar únicamente adaptadores para agentes externos
+
+Los adaptadores siguen siendo necesarios para proyectar capacidades IASI sobre otras plataformas.
+
+Sin embargo, no sustituyen la necesidad de disponer de un espacio propio donde experimentar con un agente IASI y con ejecución local.
+
+## Consecuencias
+
+IASI conserva un núcleo independiente de cualquier implementación agentic concreta.
+
+`iasi-agent` puede evolucionar rápidamente, cambiar de plataforma base o incluso descartarse sin obligar a rediseñar el runtime de IASI.
+
+La experimentación local queda aislada del núcleo metodológico.
+
+La decisión se relaciona con `EDR-20011`, que ya estableció que las capacidades agentic de IASI no deben quedar acopladas a una única plataforma.
+
+La separación permite comprobar en la práctica qué necesita realmente un agente IASI antes de convertir esas necesidades en contratos o capacidades canónicas del sistema.

@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>22  Regenerar los índices EDR en pre-render</title>
+<title>24  Regenerar los índices EDR en pre-render</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -130,10 +130,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="../../edr/20-architecture/index.html">Arquitectura</a></li>
-<li class="breadcrumb-item"><a href="../../edr/20-architecture/EDR-20005.html"><span class="chapter-number">22</span>  <span class="chapter-title">Regenerar los índices EDR en pre-render</span></a></li>
+<li class="breadcrumb-item"><a href="../../edr/20-architecture/EDR-20005.html"><span class="chapter-number">24</span>  <span class="chapter-title">Regenerar los índices EDR en pre-render</span></a></li>
 </ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">22</span>  <span class="chapter-title">Regenerar los índices EDR en pre-render</span>
+<span class="chapter-number">24</span>  <span class="chapter-title">Regenerar los índices EDR en pre-render</span>
 </h1>
 </div>
 
@@ -156,20 +156,20 @@ ul.task-list li input[type="checkbox"] {
 <span class="edr-tags-label">Tags</span> <code class="edr-tag">quarto</code> <code class="edr-tag">pre-render</code> <code class="edr-tag">edr</code> <code class="edr-tag">r</code>
 </div>
 </div>
-<section id="contexto" class="level2" data-number="22.1"><h2 data-number="22.1" class="anchored" data-anchor-id="contexto">
-<span class="header-section-number">22.1</span> Contexto</h2>
+<section id="contexto" class="level2" data-number="24.1"><h2 data-number="24.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">24.1</span> Contexto</h2>
 <p>Los índices de área son contenido derivado y deben estar actualizados cuando se publica, sin exigir una acción manual adicional después de crear o modificar un EDR.</p>
-</section><section id="decisión" class="level2" data-number="22.2"><h2 data-number="22.2" class="anchored" data-anchor-id="decisión">
-<span class="header-section-number">22.2</span> Decisión</h2>
+</section><section id="decisión" class="level2" data-number="24.2"><h2 data-number="24.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">24.2</span> Decisión</h2>
 <p>Quarto ejecutará <code>R/create-index.R</code> mediante <code>project.pre-render</code>. El script leerá las áreas desde <code>_iasi.yml</code>, recorrerá los EDR de cada directorio, extraerá <code>id</code> y <code>title</code>, validará la correspondencia con el área y regenerará el <code>index.qmd</code> correspondiente.</p>
-</section><section id="alternativas-consideradas" class="level2" data-number="22.3"><h2 data-number="22.3" class="anchored" data-anchor-id="alternativas-consideradas">
-<span class="header-section-number">22.3</span> Alternativas consideradas</h2>
+</section><section id="alternativas-consideradas" class="level2" data-number="24.3"><h2 data-number="24.3" class="anchored" data-anchor-id="alternativas-consideradas">
+<span class="header-section-number">24.3</span> Alternativas consideradas</h2>
 <ul>
 <li>Actualizar índices desde el Addin únicamente.</li>
 <li>Regenerarlos mediante una tarea manual separada.</li>
 <li>Integrar la lógica directamente en <code>iasi.quarto</code>.</li>
-</ul></section><section id="consecuencias" class="level2" data-number="22.4"><h2 data-number="22.4" class="anchored" data-anchor-id="consecuencias">
-<span class="header-section-number">22.4</span> Consecuencias</h2>
+</ul></section><section id="consecuencias" class="level2" data-number="24.4"><h2 data-number="24.4" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">24.4</span> Consecuencias</h2>
 <p>El render siempre parte de índices frescos. La publicación falla si la estructura física contradice la configuración, evitando resultados silenciosamente incompletos.</p>
 
 
@@ -574,12 +574,12 @@ ul.task-list li input[type="checkbox"] {
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../../edr/20-architecture/EDR-20004.html" class="pagination-link" aria-label="Organizar físicamente los EDR por área">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>  <span class="chapter-title">Organizar físicamente los EDR por área</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>  <span class="chapter-title">Organizar físicamente los EDR por área</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../edr/20-architecture/EDR-20006.html" class="pagination-link" aria-label="Mantener la lógica específica de EDR fuera de iasi.quarto">
-        <span class="nav-page-text"><span class="chapter-number">23</span>  <span class="chapter-title">Mantener la lógica específica de EDR fuera de iasi.quarto</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">25</span>  <span class="chapter-title">Mantener la lógica específica de EDR fuera de iasi.quarto</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

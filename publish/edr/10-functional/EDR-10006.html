@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Constraints</title>
+<title>18  Crear una presentación de introducción a IASI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,8 +26,8 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script><script src="../../site_libs/quarto-nav/headroom.min.js"></script><script src="../../site_libs/clipboard/clipboard.min.js"></script><script src="../../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../../site_libs/quarto-search/fuse.min.js"></script><script src="../../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../../">
-<link href="../../edr/30-constraints/EDR-30001.html" rel="next">
-<link href="../../edr/20-architecture/EDR-20015.html" rel="prev">
+<link href="../../edr/10-functional/EDR-10007.html" rel="next">
+<link href="../../edr/10-functional/EDR-10005.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script><script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../../site_libs/quarto-html/popper.min.js"></script><script src="../../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../../site_libs/quarto-html/anchor.min.js"></script><link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script><link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
@@ -91,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Arquitectura</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../edr/30-constraints/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../edr/30-constraints/index.html"> 
 <span class="menu-text">Constraints</span></a>
   </li>  
   <li class="nav-item">
@@ -128,8 +128,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Constraints</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="../../edr/10-functional/index.html">Funcional</a></li>
+<li class="breadcrumb-item"><a href="../../edr/10-functional/EDR-10006.html"><span class="chapter-number">18</span>  <span class="chapter-title">Crear una presentación de introducción a IASI</span></a></li>
+</ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">18</span>  <span class="chapter-title">Crear una presentación de introducción a IASI</span>
+</h1>
 </div>
 
 
@@ -143,31 +148,42 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header><p>Esta sección reúne los Engineering Decision Records clasificados en el área <strong>Constraints</strong> (<code>30</code>).</p>
-<table class="caption-top table">
-<thead><tr class="header">
-<th>ID</th>
-<th>Título</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><a href="../../edr/30-constraints/EDR-30001.html">EDR-30001</a></td>
-<td>Diseñar las publicaciones IASI para escritorio</td>
-</tr>
-<tr class="even">
-<td><a href="../../edr/30-constraints/EDR-30002.html">EDR-30002</a></td>
-<td>Evitar la generalización prematura</td>
-</tr>
-<tr class="odd">
-<td><a href="../../edr/30-constraints/EDR-30003.html">EDR-30003</a></td>
-<td>Construir manualmente la infraestructura antes de automatizarla</td>
-</tr>
-<tr class="even">
-<td><a href="../../edr/30-constraints/EDR-30004.html">EDR-30004</a></td>
-<td>Usar Windows como sistema operativo de referencia para los labs</td>
-</tr>
-</tbody>
-</table></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</header><div class="edr-meta">
+<div class="edr-meta-summary">
+<span class="edr-id">EDR-10006</span> · <span class="edr-area">Funcional</span> · <span class="edr-status">accepted</span> · <span class="edr-created">2026-08-30</span>
+</div>
+<div class="edr-tags">
+<span class="edr-tags-label">Tags</span> <code class="edr-tag">iasi</code> <code class="edr-tag">presentation</code> <code class="edr-tag">communication</code> <code class="edr-tag">introduction</code>
+</div>
+</div>
+<section id="contexto" class="level2" data-number="18.1"><h2 data-number="18.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">18.1</span> Contexto</h2>
+<p>IASI dispone de libros, documentación, repositorios, artefactos y una presencia web, pero esos medios no sustituyen una presentación concebida específicamente para <strong>introducir IASI de forma progresiva y visual</strong>.</p>
+<p>La necesidad no es crear nueva documentación ni resumir un libro. Se necesita un artefacto que permita presentar IASI ante otras personas, explicar sus ideas fundamentales de forma secuencial y apoyar una exposición oral.</p>
+<p>La presentación debe poder evolucionar a medida que evolucione la comprensión de IASI y debe formar parte del propio ecosistema de artefactos del proyecto.</p>
+</section><section id="decisión" class="level2" data-number="18.2"><h2 data-number="18.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">18.2</span> Decisión</h2>
+<p>Se creará una presentación específica denominada <strong>Introducing IASI</strong>, desarrollada como el proyecto <code>introducing-iasi</code>.</p>
+<p>Su función será introducir IASI progresivamente, priorizando la comunicación visual y la exposición de conceptos antes que la acumulación de texto explicativo.</p>
+<p>La presentación será un artefacto propio de IASI y se desarrollará aplicando el propio enfoque IASI a su construcción.</p>
+</section><section id="alternativas-consideradas" class="level2" data-number="18.3"><h2 data-number="18.3" class="anchored" data-anchor-id="alternativas-consideradas">
+<span class="header-section-number">18.3</span> Alternativas consideradas</h2>
+<ul>
+<li>Utilizar directamente los libros de IASI como material de presentación.</li>
+<li>Utilizar <code>iasi-home</code> como sustituto de una presentación.</li>
+<li>Preparar un documento estático de introducción.</li>
+<li>No crear por ahora un artefacto específico de presentación.</li>
+</ul>
+<p>Estas alternativas permiten explicar o documentar IASI, pero no proporcionan el tipo de narrativa secuencial, visual y orientada a exposición que requiere una presentación.</p>
+</section><section id="consecuencias" class="level2" data-number="18.4"><h2 data-number="18.4" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">18.4</span> Consecuencias</h2>
+<p>IASI dispone de un artefacto específico para su presentación pública.</p>
+<p>La narrativa de introducción puede evolucionar independientemente de los libros, la documentación y el portal web.</p>
+<p><code>introducing-iasi</code> se convierte además en un caso real sobre el que aplicar y validar IASI durante la construcción de un nuevo artefacto.</p>
+<p>La tecnología utilizada para materializar la presentación se decide de forma independiente en <code>EDR-20013</code>.</p>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -567,13 +583,13 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../../edr/20-architecture/EDR-20015.html" class="pagination-link" aria-label="Usar OpenCode como base inicial de iasi-agent">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">34</span>  <span class="chapter-title">Usar OpenCode como base inicial de iasi-agent</span></span>
+      <a href="../../edr/10-functional/EDR-10005.html" class="pagination-link" aria-label="Crear EDR mediante un Addin de RStudio">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>  <span class="chapter-title">Crear EDR mediante un Addin de RStudio</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../edr/30-constraints/EDR-30001.html" class="pagination-link" aria-label="Diseñar las publicaciones IASI para escritorio">
-        <span class="nav-page-text"><span class="chapter-number">35</span>  <span class="chapter-title">Diseñar las publicaciones IASI para escritorio</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../edr/10-functional/EDR-10007.html" class="pagination-link" aria-label="Proporcionar un agente IASI capaz de ejecutar trabajo sobre el workspace">
+        <span class="nav-page-text"><span class="chapter-number">19</span>  <span class="chapter-title">Proporcionar un agente IASI capaz de ejecutar trabajo sobre el workspace</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

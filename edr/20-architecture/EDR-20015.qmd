@@ -1,0 +1,224 @@
+---
+id: EDR-20015
+title: "Usar OpenCode como base inicial de iasi-agent"
+status: accepted
+area:
+  id: "20"
+  name: "Arquitectura"
+created: 2026-08-31
+tags:
+  - "agent"
+  - "opencode"
+  - "ollama"
+  - "workspace"
+  - "tooling"
+affects:
+  - "iasi-agent"
+related:
+  - "EDR-10007"
+  - "EDR-20011"
+  - "EDR-20014"
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+Una vez definida la necesidad de disponer de un agente capaz de trabajar directamente sobre un workspace IASI, la siguiente cuestión fue determinar si debía construirse desde cero o apoyarse sobre una plataforma agentic existente.
+
+La selección no debía comenzar por la herramienta.
+
+Primero se identificaron las capacidades necesarias:
+
+- trabajar desde el workspace real;
+- leer y modificar archivos de forma controlada;
+- ejecutar comandos;
+- utilizar modelos locales servidos por Ollama;
+- no quedar ligado a un único proveedor de modelos;
+- permitir reglas e instrucciones de proyecto;
+- incorporar herramientas externas;
+- soportar MCP;
+- permitir capacidades reutilizables como skills y comandos;
+- ofrecer control sobre permisos;
+- poder utilizarse desde terminal;
+- permitir posteriormente integración programática;
+- mantener separadas la metodología IASI y la plataforma de ejecución.
+
+A partir de estas necesidades se evaluaron varias alternativas.
+
+## Decisión
+
+`iasi-agent` utilizará inicialmente **OpenCode** como plataforma base de ejecución agentic.
+
+OpenCode se considera infraestructura sustituible.
+
+IASI seguirá siendo propietario de las tareas, reglas, skills, contratos y workflow que definan el comportamiento esperado. OpenCode proporciona las capacidades de ejecución necesarias para que un modelo pueda operar sobre el workspace.
+
+Conceptualmente:
+
+```text
+IASI
+  ↓
+tasks / rules / skills / workflow
+  ↓
+adapter / configuration
+  ↓
+OpenCode
+  ↓
+model provider
+  ↓
+Ollama / cloud / other
+```
+
+La elección de OpenCode no convierte sus convenciones en el modelo conceptual de IASI.
+
+Cuando una capacidad IASI necesite proyectarse al formato esperado por OpenCode, esa traducción deberá mantenerse como una adaptación de plataforma.
+
+## Alternativas consideradas
+
+### Ollama + Open WebUI
+
+**Ventajas**
+
+- Infraestructura local ya disponible.
+- Sencillez de instalación y operación.
+- Independencia de proveedores cloud para la inferencia.
+- Adecuado para conversación, análisis y uso interactivo de modelos.
+
+**Inconvenientes**
+
+- Ollama es un runtime de modelos, no un agente de workspace.
+- Open WebUI proporciona principalmente una interfaz de interacción con los modelos.
+- No resuelve por sí mismo la ejecución controlada de tareas sobre archivos, terminal y herramientas del proyecto.
+
+**Resultado**
+
+Se mantiene como infraestructura de modelos e interfaz de conversación, pero no como base suficiente de `iasi-agent`.
+
+### Continue
+
+**Ventajas**
+
+- Dispone de modo Agent con lectura, edición de archivos y ejecución de comandos.
+- Puede utilizar Ollama y modelos locales.
+- Ofrece herramientas integradas y soporte para MCP.
+- Integra bien el contexto del código y del workspace desde el IDE.
+- Permite reglas y políticas de herramientas.
+
+**Inconvenientes**
+
+- Su experiencia principal está integrada en IDEs.
+- Vincular `iasi-agent` a Continue haría que la capacidad agentic quedase demasiado asociada a una extensión y a un entorno de desarrollo concreto.
+- IASI necesita que el agente pueda existir independientemente del editor utilizado.
+
+**Resultado**
+
+Alternativa válida para utilizar IASI desde un IDE, pero no seleccionada como base principal de `iasi-agent`.
+
+### Aider
+
+**Ventajas**
+
+- Herramienta madura orientada a terminal.
+- Excelente integración con repositorios Git.
+- Puede trabajar con modelos locales mediante Ollama.
+- Dispone de repo map para proporcionar contexto del repositorio.
+- Ofrece un flujo sólido de edición, diff, commit y undo.
+- Puede editar también documentación y archivos de configuración, no únicamente código.
+
+**Inconvenientes**
+
+- Su modelo está especialmente orientado a pair programming y edición de repositorios Git.
+- El flujo de trabajo gira alrededor de conversaciones de edición, selección de archivos y commits.
+- Encaja peor como plataforma general sobre la que proyectar las distintas capacidades agentic de IASI.
+- La extensión mediante skills, agentes, permisos y herramientas no constituye el centro de su modelo del mismo modo que en OpenCode.
+
+**Resultado**
+
+Muy buena alternativa para edición asistida de código, pero menos adecuada como sustrato general de un agente IASI.
+
+### Codex CLI
+
+**Ventajas**
+
+- Agente de terminal maduro capaz de leer, modificar y ejecutar trabajo sobre el workspace.
+- Ya ha sido utilizado en proyectos IASI.
+- Dispone de controles de aprobación y sandbox.
+- Puede utilizar modelos OpenAI y también modelos locales mediante Ollama.
+- Demuestra en la práctica que una tarea IASI puede ser ejecutada por un agente independiente.
+
+**Inconvenientes**
+
+- Es una plataforma agentic definida y evolucionada dentro del ecosistema OpenAI.
+- Utilizarla como identidad de `iasi-agent` acercaría la implementación propia de IASI a una plataforma concreta.
+- El uso mediante servicios y modelos OpenAI puede estar sujeto a disponibilidad y cuotas.
+- IASI quiere conservar la posibilidad de experimentar sobre una base deliberadamente neutral respecto al proveedor.
+
+**Resultado**
+
+Se mantiene como ejecutor válido de tareas IASI y como referencia funcional, pero no se adopta como identidad ni base principal de `iasi-agent`.
+
+### Construir un agente desde cero
+
+**Ventajas**
+
+- Control completo de arquitectura, comportamiento y contratos.
+- Ninguna dependencia conceptual de una plataforma agentic existente.
+- Posibilidad de implementar exclusivamente las capacidades necesarias para IASI.
+
+**Inconvenientes**
+
+- Obliga a reconstruir capacidades ya disponibles: sesiones, tool calling, edición, shell, permisos, modelos, MCP, interfaces y gestión del contexto.
+- Aumenta drásticamente el trabajo antes de haber descubierto qué partes necesitan realmente una implementación propia.
+- Violenta el criterio de no construir una solución nueva cuando una infraestructura existente satisface la necesidad.
+
+**Resultado**
+
+Descartado como punto de partida. Podrán sustituirse componentes concretos cuando exista una razón de ingeniería para hacerlo.
+
+### OpenCode
+
+**Ventajas**
+
+- Es un agente de código abierto y orientado al workspace.
+- Puede utilizar múltiples proveedores y modelos locales mediante Ollama.
+- Dispone de herramientas para operar sobre el código base y permite extenderlas con herramientas propias.
+- Soporta servidores MCP locales y remotos.
+- Permite definir y controlar permisos de herramientas.
+- Soporta agentes configurables.
+- Soporta instrucciones de proyecto.
+- Permite comandos personalizados definidos en Markdown.
+- Soporta skills mediante archivos `SKILL.md`.
+- Puede utilizarse desde terminal sin depender de un IDE.
+- Ofrece ejecución headless mediante servidor HTTP.
+- Dispone de SDK para integración programática.
+- Su arquitectura permite separar cliente, servidor, modelo y workspace.
+
+**Inconvenientes**
+
+- Sigue siendo una dependencia externa que puede evolucionar.
+- Sus convenciones (`AGENTS.md`, `.opencode/`, configuración, etc.) no coinciden necesariamente con las abstracciones canónicas de IASI.
+- Los modelos locales pequeños pueden limitar la calidad del tool calling y del razonamiento agentic.
+- Será necesario mantener una capa de adaptación para evitar que IASI dependa de formatos específicos de OpenCode.
+
+**Resultado**
+
+Seleccionado como base inicial porque proporciona la mayor parte de la infraestructura necesaria sin obligar a IASI a construir un agente desde cero ni a ligarse a un proveedor de modelos o a un IDE concreto.
+
+## Consecuencias
+
+`iasi-agent` podrá comenzar como una adaptación/configuración de OpenCode en lugar de como un agente implementado completamente desde cero.
+
+Los modelos servidos por Ollama podrán utilizarse como proveedores de inferencia para el agente.
+
+Las reglas, skills y comandos de IASI no deberán definirse canónicamente en formatos propios de OpenCode. Se proyectarán mediante adapters cuando sea necesario.
+
+La integración con OpenCode deberá respetar las reglas de permisos e inmutabilidad establecidas por IASI.
+
+OpenCode se considera sustituible.
+
+Si en el futuro deja de satisfacer las necesidades de IASI, podrá reemplazarse sin cambiar la definición de las tareas ni el workflow.
+
+La decisión sigue el mismo criterio aplicado en otras partes del ecosistema:
+
+> **Utilizar una herramienta para lo que resuelve bien sin convertirla en la definición del problema.**

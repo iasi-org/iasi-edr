@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Constraints</title>
+<title>34  Usar OpenCode como base inicial de iasi-agent</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,8 +26,8 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script><script src="../../site_libs/quarto-nav/headroom.min.js"></script><script src="../../site_libs/clipboard/clipboard.min.js"></script><script src="../../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../../site_libs/quarto-search/fuse.min.js"></script><script src="../../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../../">
-<link href="../../edr/30-constraints/EDR-30001.html" rel="next">
-<link href="../../edr/20-architecture/EDR-20015.html" rel="prev">
+<link href="../../edr/30-constraints/index.html" rel="next">
+<link href="../../edr/20-architecture/EDR-20014.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script><script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../../site_libs/quarto-html/popper.min.js"></script><script src="../../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../../site_libs/quarto-html/anchor.min.js"></script><link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script><link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
@@ -91,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Arquitectura</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../edr/30-constraints/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../edr/30-constraints/index.html"> 
 <span class="menu-text">Constraints</span></a>
   </li>  
   <li class="nav-item">
@@ -128,8 +128,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Constraints</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="../../edr/20-architecture/index.html">Arquitectura</a></li>
+<li class="breadcrumb-item"><a href="../../edr/20-architecture/EDR-20015.html"><span class="chapter-number">34</span>  <span class="chapter-title">Usar OpenCode como base inicial de iasi-agent</span></a></li>
+</ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">34</span>  <span class="chapter-title">Usar OpenCode como base inicial de iasi-agent</span>
+</h1>
 </div>
 
 
@@ -143,31 +148,188 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header><p>Esta sección reúne los Engineering Decision Records clasificados en el área <strong>Constraints</strong> (<code>30</code>).</p>
-<table class="caption-top table">
-<thead><tr class="header">
-<th>ID</th>
-<th>Título</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><a href="../../edr/30-constraints/EDR-30001.html">EDR-30001</a></td>
-<td>Diseñar las publicaciones IASI para escritorio</td>
-</tr>
-<tr class="even">
-<td><a href="../../edr/30-constraints/EDR-30002.html">EDR-30002</a></td>
-<td>Evitar la generalización prematura</td>
-</tr>
-<tr class="odd">
-<td><a href="../../edr/30-constraints/EDR-30003.html">EDR-30003</a></td>
-<td>Construir manualmente la infraestructura antes de automatizarla</td>
-</tr>
-<tr class="even">
-<td><a href="../../edr/30-constraints/EDR-30004.html">EDR-30004</a></td>
-<td>Usar Windows como sistema operativo de referencia para los labs</td>
-</tr>
-</tbody>
-</table></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</header><div class="edr-meta">
+<div class="edr-meta-summary">
+<span class="edr-id">EDR-20015</span> · <span class="edr-area">Arquitectura</span> · <span class="edr-status">accepted</span> · <span class="edr-created">2026-08-31</span>
+</div>
+<div class="edr-tags">
+<span class="edr-tags-label">Tags</span> <code class="edr-tag">agent</code> <code class="edr-tag">opencode</code> <code class="edr-tag">ollama</code> <code class="edr-tag">workspace</code> <code class="edr-tag">tooling</code>
+</div>
+</div>
+<section id="contexto" class="level2" data-number="34.1"><h2 data-number="34.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">34.1</span> Contexto</h2>
+<p>Una vez definida la necesidad de disponer de un agente capaz de trabajar directamente sobre un workspace IASI, la siguiente cuestión fue determinar si debía construirse desde cero o apoyarse sobre una plataforma agentic existente.</p>
+<p>La selección no debía comenzar por la herramienta.</p>
+<p>Primero se identificaron las capacidades necesarias:</p>
+<ul>
+<li>trabajar desde el workspace real;</li>
+<li>leer y modificar archivos de forma controlada;</li>
+<li>ejecutar comandos;</li>
+<li>utilizar modelos locales servidos por Ollama;</li>
+<li>no quedar ligado a un único proveedor de modelos;</li>
+<li>permitir reglas e instrucciones de proyecto;</li>
+<li>incorporar herramientas externas;</li>
+<li>soportar MCP;</li>
+<li>permitir capacidades reutilizables como skills y comandos;</li>
+<li>ofrecer control sobre permisos;</li>
+<li>poder utilizarse desde terminal;</li>
+<li>permitir posteriormente integración programática;</li>
+<li>mantener separadas la metodología IASI y la plataforma de ejecución.</li>
+</ul>
+<p>A partir de estas necesidades se evaluaron varias alternativas.</p>
+</section><section id="decisión" class="level2" data-number="34.2"><h2 data-number="34.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">34.2</span> Decisión</h2>
+<p><code>iasi-agent</code> utilizará inicialmente <strong>OpenCode</strong> como plataforma base de ejecución agentic.</p>
+<p>OpenCode se considera infraestructura sustituible.</p>
+<p>IASI seguirá siendo propietario de las tareas, reglas, skills, contratos y workflow que definan el comportamiento esperado. OpenCode proporciona las capacidades de ejecución necesarias para que un modelo pueda operar sobre el workspace.</p>
+<p>Conceptualmente:</p>
+<pre class="text"><code>IASI
+  ↓
+tasks / rules / skills / workflow
+  ↓
+adapter / configuration
+  ↓
+OpenCode
+  ↓
+model provider
+  ↓
+Ollama / cloud / other</code></pre>
+<p>La elección de OpenCode no convierte sus convenciones en el modelo conceptual de IASI.</p>
+<p>Cuando una capacidad IASI necesite proyectarse al formato esperado por OpenCode, esa traducción deberá mantenerse como una adaptación de plataforma.</p>
+</section><section id="alternativas-consideradas" class="level2" data-number="34.3"><h2 data-number="34.3" class="anchored" data-anchor-id="alternativas-consideradas">
+<span class="header-section-number">34.3</span> Alternativas consideradas</h2>
+<section id="ollama-open-webui" class="level3" data-number="34.3.1"><h3 data-number="34.3.1" class="anchored" data-anchor-id="ollama-open-webui">
+<span class="header-section-number">34.3.1</span> Ollama + Open WebUI</h3>
+<p><strong>Ventajas</strong></p>
+<ul>
+<li>Infraestructura local ya disponible.</li>
+<li>Sencillez de instalación y operación.</li>
+<li>Independencia de proveedores cloud para la inferencia.</li>
+<li>Adecuado para conversación, análisis y uso interactivo de modelos.</li>
+</ul>
+<p><strong>Inconvenientes</strong></p>
+<ul>
+<li>Ollama es un runtime de modelos, no un agente de workspace.</li>
+<li>Open WebUI proporciona principalmente una interfaz de interacción con los modelos.</li>
+<li>No resuelve por sí mismo la ejecución controlada de tareas sobre archivos, terminal y herramientas del proyecto.</li>
+</ul>
+<p><strong>Resultado</strong></p>
+<p>Se mantiene como infraestructura de modelos e interfaz de conversación, pero no como base suficiente de <code>iasi-agent</code>.</p>
+</section><section id="continue" class="level3" data-number="34.3.2"><h3 data-number="34.3.2" class="anchored" data-anchor-id="continue">
+<span class="header-section-number">34.3.2</span> Continue</h3>
+<p><strong>Ventajas</strong></p>
+<ul>
+<li>Dispone de modo Agent con lectura, edición de archivos y ejecución de comandos.</li>
+<li>Puede utilizar Ollama y modelos locales.</li>
+<li>Ofrece herramientas integradas y soporte para MCP.</li>
+<li>Integra bien el contexto del código y del workspace desde el IDE.</li>
+<li>Permite reglas y políticas de herramientas.</li>
+</ul>
+<p><strong>Inconvenientes</strong></p>
+<ul>
+<li>Su experiencia principal está integrada en IDEs.</li>
+<li>Vincular <code>iasi-agent</code> a Continue haría que la capacidad agentic quedase demasiado asociada a una extensión y a un entorno de desarrollo concreto.</li>
+<li>IASI necesita que el agente pueda existir independientemente del editor utilizado.</li>
+</ul>
+<p><strong>Resultado</strong></p>
+<p>Alternativa válida para utilizar IASI desde un IDE, pero no seleccionada como base principal de <code>iasi-agent</code>.</p>
+</section><section id="aider" class="level3" data-number="34.3.3"><h3 data-number="34.3.3" class="anchored" data-anchor-id="aider">
+<span class="header-section-number">34.3.3</span> Aider</h3>
+<p><strong>Ventajas</strong></p>
+<ul>
+<li>Herramienta madura orientada a terminal.</li>
+<li>Excelente integración con repositorios Git.</li>
+<li>Puede trabajar con modelos locales mediante Ollama.</li>
+<li>Dispone de repo map para proporcionar contexto del repositorio.</li>
+<li>Ofrece un flujo sólido de edición, diff, commit y undo.</li>
+<li>Puede editar también documentación y archivos de configuración, no únicamente código.</li>
+</ul>
+<p><strong>Inconvenientes</strong></p>
+<ul>
+<li>Su modelo está especialmente orientado a pair programming y edición de repositorios Git.</li>
+<li>El flujo de trabajo gira alrededor de conversaciones de edición, selección de archivos y commits.</li>
+<li>Encaja peor como plataforma general sobre la que proyectar las distintas capacidades agentic de IASI.</li>
+<li>La extensión mediante skills, agentes, permisos y herramientas no constituye el centro de su modelo del mismo modo que en OpenCode.</li>
+</ul>
+<p><strong>Resultado</strong></p>
+<p>Muy buena alternativa para edición asistida de código, pero menos adecuada como sustrato general de un agente IASI.</p>
+</section><section id="codex-cli" class="level3" data-number="34.3.4"><h3 data-number="34.3.4" class="anchored" data-anchor-id="codex-cli">
+<span class="header-section-number">34.3.4</span> Codex CLI</h3>
+<p><strong>Ventajas</strong></p>
+<ul>
+<li>Agente de terminal maduro capaz de leer, modificar y ejecutar trabajo sobre el workspace.</li>
+<li>Ya ha sido utilizado en proyectos IASI.</li>
+<li>Dispone de controles de aprobación y sandbox.</li>
+<li>Puede utilizar modelos OpenAI y también modelos locales mediante Ollama.</li>
+<li>Demuestra en la práctica que una tarea IASI puede ser ejecutada por un agente independiente.</li>
+</ul>
+<p><strong>Inconvenientes</strong></p>
+<ul>
+<li>Es una plataforma agentic definida y evolucionada dentro del ecosistema OpenAI.</li>
+<li>Utilizarla como identidad de <code>iasi-agent</code> acercaría la implementación propia de IASI a una plataforma concreta.</li>
+<li>El uso mediante servicios y modelos OpenAI puede estar sujeto a disponibilidad y cuotas.</li>
+<li>IASI quiere conservar la posibilidad de experimentar sobre una base deliberadamente neutral respecto al proveedor.</li>
+</ul>
+<p><strong>Resultado</strong></p>
+<p>Se mantiene como ejecutor válido de tareas IASI y como referencia funcional, pero no se adopta como identidad ni base principal de <code>iasi-agent</code>.</p>
+</section><section id="construir-un-agente-desde-cero" class="level3" data-number="34.3.5"><h3 data-number="34.3.5" class="anchored" data-anchor-id="construir-un-agente-desde-cero">
+<span class="header-section-number">34.3.5</span> Construir un agente desde cero</h3>
+<p><strong>Ventajas</strong></p>
+<ul>
+<li>Control completo de arquitectura, comportamiento y contratos.</li>
+<li>Ninguna dependencia conceptual de una plataforma agentic existente.</li>
+<li>Posibilidad de implementar exclusivamente las capacidades necesarias para IASI.</li>
+</ul>
+<p><strong>Inconvenientes</strong></p>
+<ul>
+<li>Obliga a reconstruir capacidades ya disponibles: sesiones, tool calling, edición, shell, permisos, modelos, MCP, interfaces y gestión del contexto.</li>
+<li>Aumenta drásticamente el trabajo antes de haber descubierto qué partes necesitan realmente una implementación propia.</li>
+<li>Violenta el criterio de no construir una solución nueva cuando una infraestructura existente satisface la necesidad.</li>
+</ul>
+<p><strong>Resultado</strong></p>
+<p>Descartado como punto de partida. Podrán sustituirse componentes concretos cuando exista una razón de ingeniería para hacerlo.</p>
+</section><section id="opencode" class="level3" data-number="34.3.6"><h3 data-number="34.3.6" class="anchored" data-anchor-id="opencode">
+<span class="header-section-number">34.3.6</span> OpenCode</h3>
+<p><strong>Ventajas</strong></p>
+<ul>
+<li>Es un agente de código abierto y orientado al workspace.</li>
+<li>Puede utilizar múltiples proveedores y modelos locales mediante Ollama.</li>
+<li>Dispone de herramientas para operar sobre el código base y permite extenderlas con herramientas propias.</li>
+<li>Soporta servidores MCP locales y remotos.</li>
+<li>Permite definir y controlar permisos de herramientas.</li>
+<li>Soporta agentes configurables.</li>
+<li>Soporta instrucciones de proyecto.</li>
+<li>Permite comandos personalizados definidos en Markdown.</li>
+<li>Soporta skills mediante archivos <code>SKILL.md</code>.</li>
+<li>Puede utilizarse desde terminal sin depender de un IDE.</li>
+<li>Ofrece ejecución headless mediante servidor HTTP.</li>
+<li>Dispone de SDK para integración programática.</li>
+<li>Su arquitectura permite separar cliente, servidor, modelo y workspace.</li>
+</ul>
+<p><strong>Inconvenientes</strong></p>
+<ul>
+<li>Sigue siendo una dependencia externa que puede evolucionar.</li>
+<li>Sus convenciones (<code>AGENTS.md</code>, <code>.opencode/</code>, configuración, etc.) no coinciden necesariamente con las abstracciones canónicas de IASI.</li>
+<li>Los modelos locales pequeños pueden limitar la calidad del tool calling y del razonamiento agentic.</li>
+<li>Será necesario mantener una capa de adaptación para evitar que IASI dependa de formatos específicos de OpenCode.</li>
+</ul>
+<p><strong>Resultado</strong></p>
+<p>Seleccionado como base inicial porque proporciona la mayor parte de la infraestructura necesaria sin obligar a IASI a construir un agente desde cero ni a ligarse a un proveedor de modelos o a un IDE concreto.</p>
+</section></section><section id="consecuencias" class="level2" data-number="34.4"><h2 data-number="34.4" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">34.4</span> Consecuencias</h2>
+<p><code>iasi-agent</code> podrá comenzar como una adaptación/configuración de OpenCode en lugar de como un agente implementado completamente desde cero.</p>
+<p>Los modelos servidos por Ollama podrán utilizarse como proveedores de inferencia para el agente.</p>
+<p>Las reglas, skills y comandos de IASI no deberán definirse canónicamente en formatos propios de OpenCode. Se proyectarán mediante adapters cuando sea necesario.</p>
+<p>La integración con OpenCode deberá respetar las reglas de permisos e inmutabilidad establecidas por IASI.</p>
+<p>OpenCode se considera sustituible.</p>
+<p>Si en el futuro deja de satisfacer las necesidades de IASI, podrá reemplazarse sin cambiar la definición de las tareas ni el workflow.</p>
+<p>La decisión sigue el mismo criterio aplicado en otras partes del ecosistema:</p>
+<blockquote class="blockquote">
+<p><strong>Utilizar una herramienta para lo que resuelve bien sin convertirla en la definición del problema.</strong></p>
+</blockquote>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -567,13 +729,13 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../../edr/20-architecture/EDR-20015.html" class="pagination-link" aria-label="Usar OpenCode como base inicial de iasi-agent">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">34</span>  <span class="chapter-title">Usar OpenCode como base inicial de iasi-agent</span></span>
+      <a href="../../edr/20-architecture/EDR-20014.html" class="pagination-link" aria-label="Mantener iasi-agent como proyecto separado de IASI">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">33</span>  <span class="chapter-title">Mantener iasi-agent como proyecto separado de IASI</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../edr/30-constraints/EDR-30001.html" class="pagination-link" aria-label="Diseñar las publicaciones IASI para escritorio">
-        <span class="nav-page-text"><span class="chapter-number">35</span>  <span class="chapter-title">Diseñar las publicaciones IASI para escritorio</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../edr/30-constraints/index.html" class="pagination-link" aria-label="Constraints">
+        <span class="nav-page-text">Constraints</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -21,6 +21,8 @@ book:
         - "edr/10-functional/EDR-10003.qmd"
         - "edr/10-functional/EDR-10004.qmd"
         - "edr/10-functional/EDR-10005.qmd"
+        - "edr/10-functional/EDR-10006.qmd"
+        - "edr/10-functional/EDR-10007.qmd"
     - part: "edr/20-architecture/index.qmd"
       chapters:
         - "edr/20-architecture/EDR-20001.qmd"
@@ -35,6 +37,9 @@ book:
         - "edr/20-architecture/EDR-20010.qmd"
         - "edr/20-architecture/EDR-20011.qmd"
         - "edr/20-architecture/EDR-20012.qmd"
+        - "edr/20-architecture/EDR-20013.qmd"
+        - "edr/20-architecture/EDR-20014.qmd"
+        - "edr/20-architecture/EDR-20015.qmd"
     - part: "edr/30-constraints/index.qmd"
       chapters:
         - "edr/30-constraints/EDR-30001.qmd"

@@ -18,4 +18,7 @@ Esta sección reúne los Engineering Decision Records clasificados en el área *
 | [EDR-20010](EDR-20010.qmd) | Mantener iasi-graphics deliberadamente simple |
 | [EDR-20011](EDR-20011.qmd) | Crear un espacio dedicado para capacidades agentic de IASI |
 | [EDR-20012](EDR-20012.qmd) | Separar el entorno de laboratorios mediante una máquina virtual dedicada |
+| [EDR-20013](EDR-20013.qmd) | Usar HTMLSlides para materializar Introducing IASI |
+| [EDR-20014](EDR-20014.qmd) | Mantener iasi-agent como proyecto separado de IASI |
+| [EDR-20015](EDR-20015.qmd) | Usar OpenCode como base inicial de iasi-agent |
 
