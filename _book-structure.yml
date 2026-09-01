@@ -63,6 +63,7 @@ book:
         - "edr/70-quality/EDR-70001.qmd"
         - "edr/70-quality/EDR-70002.qmd"
         - "edr/70-quality/EDR-70003.qmd"
+        - "edr/70-quality/EDR-70004.qmd"
     - part: "edr/80-operation/index.qmd"
       chapters:
         - "edr/80-operation/EDR-80001.qmd"

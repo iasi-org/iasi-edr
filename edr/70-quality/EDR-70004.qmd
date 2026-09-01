@@ -1,0 +1,96 @@
+---
+id: EDR-70004
+title: "Preservar el formato deliberado del código Go"
+status: accepted
+area:
+  id: "70"
+  name: "Calidad"
+created: 2026-09-01
+tags:
+  - "go"
+  - "formatting"
+  - "readability"
+  - "coding-style"
+affects:
+  - "iasi-core"
+  - "iasi-cli"
+  - "builtin/rules/coding/styles/go"
+related:
+  []
+supersedes: []
+superseded-by: []
+---
+
+## Contexto
+
+IASI disponía de una rule específica para Go que exigía que todo el código fuente se ajustase al formato producido por `gofmt` y desaconsejaba mantener manualmente cualquier formato que entrase en conflicto con él.
+
+Durante la revisión del código de `iasi-cli` se comprobó que determinadas decisiones de formato pueden expresar de forma directa la estructura lógica del programa y mejorar su lectura por personas.
+
+Por ejemplo, un `switch` utilizado como tabla de decisión puede escribirse de forma que sus alternativas se comprendan de un vistazo:
+
+```go
+switch adapter.Action {
+    case cli.Help: adapter = helpAdapter(adapter)
+    case cli.List: adapter = listAdapters(adapter)
+    default:       adapter = processAdapter(adapter)
+}
+```
+
+La indentación muestra que los `case` pertenecen al bloque del `switch`, mientras que la alineación permite comparar visualmente las alternativas y sus acciones.
+
+El formateo automático de Go modifica esta representación aunque el código sea válido, eliminando información visual introducida deliberadamente para facilitar su comprensión.
+
+## Decisión
+
+El código Go propiedad de IASI conservará su **formato deliberado**.
+
+No se ejecutarán automáticamente `gofmt`, `go fmt` ni herramientas equivalentes que normalicen el formato del código Go y puedan sustituir decisiones explícitas de indentación, alineación o agrupación visual.
+
+La rule existente que obliga a utilizar `gofmt` se elimina de `iasi-core`.
+
+Las herramientas de desarrollo, automatizaciones y procesos de integración no deberán aplicar formateo automático sobre código Go propiedad del proyecto.
+
+El formato seguirá siendo responsabilidad de la ingeniería del código. Puede modificarse cuando la modificación sea deliberada y mejore o preserve su legibilidad, pero no se normalizará automáticamente por el mero hecho de ajustarse a una convención externa.
+
+## Rationale
+
+El formato del código no es únicamente decoración. Puede formar parte de su representación y ayudar a mostrar relaciones, niveles, alternativas y bloques conceptuales.
+
+IASI prioriza que el código pueda **leerse y comprenderse por personas**. Una herramienta automática es útil mientras contribuya a ese objetivo, pero no debe imponerse cuando elimina información visual que el autor ha introducido deliberadamente para expresar mejor la estructura del programa.
+
+La decisión no rechaza las convenciones del ecosistema Go como referencia general. Establece que una convención de formato no tiene prioridad automática sobre una representación deliberada que resulte más clara para el código concreto.
+
+## Alternativas consideradas
+
+### Mantener `gofmt` como obligatorio
+
+Se descarta porque impide conservar formatos deliberados que permiten representar con mayor claridad determinadas estructuras lógicas.
+
+### Utilizar `gofmt` por defecto y permitir excepciones puntuales
+
+Se descarta porque cualquier ejecución automática puede destruir esas excepciones. Obliga además a introducir mecanismos adicionales para identificar qué bloques deben preservarse.
+
+### Desactivar únicamente el formateo al guardar
+
+Es insuficiente. El mismo problema puede aparecer mediante `go fmt`, `gofmt`, tareas de build, acciones del editor, agentes o pipelines de integración.
+
+## Consecuencias
+
+El código Go de IASI puede utilizar indentación, alineación y espacios de manera deliberada cuando ayuden a expresar su estructura.
+
+Los editores y agentes que trabajen sobre el código no deben ejecutar formateadores automáticos de Go salvo decisión explícita que modifique este EDR.
+
+Las pipelines de build y validación no deben asumir que `gofmt` forma parte de los criterios de aceptación del código.
+
+El formato pasa a revisarse como parte de la legibilidad del código, no como conformidad automática con la salida de una herramienta.
+
+El código generado o mantenido externamente puede conservar el formato impuesto por su generador o por su fuente original cuando no sea propiedad del proyecto.
+
+## Principios derivados
+
+> **El formato del código puede expresar estructura.**
+
+> **La legibilidad para las personas tiene prioridad sobre la normalización automática.**
+
+> **El código propiedad de IASI se formatea deliberadamente, no automáticamente.**
