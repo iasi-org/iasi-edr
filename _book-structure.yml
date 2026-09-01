@@ -14,6 +14,7 @@ book:
         - "edr/00-general/EDR-00009.qmd"
         - "edr/00-general/EDR-00010.qmd"
         - "edr/00-general/EDR-00011.qmd"
+        - "edr/00-general/EDR-00012.qmd"
     - part: "edr/10-functional/index.qmd"
       chapters:
         - "edr/10-functional/EDR-10001.qmd"

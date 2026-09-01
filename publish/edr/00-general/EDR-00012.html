@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>26  Mantener la lógica específica de EDR fuera de iasi.quarto</title>
+<title>13  Organizar el flujo del repositorio mediante nombres semánticos</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,8 +26,8 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script><script src="../../site_libs/quarto-nav/headroom.min.js"></script><script src="../../site_libs/clipboard/clipboard.min.js"></script><script src="../../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../../site_libs/quarto-search/fuse.min.js"></script><script src="../../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../../">
-<link href="../../edr/20-architecture/EDR-20007.html" rel="next">
-<link href="../../edr/20-architecture/EDR-20005.html" rel="prev">
+<link href="../../edr/10-functional/index.html" rel="next">
+<link href="../../edr/00-general/EDR-00011.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script><script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../../site_libs/quarto-html/popper.min.js"></script><script src="../../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../../site_libs/quarto-html/anchor.min.js"></script><link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script><link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
@@ -129,11 +129,11 @@ ul.task-list li input[type="checkbox"] {
     
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="../../edr/20-architecture/index.html">Arquitectura</a></li>
-<li class="breadcrumb-item"><a href="../../edr/20-architecture/EDR-20006.html"><span class="chapter-number">26</span>  <span class="chapter-title">Mantener la lógica específica de EDR fuera de iasi.quarto</span></a></li>
+<li class="breadcrumb-item"><a href="../../edr/00-general/index.html">General</a></li>
+<li class="breadcrumb-item"><a href="../../edr/00-general/EDR-00012.html"><span class="chapter-number">13</span>  <span class="chapter-title">Organizar el flujo del repositorio mediante nombres semánticos</span></a></li>
 </ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">26</span>  <span class="chapter-title">Mantener la lógica específica de EDR fuera de iasi.quarto</span>
+<span class="chapter-number">13</span>  <span class="chapter-title">Organizar el flujo del repositorio mediante nombres semánticos</span>
 </h1>
 </div>
 
@@ -150,29 +150,101 @@ ul.task-list li input[type="checkbox"] {
 
 </header><div class="edr-meta">
 <div class="edr-meta-summary">
-<span class="edr-id">EDR-20006</span> · <span class="edr-area">Arquitectura</span> · <span class="edr-status">accepted</span> · <span class="edr-created">2026-08-16</span>
+<span class="edr-id">EDR-00012</span> · <span class="edr-area">General</span> · <span class="edr-status">accepted</span> · <span class="edr-created">2026-09-01</span>
 </div>
 <div class="edr-tags">
-<span class="edr-tags-label">Tags</span> <code class="edr-tag">separación</code> <code class="edr-tag">iasi-quarto</code> <code class="edr-tag">edr</code>
+<span class="edr-tags-label">Tags</span> <code class="edr-tag">repository-structure</code> <code class="edr-tag">workflow</code> <code class="edr-tag">naming</code>
 </div>
 </div>
-<section id="contexto" class="level2" data-number="26.1"><h2 data-number="26.1" class="anchored" data-anchor-id="contexto">
-<span class="header-section-number">26.1</span> Contexto</h2>
-<p><code>iasi.quarto</code> proporciona infraestructura genérica de publicación. La generación de catálogos por áreas EDR responde a un modelo particular que, por ahora, no ha demostrado ser necesario en otras publicaciones.</p>
-</section><section id="decisión" class="level2" data-number="26.2"><h2 data-number="26.2" class="anchored" data-anchor-id="decisión">
-<span class="header-section-number">26.2</span> Decisión</h2>
-<p>La lógica específica de EDR permanecerá en <code>iasi-edr</code>, inicialmente bajo <code>R/</code>. Solo se promoverá a <code>iasi.quarto</code> cuando exista evidencia de reutilización real.</p>
-</section><section id="alternativas-consideradas" class="level2" data-number="26.3"><h2 data-number="26.3" class="anchored" data-anchor-id="alternativas-consideradas">
-<span class="header-section-number">26.3</span> Alternativas consideradas</h2>
+<section id="organizar-el-flujo-del-repositorio-mediante-nombres-semánticos" class="level1" data-number="14"><h1 data-number="14">
+<span class="header-section-number">14</span> Organizar el flujo del repositorio mediante nombres semánticos</h1>
+<section id="contexto" class="level2" data-number="14.1"><h2 data-number="14.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">14.1</span> Contexto</h2>
+<p>Durante la definición inicial del flujo de trabajo se utilizaron prefijos alfabéticos para ordenar visualmente las áreas principales del repositorio:</p>
+<pre class="text"><code>A-inputs/
+B-engine/
+C-outputs/
+D-deliverables/</code></pre>
+<p>Esta estructura hacía visible una secuencia aproximada de trabajo, pero introducía dos problemas.</p>
+<p>En primer lugar, los prefijos <code>A-</code>, <code>B-</code>, <code>C-</code> y <code>D-</code> no aportan significado propio. Su función es únicamente forzar el orden de las carpetas.</p>
+<p>En segundo lugar, ese orden puede sugerir un proceso estrictamente secuencial por fases, cuando el trabajo real puede volver sobre los inputs, revisar especificaciones, regenerar outputs o repetir validaciones tantas veces como sea necesario.</p>
+<p>Además, algunos nombres resultaban demasiado ambiguos. En particular, <code>engine/</code> podía interpretarse como un componente software ejecutable, mientras que su contenido representa realmente los elementos que coordinan y gobiernan el proceso de trabajo.</p>
+</section><section id="decisión" class="level2" data-number="14.2"><h2 data-number="14.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">14.2</span> Decisión</h2>
+<p>Las áreas principales del repositorio se nombrarán por su <strong>función</strong>, sin prefijos artificiales destinados únicamente a imponer un orden visual.</p>
+<p>La estructura canónica será:</p>
+<pre class="text"><code>inputs/
+orchestration/
+outputs/
+releases/</code></pre>
+<p>Cada área representa una responsabilidad diferente:</p>
 <ul>
-<li>Incorporar inmediatamente cualquier automatización nueva a <code>iasi.quarto</code>.</li>
-<li>Duplicar la lógica entre ambos repositorios.</li>
-</ul></section><section id="consecuencias" class="level2" data-number="26.4"><h2 data-number="26.4" class="anchored" data-anchor-id="consecuencias">
-<span class="header-section-number">26.4</span> Consecuencias</h2>
-<p><code>iasi.quarto</code> conserva una responsabilidad genérica y EDR puede evolucionar con rapidez sin convertir una necesidad local en contrato global.</p>
+<li>
+<code>inputs/</code> contiene la información que entra en el proceso.</li>
+<li>
+<code>orchestration/</code> contiene los elementos que organizan, dirigen y gobiernan el trabajo realizado sobre los inputs, como especificaciones, tareas y otros mecanismos de coordinación.</li>
+<li>
+<code>outputs/</code> contiene los artefactos producidos durante el proceso.</li>
+<li>
+<code>releases/</code> contiene los artefactos aceptados y preparados para su publicación, entrega o distribución.</li>
+</ul>
+<p>La estructura no representa fases rígidas ni obliga a recorrer las carpetas una sola vez en ese orden.</p>
+</section><section id="rationale" class="level2" data-number="14.3"><h2 data-number="14.3" class="anchored" data-anchor-id="rationale">
+<span class="header-section-number">14.3</span> Rationale</h2>
+<p>Los nombres deben expresar <strong>qué es cada cosa</strong>, no únicamente dónde queremos que aparezca en un árbol de directorios.</p>
+<p>Los prefijos de orden convierten una decisión de presentación en parte permanente del modelo del repositorio. Al eliminarlos, la estructura queda definida por conceptos que pueden evolucionar sin depender de una numeración o secuencia artificial.</p>
+<p><code>orchestration/</code> sustituye a <code>engine/</code> porque describe mejor la responsabilidad de su contenido. No representa necesariamente un motor ejecutable, sino el conjunto de artefactos que coordinan el proceso, actualmente incluyendo elementos como:</p>
+<pre class="text"><code>orchestration/
+    specifications/
+    tasks/</code></pre>
+<p>y pudiendo incorporar en el futuro otros elementos de gobierno o coordinación sin alterar el significado del área.</p>
+<p><code>releases/</code> sustituye a <code>deliverables/</code> para distinguir entre aquello que el proceso <strong>produce</strong> y aquello que finalmente se <strong>acepta y libera</strong>.</p>
+</section><section id="alternativas-consideradas" class="level2" data-number="14.4"><h2 data-number="14.4" class="anchored" data-anchor-id="alternativas-consideradas">
+<span class="header-section-number">14.4</span> Alternativas consideradas</h2>
+<section id="mantener-los-prefijos-a--b--c--d-" class="level3" data-number="14.4.1"><h3 data-number="14.4.1" class="anchored" data-anchor-id="mantener-los-prefijos-a--b--c--d-">
+<span class="header-section-number">14.4.1</span> Mantener los prefijos <code>A-</code>, <code>B-</code>, <code>C-</code>, <code>D-</code>
+</h3>
+<p>Se descarta porque fuerza un orden visual artificial y puede interpretarse como una metodología secuencial por fases.</p>
+</section><section id="mantener-engine" class="level3" data-number="14.4.2"><h3 data-number="14.4.2" class="anchored" data-anchor-id="mantener-engine">
+<span class="header-section-number">14.4.2</span> Mantener <code>engine/</code>
+</h3>
+<p>Se descarta porque puede confundirse con un componente ejecutable y no describe con suficiente precisión el papel de especificaciones, tareas y futuros mecanismos de coordinación.</p>
+</section><section id="utilizar-model" class="level3" data-number="14.4.3"><h3 data-number="14.4.3" class="anchored" data-anchor-id="utilizar-model">
+<span class="header-section-number">14.4.3</span> Utilizar <code>model/</code>
+</h3>
+<p>Se consideró como representación interna del problema, pero se descarta por su ambigüedad en un contexto de Sistemas Inteligentes, donde <code>model</code> se asocia de forma natural a modelos de IA.</p>
+</section><section id="utilizar-deliverables" class="level3" data-number="14.4.4"><h3 data-number="14.4.4" class="anchored" data-anchor-id="utilizar-deliverables">
+<span class="header-section-number">14.4.4</span> Utilizar <code>deliverables/</code>
+</h3>
+<p>Se descarta a favor de <code>releases/</code>, que expresa mejor que los artefactos contenidos en esa área han superado el proceso de aceptación y están preparados para salir del flujo de trabajo.</p>
+</section></section><section id="consecuencias" class="level2" data-number="14.5"><h2 data-number="14.5" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">14.5</span> Consecuencias</h2>
+<p>La estructura principal del repositorio pasa a ser legible sin depender de prefijos de orden.</p>
+<p>El flujo puede entenderse conceptualmente como:</p>
+<pre class="text"><code>inputs
+   ↓
+orchestration
+   ↓
+outputs
+   ↓
+releases</code></pre>
+<p>sin que este esquema implique una ejecución estrictamente lineal.</p>
+<p>Las herramientas, agentes y personas podrán volver sobre cualquiera de estas áreas cuando el proceso lo requiera.</p>
+<p>La distinción entre <code>outputs/</code> y <code>releases/</code> hace explícito que <strong>producir un artefacto no implica automáticamente aceptarlo</strong>.</p>
+</section><section id="principios-derivados" class="level2" data-number="14.6"><h2 data-number="14.6" class="anchored" data-anchor-id="principios-derivados">
+<span class="header-section-number">14.6</span> Principios derivados</h2>
+<blockquote class="blockquote">
+<p><strong>Los nombres expresan función, no posición.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>El orden visual no debe convertirse en una falsa secuencia metodológica.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Un output es producido; un release ha sido aceptado para salir del proceso.</strong></p>
+</blockquote>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -572,13 +644,13 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../../edr/20-architecture/EDR-20005.html" class="pagination-link" aria-label="Regenerar los índices EDR en pre-render">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">25</span>  <span class="chapter-title">Regenerar los índices EDR en pre-render</span></span>
+      <a href="../../edr/00-general/EDR-00011.html" class="pagination-link" aria-label="Lab execution model">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>  <span class="chapter-title">Lab execution model</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../edr/20-architecture/EDR-20007.html" class="pagination-link" aria-label="Separar la configuración común de los perfiles HTML y PDF">
-        <span class="nav-page-text"><span class="chapter-number">27</span>  <span class="chapter-title">Separar la configuración común de los perfiles HTML y PDF</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../edr/10-functional/index.html" class="pagination-link" aria-label="Funcional">
+        <span class="nav-page-text">Funcional</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

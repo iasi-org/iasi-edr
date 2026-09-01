@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>31  Separar el entorno de laboratorios mediante una máquina virtual dedicada</title>
+<title>32  Separar el entorno de laboratorios mediante una máquina virtual dedicada</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -130,10 +130,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="../../edr/20-architecture/index.html">Arquitectura</a></li>
-<li class="breadcrumb-item"><a href="../../edr/20-architecture/EDR-20012.html"><span class="chapter-number">31</span>  <span class="chapter-title">Separar el entorno de laboratorios mediante una máquina virtual dedicada</span></a></li>
+<li class="breadcrumb-item"><a href="../../edr/20-architecture/EDR-20012.html"><span class="chapter-number">32</span>  <span class="chapter-title">Separar el entorno de laboratorios mediante una máquina virtual dedicada</span></a></li>
 </ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">31</span>  <span class="chapter-title">Separar el entorno de laboratorios mediante una máquina virtual dedicada</span>
+<span class="chapter-number">32</span>  <span class="chapter-title">Separar el entorno de laboratorios mediante una máquina virtual dedicada</span>
 </h1>
 </div>
 
@@ -156,24 +156,24 @@ ul.task-list li input[type="checkbox"] {
 <span class="edr-tags-label">Tags</span> <code class="edr-tag">labs</code> <code class="edr-tag">infra</code> <code class="edr-tag">virtualización</code> <code class="edr-tag">entornos</code>
 </div>
 </div>
-<section id="contexto" class="level2" data-number="31.1"><h2 data-number="31.1" class="anchored" data-anchor-id="contexto">
-<span class="header-section-number">31.1</span> Contexto</h2>
+<section id="contexto" class="level2" data-number="32.1"><h2 data-number="32.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">32.1</span> Contexto</h2>
 <p>Los primeros laboratorios pueden realizarse prácticamente desde cualquier entorno, pero a medida que avanzan empiezan a necesitar herramientas, runtimes, servicios, contenedores y productos propios de IASI.</p>
 <p>Utilizar para ellos la misma máquina empleada para desarrollar IASI mezclaría dos contextos diferentes. El entorno de desarrollo contiene repositorios fuente, herramientas internas y configuraciones que un usuario de los labs no debería necesitar.</p>
 <p>Además, utilizar un entorno separado permite comprobar que los productos IASI funcionan fuera de la máquina en la que fueron desarrollados.</p>
-</section><section id="decisión" class="level2" data-number="31.2"><h2 data-number="31.2" class="anchored" data-anchor-id="decisión">
-<span class="header-section-number">31.2</span> Decisión</h2>
+</section><section id="decisión" class="level2" data-number="32.2"><h2 data-number="32.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">32.2</span> Decisión</h2>
 <p>Los laboratorios que requieran una infraestructura específica utilizarán una <strong>máquina virtual dedicada a labs</strong>, separada del entorno <code>iasi-dev</code>.</p>
 <p>El Lab 10 del Volumen II será responsable de construir ese entorno de referencia. Los laboratorios posteriores podrán asumir la infraestructura creada a partir de ese punto.</p>
 <p>La máquina podrá conservar estados reproducibles mediante checkpoints cuando resulte útil para la ejecución o repetición de los laboratorios.</p>
-</section><section id="alternativas-consideradas" class="level2" data-number="31.3"><h2 data-number="31.3" class="anchored" data-anchor-id="alternativas-consideradas">
-<span class="header-section-number">31.3</span> Alternativas consideradas</h2>
+</section><section id="alternativas-consideradas" class="level2" data-number="32.3"><h2 data-number="32.3" class="anchored" data-anchor-id="alternativas-consideradas">
+<span class="header-section-number">32.3</span> Alternativas consideradas</h2>
 <ul>
 <li>Utilizar directamente la máquina de desarrollo <code>iasi-dev</code>.</li>
 <li>Instalar las dependencias de los labs sobre la máquina habitual del usuario.</li>
 <li>Crear un entorno completamente automatizado antes de realizar manualmente los laboratorios de infraestructura.</li>
-</ul></section><section id="consecuencias" class="level2" data-number="31.4"><h2 data-number="31.4" class="anchored" data-anchor-id="consecuencias">
-<span class="header-section-number">31.4</span> Consecuencias</h2>
+</ul></section><section id="consecuencias" class="level2" data-number="32.4"><h2 data-number="32.4" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">32.4</span> Consecuencias</h2>
 <p>El entorno donde se construye IASI queda separado del entorno donde se utiliza IASI.</p>
 <p>Los laboratorios permiten comprobar que los productos pueden instalarse y utilizarse sin depender de sus repositorios fuente.</p>
 <p>La máquina virtual proporciona aislamiento y permite conservar estados conocidos para repetir experimentos o recuperar el entorno.</p>
@@ -581,12 +581,12 @@ ul.task-list li input[type="checkbox"] {
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../../edr/20-architecture/EDR-20011.html" class="pagination-link" aria-label="Crear un espacio dedicado para capacidades agentic de IASI">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">30</span>  <span class="chapter-title">Crear un espacio dedicado para capacidades agentic de IASI</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">31</span>  <span class="chapter-title">Crear un espacio dedicado para capacidades agentic de IASI</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../edr/20-architecture/EDR-20013.html" class="pagination-link" aria-label="Usar HTMLSlides para materializar Introducing IASI">
-        <span class="nav-page-text"><span class="chapter-number">32</span>  <span class="chapter-title">Usar HTMLSlides para materializar Introducing IASI</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">33</span>  <span class="chapter-title">Usar HTMLSlides para materializar Introducing IASI</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

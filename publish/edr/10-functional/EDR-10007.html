@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>19  Proporcionar un agente IASI capaz de ejecutar trabajo sobre el workspace</title>
+<title>20  Proporcionar un agente IASI capaz de ejecutar trabajo sobre el workspace</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -130,10 +130,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="../../edr/10-functional/index.html">Funcional</a></li>
-<li class="breadcrumb-item"><a href="../../edr/10-functional/EDR-10007.html"><span class="chapter-number">19</span>  <span class="chapter-title">Proporcionar un agente IASI capaz de ejecutar trabajo sobre el workspace</span></a></li>
+<li class="breadcrumb-item"><a href="../../edr/10-functional/EDR-10007.html"><span class="chapter-number">20</span>  <span class="chapter-title">Proporcionar un agente IASI capaz de ejecutar trabajo sobre el workspace</span></a></li>
 </ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">19</span>  <span class="chapter-title">Proporcionar un agente IASI capaz de ejecutar trabajo sobre el workspace</span>
+<span class="chapter-number">20</span>  <span class="chapter-title">Proporcionar un agente IASI capaz de ejecutar trabajo sobre el workspace</span>
 </h1>
 </div>
 
@@ -156,8 +156,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="edr-tags-label">Tags</span> <code class="edr-tag">agent</code> <code class="edr-tag">workspace</code> <code class="edr-tag">local-models</code> <code class="edr-tag">execution</code>
 </div>
 </div>
-<section id="contexto" class="level2" data-number="19.1"><h2 data-number="19.1" class="anchored" data-anchor-id="contexto">
-<span class="header-section-number">19.1</span> Contexto</h2>
+<section id="contexto" class="level2" data-number="20.1"><h2 data-number="20.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">20.1</span> Contexto</h2>
 <p>La infraestructura local de IASI ya permite ejecutar modelos mediante Ollama.</p>
 <p>Sin embargo, disponer de un modelo local no equivale a disponer de un agente capaz de realizar trabajo de ingeniería.</p>
 <p>Un modelo utilizado en modo chat o prompt puede recibir contexto y generar una respuesta, pero no dispone necesariamente de las capacidades necesarias para trabajar sobre un proyecto real:</p>
@@ -169,8 +169,8 @@ response</code></pre>
 <p>Para ejecutar trabajo IASI se necesita una capa adicional capaz de operar sobre el workspace.</p>
 <p>La necesidad se hizo explícita al intentar utilizar los modelos locales como alternativa de ejecución: el modelo estaba disponible, pero faltaba el componente capaz de leer el proyecto, comprender una tarea, utilizar herramientas, modificar los artefactos permitidos y materializar resultados.</p>
 <p>La existencia de agentes externos como Codex demostró además que la tarea y el ejecutor pueden separarse. Una misma tarea IASI puede ser ejecutada por distintos agentes sin redefinir el trabajo.</p>
-</section><section id="decisión" class="level2" data-number="19.2"><h2 data-number="19.2" class="anchored" data-anchor-id="decisión">
-<span class="header-section-number">19.2</span> Decisión</h2>
+</section><section id="decisión" class="level2" data-number="20.2"><h2 data-number="20.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">20.2</span> Decisión</h2>
 <p>IASI dispondrá de un agente denominado inicialmente <code>iasi-agent</code>, capaz de ejecutar trabajo directamente sobre un workspace IASI.</p>
 <p>Su objetivo es proporcionar la capa de ejecución que convierte un modelo en un ejecutor de ingeniería.</p>
 <p>Conceptualmente:</p>
@@ -193,23 +193,23 @@ WORKSPACE</code></pre>
 <p>La capacidad de acceder al workspace no implica autorización para modificar cualquier contenido.</p>
 <p>Las reglas de IASI siguen gobernando qué puede leerse, modificarse o producirse. Los artefactos definidos como inmutables continúan siendo inmutables independientemente del agente que ejecute el trabajo.</p>
 <p>La ejecución local será una capacidad de primer nivel. <code>iasi-agent</code> deberá poder utilizar modelos locales cuando estos sean suficientes para la tarea.</p>
-</section><section id="alternativas-consideradas" class="level2" data-number="19.3"><h2 data-number="19.3" class="anchored" data-anchor-id="alternativas-consideradas">
-<span class="header-section-number">19.3</span> Alternativas consideradas</h2>
-<section id="utilizar-únicamente-ollama-u-open-webui" class="level3" data-number="19.3.1"><h3 data-number="19.3.1" class="anchored" data-anchor-id="utilizar-únicamente-ollama-u-open-webui">
-<span class="header-section-number">19.3.1</span> Utilizar únicamente Ollama u Open WebUI</h3>
+</section><section id="alternativas-consideradas" class="level2" data-number="20.3"><h2 data-number="20.3" class="anchored" data-anchor-id="alternativas-consideradas">
+<span class="header-section-number">20.3</span> Alternativas consideradas</h2>
+<section id="utilizar-únicamente-ollama-u-open-webui" class="level3" data-number="20.3.1"><h3 data-number="20.3.1" class="anchored" data-anchor-id="utilizar-únicamente-ollama-u-open-webui">
+<span class="header-section-number">20.3.1</span> Utilizar únicamente Ollama u Open WebUI</h3>
 <p>Permiten ejecutar e interactuar con modelos locales, pero no proporcionan por sí mismos el agente de workspace que necesita IASI.</p>
 <p>Resuelven la inferencia y la conversación, no la ejecución completa del trabajo de ingeniería.</p>
-</section><section id="depender-exclusivamente-de-agentes-externos" class="level3" data-number="19.3.2"><h3 data-number="19.3.2" class="anchored" data-anchor-id="depender-exclusivamente-de-agentes-externos">
-<span class="header-section-number">19.3.2</span> Depender exclusivamente de agentes externos</h3>
+</section><section id="depender-exclusivamente-de-agentes-externos" class="level3" data-number="20.3.2"><h3 data-number="20.3.2" class="anchored" data-anchor-id="depender-exclusivamente-de-agentes-externos">
+<span class="header-section-number">20.3.2</span> Depender exclusivamente de agentes externos</h3>
 <p>Agentes como Codex ya ofrecen excelentes capacidades sobre el workspace.</p>
 <p>Sin embargo, hacer depender toda la ejecución de IASI de un único agente externo introduciría una dependencia innecesaria entre la metodología y un ejecutor concreto.</p>
 <p>Además, disponibilidad, cuotas, conectividad o evolución del producto podrían impedir temporalmente la ejecución sin que haya cambiado la tarea.</p>
-</section><section id="construir-inmediatamente-un-agente-completo-desde-cero" class="level3" data-number="19.3.3"><h3 data-number="19.3.3" class="anchored" data-anchor-id="construir-inmediatamente-un-agente-completo-desde-cero">
-<span class="header-section-number">19.3.3</span> Construir inmediatamente un agente completo desde cero</h3>
+</section><section id="construir-inmediatamente-un-agente-completo-desde-cero" class="level3" data-number="20.3.3"><h3 data-number="20.3.3" class="anchored" data-anchor-id="construir-inmediatamente-un-agente-completo-desde-cero">
+<span class="header-section-number">20.3.3</span> Construir inmediatamente un agente completo desde cero</h3>
 <p>Proporcionaría control total, pero obligaría a desarrollar antes de tiempo capacidades ya resueltas por plataformas agentic existentes: gestión de modelos, herramientas, sesiones, permisos, edición de archivos, ejecución de comandos e integración con protocolos externos.</p>
 <p>IASI necesita definir primero qué espera de un agente y reutilizar infraestructura existente siempre que satisfaga esa necesidad.</p>
-</section></section><section id="consecuencias" class="level2" data-number="19.4"><h2 data-number="19.4" class="anchored" data-anchor-id="consecuencias">
-<span class="header-section-number">19.4</span> Consecuencias</h2>
+</section></section><section id="consecuencias" class="level2" data-number="20.4"><h2 data-number="20.4" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">20.4</span> Consecuencias</h2>
 <p>El modelo deja de confundirse con el agente.</p>
 <p>Ollama permanece como runtime de modelos y <code>iasi-agent</code> proporciona la capa de ejecución sobre el workspace.</p>
 <p>IASI puede utilizar diferentes modelos sin redefinir el agente y diferentes agentes sin redefinir la tarea.</p>
@@ -623,7 +623,7 @@ WORKSPACE</code></pre>
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../../edr/10-functional/EDR-10006.html" class="pagination-link" aria-label="Crear una presentación de introducción a IASI">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>  <span class="chapter-title">Crear una presentación de introducción a IASI</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>  <span class="chapter-title">Crear una presentación de introducción a IASI</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

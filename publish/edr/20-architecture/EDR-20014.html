@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>33  Mantener iasi-agent como proyecto separado de IASI</title>
+<title>34  Mantener iasi-agent como proyecto separado de IASI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -130,10 +130,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="../../edr/20-architecture/index.html">Arquitectura</a></li>
-<li class="breadcrumb-item"><a href="../../edr/20-architecture/EDR-20014.html"><span class="chapter-number">33</span>  <span class="chapter-title">Mantener iasi-agent como proyecto separado de IASI</span></a></li>
+<li class="breadcrumb-item"><a href="../../edr/20-architecture/EDR-20014.html"><span class="chapter-number">34</span>  <span class="chapter-title">Mantener iasi-agent como proyecto separado de IASI</span></a></li>
 </ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">33</span>  <span class="chapter-title">Mantener iasi-agent como proyecto separado de IASI</span>
+<span class="chapter-number">34</span>  <span class="chapter-title">Mantener iasi-agent como proyecto separado de IASI</span>
 </h1>
 </div>
 
@@ -156,15 +156,15 @@ ul.task-list li input[type="checkbox"] {
 <span class="edr-tags-label">Tags</span> <code class="edr-tag">agent</code> <code class="edr-tag">separation</code> <code class="edr-tag">experimentation</code> <code class="edr-tag">architecture</code>
 </div>
 </div>
-<section id="contexto" class="level2" data-number="33.1"><h2 data-number="33.1" class="anchored" data-anchor-id="contexto">
-<span class="header-section-number">33.1</span> Contexto</h2>
+<section id="contexto" class="level2" data-number="34.1"><h2 data-number="34.1" class="anchored" data-anchor-id="contexto">
+<span class="header-section-number">34.1</span> Contexto</h2>
 <p>IASI ya dispone de un runtime y de comandos destinados a soportar la aplicación de la metodología.</p>
 <p>Por otra parte, <code>iasi-dev</code> es el entorno utilizado para desarrollar IASI.</p>
 <p>La aparición de la necesidad de experimentar con un agente local capaz de trabajar sobre el workspace no implica que esa implementación deba incorporarse directamente al runtime de IASI.</p>
 <p>Todavía se están descubriendo las capacidades que debe tener un agente IASI, la forma de conectarlo con modelos locales, la relación con skills, comandos y herramientas, y el grado de adaptación necesario sobre plataformas agentic existentes.</p>
 <p>Introducir esa experimentación directamente dentro de IASI mezclaría una capacidad todavía en evolución con el núcleo que define y ejecuta la metodología.</p>
-</section><section id="decisión" class="level2" data-number="33.2"><h2 data-number="33.2" class="anchored" data-anchor-id="decisión">
-<span class="header-section-number">33.2</span> Decisión</h2>
+</section><section id="decisión" class="level2" data-number="34.2"><h2 data-number="34.2" class="anchored" data-anchor-id="decisión">
+<span class="header-section-number">34.2</span> Decisión</h2>
 <p>Se mantendrá <code>iasi-agent</code> como un proyecto separado de IASI.</p>
 <p><code>iasi-agent</code> será el espacio donde experimentar, integrar y validar una implementación de agente capaz de ejecutar trabajo IASI sobre un workspace.</p>
 <p>La separación conceptual será:</p>
@@ -178,23 +178,23 @@ ejecuta trabajo IASI como uno de sus posibles agentes</code></pre>
 <p>IASI no dependerá de <code>iasi-agent</code> para definir la metodología.</p>
 <p><code>iasi-agent</code> dependerá de los contratos y artefactos que IASI establezca para poder ejecutar trabajo correctamente.</p>
 <p>El nombre <code>iasi-agent</code> identifica esta línea de trabajo y puede evolucionar si la comprensión posterior del producto lo requiere.</p>
-</section><section id="alternativas-consideradas" class="level2" data-number="33.3"><h2 data-number="33.3" class="anchored" data-anchor-id="alternativas-consideradas">
-<span class="header-section-number">33.3</span> Alternativas consideradas</h2>
-<section id="incorporar-el-agente-directamente-dentro-de-iasi" class="level3" data-number="33.3.1"><h3 data-number="33.3.1" class="anchored" data-anchor-id="incorporar-el-agente-directamente-dentro-de-iasi">
-<span class="header-section-number">33.3.1</span> Incorporar el agente directamente dentro de IASI</h3>
+</section><section id="alternativas-consideradas" class="level2" data-number="34.3"><h2 data-number="34.3" class="anchored" data-anchor-id="alternativas-consideradas">
+<span class="header-section-number">34.3</span> Alternativas consideradas</h2>
+<section id="incorporar-el-agente-directamente-dentro-de-iasi" class="level3" data-number="34.3.1"><h3 data-number="34.3.1" class="anchored" data-anchor-id="incorporar-el-agente-directamente-dentro-de-iasi">
+<span class="header-section-number">34.3.1</span> Incorporar el agente directamente dentro de IASI</h3>
 <p>Reduciría inicialmente el número de proyectos, pero acoplaría el runtime de la metodología con una implementación agentic concreta todavía experimental.</p>
 <p>También dificultaría distinguir qué comportamiento pertenece a IASI y qué comportamiento pertenece al ejecutor.</p>
-</section><section id="tratar-el-agente-como-parte-de-iasi-dev" class="level3" data-number="33.3.2"><h3 data-number="33.3.2" class="anchored" data-anchor-id="tratar-el-agente-como-parte-de-iasi-dev">
-<span class="header-section-number">33.3.2</span> Tratar el agente como parte de <code>iasi-dev</code>
+</section><section id="tratar-el-agente-como-parte-de-iasi-dev" class="level3" data-number="34.3.2"><h3 data-number="34.3.2" class="anchored" data-anchor-id="tratar-el-agente-como-parte-de-iasi-dev">
+<span class="header-section-number">34.3.2</span> Tratar el agente como parte de <code>iasi-dev</code>
 </h3>
 <p><code>iasi-dev</code> es un entorno de desarrollo, no un producto de ejecución IASI.</p>
 <p>Ubicar allí el agente confundiría infraestructura de desarrollo con una capacidad reutilizable del ecosistema.</p>
-</section><section id="utilizar-únicamente-adaptadores-para-agentes-externos" class="level3" data-number="33.3.3"><h3 data-number="33.3.3" class="anchored" data-anchor-id="utilizar-únicamente-adaptadores-para-agentes-externos">
-<span class="header-section-number">33.3.3</span> Utilizar únicamente adaptadores para agentes externos</h3>
+</section><section id="utilizar-únicamente-adaptadores-para-agentes-externos" class="level3" data-number="34.3.3"><h3 data-number="34.3.3" class="anchored" data-anchor-id="utilizar-únicamente-adaptadores-para-agentes-externos">
+<span class="header-section-number">34.3.3</span> Utilizar únicamente adaptadores para agentes externos</h3>
 <p>Los adaptadores siguen siendo necesarios para proyectar capacidades IASI sobre otras plataformas.</p>
 <p>Sin embargo, no sustituyen la necesidad de disponer de un espacio propio donde experimentar con un agente IASI y con ejecución local.</p>
-</section></section><section id="consecuencias" class="level2" data-number="33.4"><h2 data-number="33.4" class="anchored" data-anchor-id="consecuencias">
-<span class="header-section-number">33.4</span> Consecuencias</h2>
+</section></section><section id="consecuencias" class="level2" data-number="34.4"><h2 data-number="34.4" class="anchored" data-anchor-id="consecuencias">
+<span class="header-section-number">34.4</span> Consecuencias</h2>
 <p>IASI conserva un núcleo independiente de cualquier implementación agentic concreta.</p>
 <p><code>iasi-agent</code> puede evolucionar rápidamente, cambiar de plataforma base o incluso descartarse sin obligar a rediseñar el runtime de IASI.</p>
 <p>La experimentación local queda aislada del núcleo metodológico.</p>
@@ -603,12 +603,12 @@ ejecuta trabajo IASI como uno de sus posibles agentes</code></pre>
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../../edr/20-architecture/EDR-20013.html" class="pagination-link" aria-label="Usar HTMLSlides para materializar Introducing IASI">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">32</span>  <span class="chapter-title">Usar HTMLSlides para materializar Introducing IASI</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">33</span>  <span class="chapter-title">Usar HTMLSlides para materializar Introducing IASI</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../edr/20-architecture/EDR-20015.html" class="pagination-link" aria-label="Usar OpenCode como base inicial de iasi-agent">
-        <span class="nav-page-text"><span class="chapter-number">34</span>  <span class="chapter-title">Usar OpenCode como base inicial de iasi-agent</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">35</span>  <span class="chapter-title">Usar OpenCode como base inicial de iasi-agent</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

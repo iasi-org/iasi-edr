@@ -1,0 +1,130 @@
+---
+id: EDR-00012
+title: "Organizar el flujo del repositorio mediante nombres semánticos"
+status: accepted
+area:
+  id: "00"
+  name: "General"
+created: 2026-09-01
+tags:
+  - "repository-structure"
+  - "workflow"
+  - "naming"
+affects:
+  - "inputs"
+  - "orchestration"
+  - "outputs"
+  - "releases"
+related: []
+supersedes: []
+superseded-by: []
+---
+
+# Organizar el flujo del repositorio mediante nombres semánticos
+
+## Contexto
+
+Durante la definición inicial del flujo de trabajo se utilizaron prefijos alfabéticos para ordenar visualmente las áreas principales del repositorio:
+
+```text
+A-inputs/
+B-engine/
+C-outputs/
+D-deliverables/
+```
+
+Esta estructura hacía visible una secuencia aproximada de trabajo, pero introducía dos problemas.
+
+En primer lugar, los prefijos `A-`, `B-`, `C-` y `D-` no aportan significado propio. Su función es únicamente forzar el orden de las carpetas.
+
+En segundo lugar, ese orden puede sugerir un proceso estrictamente secuencial por fases, cuando el trabajo real puede volver sobre los inputs, revisar especificaciones, regenerar outputs o repetir validaciones tantas veces como sea necesario.
+
+Además, algunos nombres resultaban demasiado ambiguos. En particular, `engine/` podía interpretarse como un componente software ejecutable, mientras que su contenido representa realmente los elementos que coordinan y gobiernan el proceso de trabajo.
+
+## Decisión
+
+Las áreas principales del repositorio se nombrarán por su **función**, sin prefijos artificiales destinados únicamente a imponer un orden visual.
+
+La estructura canónica será:
+
+```text
+inputs/
+orchestration/
+outputs/
+releases/
+```
+
+Cada área representa una responsabilidad diferente:
+
+- `inputs/` contiene la información que entra en el proceso.
+- `orchestration/` contiene los elementos que organizan, dirigen y gobiernan el trabajo realizado sobre los inputs, como especificaciones, tareas y otros mecanismos de coordinación.
+- `outputs/` contiene los artefactos producidos durante el proceso.
+- `releases/` contiene los artefactos aceptados y preparados para su publicación, entrega o distribución.
+
+La estructura no representa fases rígidas ni obliga a recorrer las carpetas una sola vez en ese orden.
+
+## Rationale
+
+Los nombres deben expresar **qué es cada cosa**, no únicamente dónde queremos que aparezca en un árbol de directorios.
+
+Los prefijos de orden convierten una decisión de presentación en parte permanente del modelo del repositorio. Al eliminarlos, la estructura queda definida por conceptos que pueden evolucionar sin depender de una numeración o secuencia artificial.
+
+`orchestration/` sustituye a `engine/` porque describe mejor la responsabilidad de su contenido. No representa necesariamente un motor ejecutable, sino el conjunto de artefactos que coordinan el proceso, actualmente incluyendo elementos como:
+
+```text
+orchestration/
+    specifications/
+    tasks/
+```
+
+y pudiendo incorporar en el futuro otros elementos de gobierno o coordinación sin alterar el significado del área.
+
+`releases/` sustituye a `deliverables/` para distinguir entre aquello que el proceso **produce** y aquello que finalmente se **acepta y libera**.
+
+## Alternativas consideradas
+
+### Mantener los prefijos `A-`, `B-`, `C-`, `D-`
+
+Se descarta porque fuerza un orden visual artificial y puede interpretarse como una metodología secuencial por fases.
+
+### Mantener `engine/`
+
+Se descarta porque puede confundirse con un componente ejecutable y no describe con suficiente precisión el papel de especificaciones, tareas y futuros mecanismos de coordinación.
+
+### Utilizar `model/`
+
+Se consideró como representación interna del problema, pero se descarta por su ambigüedad en un contexto de Sistemas Inteligentes, donde `model` se asocia de forma natural a modelos de IA.
+
+### Utilizar `deliverables/`
+
+Se descarta a favor de `releases/`, que expresa mejor que los artefactos contenidos en esa área han superado el proceso de aceptación y están preparados para salir del flujo de trabajo.
+
+## Consecuencias
+
+La estructura principal del repositorio pasa a ser legible sin depender de prefijos de orden.
+
+El flujo puede entenderse conceptualmente como:
+
+```text
+inputs
+   ↓
+orchestration
+   ↓
+outputs
+   ↓
+releases
+```
+
+sin que este esquema implique una ejecución estrictamente lineal.
+
+Las herramientas, agentes y personas podrán volver sobre cualquiera de estas áreas cuando el proceso lo requiera.
+
+La distinción entre `outputs/` y `releases/` hace explícito que **producir un artefacto no implica automáticamente aceptarlo**.
+
+## Principios derivados
+
+> **Los nombres expresan función, no posición.**
+
+> **El orden visual no debe convertirse en una falsa secuencia metodológica.**
+
+> **Un output es producido; un release ha sido aceptado para salir del proceso.**
