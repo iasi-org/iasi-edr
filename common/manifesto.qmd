@@ -49,7 +49,7 @@ IASI nace como una iniciativa personal, pero no pretende ser un proyecto persona
 
 **Toda aportación fundamentada será bienvenida.**
 
-Porque creemos que la Ingeniería Asistida por Sistemas Inteligentes solo puede construirse desde la colaboración, el pensamiento crítico y la experimentación.
+Porque creemos que la Ingeniería Aumentada por Sistemas Inteligentes solo puede construirse desde la colaboración, el pensamiento crítico y la experimentación.
 
 > *La mejor metodología no es la que seguimos, sino la que descubrimos mientras resolvemos el problema adecuado.*
 
